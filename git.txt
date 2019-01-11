@@ -1,0 +1,122 @@
+﻿www.git-scm.com
+
+git --version
+
+// Think
+git(git)-TFS
+npm(node)-NuGet
+
+IDE
+1, reference
+2, code manage
+3, unittest
+4, intellisence
+5, snippets
+
+
+
+git config --global user.name "nzh"
+git config --global user.email
+git config -l	//查看配置
+
+--P3 创建仓库
+git init
+git init MyOrdner
+git clone MyUrl
+
+--P4 基本用法
+git status
+
+！！！// Checkin
+git add .
+git commit -m "test1"
+
+git log
+
+
+// Checkout
+git checkout 7位ID
+
+
+--P5 三种状态
+modifed, staged, committed
+git checkout -	//回到上个版本
+
+1修改，2add（staged），3commit（commited）
+
+git log -p
+
+
+--P6 标签tag
+git add . && git commit -m "MyCommentar"
+
+git log --online
+
+// 打标签
+git tag -a v1 -m "详细描述"
+
+git tag
+
+git tag -a v0.5 -m "备注" 7位ID
+
+// 用标签
+git checkout v1
+
+git log --oneline --all
+
+
+--P7 分支
+git branch rich
+git checkout rich
+
+git checkout master //回到主线
+
+！！！git log --oneline --all --graph //图形化显示所有commits
+
+//Think
+开发就2件事：改错，加新功能
+
+--P8 合并分支
+回到某个节点
+git checkout 7位ID
+
+git checkout -b ff //创建并切换到新的分支ff
+
+
+git checkout master //回到主线
+
+git merge ff //合并分支
+
+--P9 远程仓库
+
+//Think
+造药丸	git add . && git commit -m "注释"
+用药丸	git checkout 7位ID
+造大药丸	git tag -a v1 -m "注释"
+用大药丸	git checkout v1
+图型查看	git log --oneline --all --graph
+
+
+github
+注册，登陆，New Repository，Repostory名称，Create Repository
+git remote add github url
+git remote
+git remote -v
+git push -u github master //推上github
+
+git clone url
+
+
+jackinz
+jackinz2010@hotmail.de
+t214200+
+
+git remote add origin https://github.com/jackinz/tempo.git
+git push -u origin master
+
+碰到的问题：第一次push成功，第二次就push不上了。解决方法：先pull再push。git pull origin master--allow-unrelated-histories
+碰到的问题：进入了vim。解决方法：按esc，同时按两下大写的z就可以退出
+
+
+git remote add origin https://github.com/jackinz/knowhow.git
+git push -u origin master
