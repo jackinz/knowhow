@@ -1,4 +1,27 @@
-﻿www.git-scm.com
+﻿--------------------常用命令--------------------
+// 本地
+git init
+git status
+git add .
+git commit -m "MyCommentar"
+git log
+git log -p
+git log --oneline --all --graph
+
+// 远程
+git remote add github url
+git remote add origin https://github.com/jackinz/knowhow.git
+git clone https://github.com/jackinz/knowhow.git whh
+git pull
+git push -u origin master
+
+
+// 最简
+git add . && git commit -m "MyCommentar"
+git pull
+git push -u origin master
+-------------------------------------------------
+www.git-scm.com
 
 git --version
 
