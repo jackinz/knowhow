@@ -1,6 +1,7 @@
 ﻿Methode1: js, css in project (local)
 Methode2: js, css in cdn (server)
 Methode3: js, css in project (local, npm)
+Methode4: js, css in project (local, NuGet)
 
 How to use npm?
 1, install code.js: nodejs.org/download and install
@@ -18,3 +19,9 @@ How to use npm?
 查	查看package.json
 
 高级	在package.json/script里面新定义一个方法yo, 在console里面来使用： npm run yo
+
+4, use
+vs/Tools/NuGet package manager/gui
+搜索jQuery后添加
+NuGet在solution里添加一个文件夹package，在project里增加一个文件package.json和一个文件夹Script。
+在项目中就使用Script中的资源，比如js或css。
