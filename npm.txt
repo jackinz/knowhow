@@ -1,4 +1,11 @@
-﻿Methode1: js, css in project (local)
+﻿--------------------常用命令--------------------
+// 最简
+npm i jquery -g
+npm update jquery
+npm update jquery@3.0.0
+-------------------------------------------------
+
+Methode1: js, css in project (local)
 Methode2: js, css in cdn (server)
 Methode3: js, css in project (local, npm)
 Methode4: js, css in project (local, NuGet)
