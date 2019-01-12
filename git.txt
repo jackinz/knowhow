@@ -117,3 +117,8 @@ git push -u origin master
 
 git remote add origin https://github.com/jackinz/knowhow.git
 git push -u origin master
+
+--P10 多人合作
+git clone https://github.com/jackinz/knowhow.git whh
+git pull
+git push -u origin master
