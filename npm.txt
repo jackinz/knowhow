@@ -1,6 +1,6 @@
 ﻿--------------------常用命令--------------------
 // 最简
-npm init -y （第一次使用时需要）
+npm init -y （第一次使用时需要，-y使用默认参数）
 npm i jquery （后面加参数-g，表示更新全局node_modules） 
 npm update jquery （更新为最新版，jquery@3.0.0表示更新到某版本）
 npm i （没有node_modules，只有package.json的情况下，自动添加node_modules）
@@ -33,10 +33,10 @@ How to use npm?
 
 
 How to use NuGet?
-vs/Tools/NuGet package manager/Manage NuGet Packages for solution...(在community版本中没有这个选项)
-搜索jQuery后添加
-NuGet在solution里添加一个文件夹package，在project里增加一个文件package.json和一个文件夹Script。
-在项目中就使用Script中的资源，比如js或css。
+1, vs/Tools/NuGet package manager/Manage NuGet Packages for solution...(在community版本中没有这个选项)
+2, 搜索jQuery后添加
+3, NuGet在solution里添加一个文件夹package，在project里增加一个文件package.json和一个文件夹Script。
+4, 在项目中就使用Script中的资源，比如js或css。
 
 
 

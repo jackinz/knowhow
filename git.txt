@@ -135,7 +135,7 @@ git push -u origin master
 碰到的问题：第一次push成功，第二次就push不上了。解决方法：先pull再push。git pull origin master--allow-unrelated-histories
 如果用上面2句咒语，只能新增文件push。修改一个文件不可以。
 
-碰到的问题：输入命令git commit就会进入vim，如何退出vim。解决方法：按esc，同时按两下大写的z就可以退出。
+碰到的问题：在有改动的情况下，输入命令git commit就会进入vim，如何退出vim。解决方法：按esc，同时按两下大写的z就可以退出。
 
 
 git remote add origin https://github.com/jackinz/knowhow.git
