@@ -1,21 +1,25 @@
 ﻿--------------------常用命令--------------------
 // 最简
-npm i jquery -g
-npm update jquery
-npm update jquery@3.0.0
+npm init -y （第一次使用时需要）
+npm i jquery （后面加参数-g，表示更新全局node_modules） 
+npm update jquery （更新为最新版，jquery@3.0.0表示更新到某版本）
+npm i （没有node_modules，只有package.json的情况下，自动添加node_modules）
 -------------------------------------------------
+
+同类产品:yarn, NuGet
 
 Methode1: js, css in project (local)
 Methode2: js, css in cdn (server)
 Methode3: js, css in project (local, npm)
 Methode4: js, css in project (local, NuGet)
 
+
 How to use npm?
 1, install code.js: nodejs.org/download and install
 2, test: 1) node -v, 2) npm -v
 
 3, use:
-初始化	npm init -y	//init新建一个文件package.json
+初始化	npm init -y	//init新建一个文件package.json,-y可以使用默认参数
 增	npm install jqeury@latest -g	//install新建一个文件夹node_modules
 	npm i jquery -g
 	npm i vue
@@ -27,8 +31,15 @@ How to use npm?
 
 高级	在package.json/script里面新定义一个方法yo, 在console里面来使用： npm run yo
 
-4, use
-vs/Tools/NuGet package manager/gui
+
+How to use NuGet?
+vs/Tools/NuGet package manager/Manage NuGet Packages for solution...(在community版本中没有这个选项)
 搜索jQuery后添加
 NuGet在solution里添加一个文件夹package，在project里增加一个文件package.json和一个文件夹Script。
 在项目中就使用Script中的资源，比如js或css。
+
+
+
+对比npm和NuGet
+npm	NodePackageManager	package.json	项目文件夹内添加文件夹node_modules	在项目中使用dist文件夹下文件
+NuGet	NuGetPackageManager	packages.config	项目上一层添加文件夹packages	在项目中使用script文件夹下文件
