@@ -1,0 +1,15 @@
+﻿--命名规范
+PascalCase
+camelCase
+snake_case
+
+--SQL规范化
+Poor Man's T-SQL Formatter
+可以用在Nodepad++和SSMS中: ctrl+k, f
+
+--代码规范化
+用于调整缩进，空格等
+VS: ctrl+k ctrl+d
+
+用于清除References，规范空格，空行等
+CodeMaid (vs的插件)
