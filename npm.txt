@@ -41,5 +41,5 @@ How to use NuGet?
 
 
 对比npm和NuGet
-npm	NodePackageManager	package.json	项目文件夹内添加文件夹node_modules	在项目中使用dist文件夹下文件
-NuGet	NuGetPackageManager	packages.config	项目上一层添加文件夹packages	在项目中使用script文件夹下文件
+npm		NodePackageManager	package.json	项目文件夹内添加文件夹node_modules	在项目中使用dist文件夹下文件
+NuGet	NuGetPackageManager	packages.config	项目上一层添加文件夹packages		在项目中使用script文件夹下文件
