@@ -10,9 +10,8 @@ git log --oneline --all --graph
 
 // 远程
 git remote add github url
-git remote add origin https://github.com/jackinz/knowhow.git (第一次要使用url，add之后才可以用push)
-git clone https://github.com/jackinz/knowhow.git whh
-git pull https://github.com/jackinz/knowhow.git (第一次要使用url)
+git remote add origin https://github.com/jackinz/knowhow.git (第一次从本地上传github，add之后才可以用push)
+git clone https://github.com/jackinz/knowhow.git whh (第一次从github上往本地拉)
 git pull
 git push -u origin master
 
