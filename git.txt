@@ -1,4 +1,6 @@
-﻿--------------------常用命令--------------------
+﻿our ability to learn faster than your competition is your only sustainable competitive advantage. - Arie de Gues
+
+--------------------常用命令--------------------
 // 本地
 git init
 git status
