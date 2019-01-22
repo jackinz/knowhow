@@ -1,14 +1,3 @@
--- plug-ins:
-poorman's t-sql formatter (ctrl+k, f)
-ssms tools (ssf, f12)
-
-
--- shortcuts in ssms
-ctrl + n
-ctrl + e = f5 execute
-ctrl + r result window open/close
-
-
 -- search text in tablename and columnname
 SELECT      COLUMN_NAME AS 'ColumnName'
             ,TABLE_NAME AS  'TableName'

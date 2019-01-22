@@ -22,6 +22,11 @@ git push -u origin master
 git add . && git commit -m "MyCommentar"
 git pull
 git push -u origin master
+
+查看当前状态
+git status
+git pull
+
 -------------------------------------------------
 www.git-scm.com
 

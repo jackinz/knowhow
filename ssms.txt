@@ -1,0 +1,15 @@
+You learn to speak by speaking, to study by studying, to run by running, to work by working; in just the same way, you learn to love by loving. - Anatole France
+
+-- plug-ins, software:
+poorman's t-sql formatter (ctrl+k, f)
+ssms tools (ssf, f12)
+
+
+
+
+
+-- shortcuts in ssms
+ctrl + n
+ctrl + e = f5 execute
+ctrl + r result window open/close
+
