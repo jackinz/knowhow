@@ -3,9 +3,7 @@ You learn to speak by speaking, to study by studying, to run by running, to work
 -- plug-ins, software:
 poorman's t-sql formatter (ctrl+k, f)
 ssms tools (ssf, f12)
-
-
-
+multiscript by radgate
 
 
 -- shortcuts in ssms
