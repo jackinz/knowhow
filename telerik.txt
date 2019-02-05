@@ -1,4 +1,47 @@
-﻿
+﻿20190205
+--NachDemEditfensterGridZuAktualisieren
+
+GpdrEdit.aspx --> Urkunde/Archiv.aspx
+1,Grid
+function ReloadDokument(sender, args) {
+	if (args.get_argument() != null && args.get_argument().refreshGrid) {
+        	$find("RgErrorcode").get_masterTableView().rebind();
+	}
+}
+
+2,Grid
+OnClientClose="ReloadDokument"
+
+
+3,Window
+function Speichern_Click() {
+	GetRadWindow().Close({ refreshGrid: true });
+}
+
+-----------------------------------------------------------------------------
+
+Archiv.aspx:
+    <telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
+        <script type="text/javascript">
+            function ReloadDokument(sender, args) {
+                if (args.get_argument() != null && args.get_argument().refreshGrid) {
+                    $find("RgErrorcode").get_masterTableView().rebind();
+                }
+            }
+        </script>
+    </telerik:RadCodeBlock>
+
+
+                <telerik:RadWindowManager ID="RadWindowManagerGA1" runat="server" EnableShadow="true"
+                    ReloadOnShow="False" ShowContentDuringLoad="False" Modal="true" CenterIfModal="True" VisibleStatusbar="False"
+                    VisibleTitlebar="True" IconUrl="../i/page_white_edit.png" Animation="None">
+                    <Windows>
+                        <telerik:RadWindow runat="server" ID="RwAErrorcodeEdit" OnClientClose="ReloadDokument">
+                        </telerik:RadWindow>
+                    </Windows>
+                </telerik:RadWindowManager>
+
+
 20190131
 OnClientClick和OnClick不能同时使用，同时使用会不稳定
 应该在OnClick中使用js

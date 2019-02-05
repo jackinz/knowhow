@@ -1,0 +1,111 @@
+20190205
+-- cookie
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=../";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user=getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+       user = prompt("Please enter your name:","");
+       if (user != "" && user != null) {
+           setCookie("username", user, 30);
+       }
+    }
+}
+
+</script>
+</head>
+<body onload="checkCookie()">
+</body>
+</html>
+
+
+
+-- repeater
+<asp:Repeater ID="rptCustomers" runat="server">
+    <HeaderTemplate>
+        <table cellspacing="0" rules="all" border="1">
+            <tr>
+                <th scope="col" style="width: 80px">
+                    Customer Id
+                </th>
+                <th scope="col" style="width: 120px">
+                    Customer Name
+                </th>
+                <th scope="col" style="width: 100px">
+                    Country
+                </th>
+            </tr>
+    </HeaderTemplate>
+    <ItemTemplate>
+        <tr>
+            <td>
+                <asp:Label ID="lblCustomerId" runat="server" Text='<%# Eval("CustomerId") %>' />
+            </td>
+            <td>
+                <asp:Label ID="lblContactName" runat="server" Text='<%# Eval("ContactName") %>' />
+            </td>
+            <td>
+                <asp:Label ID="lblCountry" runat="server" Text='<%# Eval("Country") %>' />
+            </td>
+        </tr>
+    </ItemTemplate>
+    <FooterTemplate>
+        </table>
+    </FooterTemplate>
+</asp:Repeater>
+
+
+-----------------------------------------------------------------------------------------------------
+protected void Page_Load(object sender, EventArgs e)
+{
+    if (!this.IsPostBack)
+    {
+        this.BindRepeater();
+    }
+}
+ 
+private void BindRepeater()
+{
+    string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+    using (SqlConnection con = new SqlConnection(constr))
+    {
+        using (SqlCommand cmd = new SqlCommand("SELECT TOP 10 * FROM Customers", con))
+        {
+            using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+            {
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                rptCustomers.DataSource = dt;
+                rptCustomers.DataBind();
+            }
+        }
+    }
+}

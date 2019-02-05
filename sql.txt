@@ -1,3 +1,139 @@
+﻿20190207
+Trigger Oder Pos:
+CREATE TRIGGER [dbo].[Trg_OrderPos_IUD]
+   ON  [dbo].[OrderPos] 
+   AFTER INSERT,DELETE,UPDATE
+AS 
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    DECLARE @OrderId int
+	DECLARE @CstSumme decimal
+	DECLARE @PrcSumme decimal
+
+	-- update, insert
+	IF EXISTS (SELECT * FROM inserted)
+	BEGIN
+		SELECT @OrderId = OrderId FROM inserted
+		SELECT @CstSumme = sum(Cst_Cost), @PrcSumme = sum(Cst_Price) from OrderPos where OrderId = @OrderId
+		update Orders set Cst_CostSumme = @CstSumme where OrderId = @OrderId
+
+	END
+
+	-- delete
+	IF EXISTS (SELECT * FROM deleted) AND NOT EXISTS(SELECT * FROM inserted)
+	BEGIN
+		SELECT @OrderId = OrderId FROM deleted
+		SELECT @CstSumme = sum(Cst_Cost) from OrderPos where OrderId = @OrderId
+		update Orders set Cst_CostSumme = @CstSumme where OrderId = @OrderId
+	END
+
+END
+GO
+
+
+
+20190206
+Trigger Example:
+CREATE TABLE [dbo].[Person](
+	[PersonId] [int] IDENTITY(1,1) NOT NULL,
+	[PersonName] [nvarchar](50) NOT NULL,
+	[AddressCount] int NOT NULL DEFAULT 0,
+	CONSTRAINT PK_Person PRIMARY KEY ([PersonId])
+)
+CREATE TABLE [dbo].[Person_Address](
+	[AddressId] int IDENTITY(1,1) NOT NULL,
+	[PersonId] int NOT NULL,
+	[AddressText] nvarchar(100) NOT NULL,
+	[ZIP] nvarchar(10) NOT NULL,
+	[Place] nvarchar(10) NOT NULL,
+	[CreateOn] datetime DEFAULT GETDATE() NOT NULL,
+	CONSTRAINT PK_Person_Address PRIMARY KEY (AddressId),
+	CONSTRAINT FK_Person_Person_Address FOREIGN KEY (PersonId) REFERENCES Person(PersonId) ON DELETE CASCADE
+)
+CREATE TRIGGER UpdatePersonOnAddressCount
+   ON  [dbo].[Person_Address]
+   AFTER INSERT,DELETE,UPDATE
+AS 
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @AddressCount int
+	DECLARE @PersonId int
+
+	SET @PersonId = (SELECT PersonId FROM inserted)
+	SET @AddressCount = (SELECT COUNT(*) FROM [Person_Address] WHERE PersonId = @PersonId)
+
+	UPDATE [Person] SET AddressCount = @AddressCount WHERE PersonId = @PersonId
+END
+
+
+INSERT INTO [dbo].[Person](PersonName) values ('Jackie'),('Mary')
+INSERT INTO [dbo].[Person_Address](PersonId,AddressText,ZIP,Place) values (1,'Bodnegger Str.48','88087','Grünkraut')
+
+
+--show cascade function(ON DELETE CASCADE)
+select AddressCount from Person
+INSERT INTO [dbo].[Person_Address](PersonId,AddressText,ZIP,Place) values (1,'Max Str.1','77012','Karlsruhe')
+select AddressCount from Person
+
+
+DROP TABLE [Person_Address]
+DROP TABLE [Person]
+
+
+20190205
+-- how to run a stored procedure?
+DECLARE @GaId varchar(30)
+
+DECLARE GaCursor CURSOR FOR
+select ga_id from ga_antraege
+
+OPEN GaCursor
+
+FETCH NEXT FROM GaCursor INTO @GaId
+
+WHILE @@FETCH_STATUS <> -1
+BEGIN
+
+	EXEC dbo.up_GA_Antraege_RefreshGutschriftsnummerHersteller @GaId = @GaId
+
+	FETCH NEXT FROM GaCursor INTO @GaId
+END
+
+CLOSE GaCursor
+DEALLOCATE GaCursor
+
+-- LAG & LEAD
+	SELECT *
+	FROM (
+		SELECT [GA_ID]
+			,[GA_POS_ID]
+			,[MAT_POS_ID]
+			,[GutschriftsnummerHersteller] AS Jetzt
+			,LAG(GutschriftsnummerHersteller) OVER (
+				PARTITION BY GA_ID
+				,GA_POS_ID
+				,MAT_POS_ID ORDER BY datum
+				) AS Vorher
+			,LEAD(GutschriftsnummerHersteller) OVER (
+				PARTITION BY GA_ID
+				,GA_POS_ID
+				,MAT_POS_ID ORDER BY datum
+				) AS Nachher
+		FROM [Knaus_WK3].[dbo].[LOG_GA_Antraege_Material]
+		) x
+	WHERE x.jetzt <> x.vorher
+		AND x.jetzt LIKE '0023______'
+		AND (
+			x.nachher IS NULL
+			OR x.nachher = x.jetzt
+		    )
+
+
+20190201
 -- search text in tablename and columnname
 INFORMATION_SCHEMA
 
@@ -8,3 +144,211 @@ WHERE       COLUMN_NAME LIKE '%MyName%'
 	    or TABLE_NAME LIKE '%MyName%'
 ORDER BY    TableName
             ,ColumnName;
+
+
+
+20190110
+FOR XML PATH('')
+----------------------------
+id value
+—————
+1 aa
+1 bb
+2 aaa
+2 bbb
+2 ccc
+
+想要得到
+1 aa,bb, 
+2 aaa,bbb,ccc,
+----------------------------
+
+SELECT id,    
+       [val]=( SELECT [value] +','
+               FROM tb AS b    
+               WHERE b.id = a.id    
+               FOR XML PATH('')  )    
+FROM tb AS a
+GROUP BY id
+
+20181212
+Get column count of a table:
+SELECT COUNT(*)
+  FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE table_name = 'KAT_Fahrzeuge'
+   --AND table_catalog = 'database_name'
+
+
+拷贝表1内容到表2，不成功的原因可能是因为表结构不同，或者有自动列，需要去除自动列拷贝
+
+// 得到所有非自动生成的列名
+select c.name, c.*
+ from sys.columns c
+inner join sys.tables t on c.object_id = t.object_id
+where t.name = 'GA_Antraege_Material' and is_computed = 0
+order by c.name
+
+Poor Man's T-SQL Formatter
+PlugIn for SSMS, VS, Notepad++
+Ctrl+K F
+
+20181001
+Trigger:
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		Nzh
+-- Create date: 01.10.2018
+-- Description:	bei neuer Position in [GA_Verlauf] ändern [GA_Antraege]/[LastStatusChange]
+-- =============================================
+CREATE TRIGGER TR_GA_Verlauf_I
+   ON  [dbo].[GA_Verlauf]
+   AFTER INSERT
+AS 
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for trigger here
+	UPDATE [GA_Antraege]
+		SET    [GA_Antraege].[LastStatusChange] = GetDate()
+		FROM   [GA_Antraege]
+			   JOIN inserted
+				 ON [GA_Antraege].[GA_ID] = inserted.[GA_ID]
+
+END
+GO
+
+
+
+20180912
+--从GA_Verlauf表中，选出最后StatusId
+select verl.GA_ID,verl.StatusId from 
+(
+select ga_id, max(datum) as MaxDatum
+from ga_verlauf
+group by ga_id
+) a
+inner join ga_verlauf verl on a.GA_ID = verl.GA_ID and a.MaxDatum = verl.Datum
+
+20180814
+--检验function foo是否存在，如存在则删之
+IF EXISTS (SELECT *
+           FROM   sys.objects
+           WHERE  object_id = OBJECT_ID(N'[dbo].[foo]')
+                  AND type IN ( N'FN', N'IF', N'TF', N'FS', N'FT' ))
+  DROP FUNCTION [dbo].[foo]
+
+GO
+
+
+--get path from id
+1)
+CREATE TABLE Software (
+    ID INT,
+    ParentID INT,
+    name VARCHAR(150)
+);
+
+INSERT INTO Software VALUES (1,0,'a'); 
+INSERT INTO Software VALUES (2,1,'b'); 
+INSERT INTO Software VALUES (3,1,'c'); 
+INSERT INTO Software VALUES (4,2,'d'); 
+
+目标：输入4，给出a;b;d
+
+2)
+CREATE FUNCTION fnTree(@ID int)
+RETURNS table AS
+RETURN
+(
+    WITH tree AS
+    (
+      SELECT c1.id, c1.ParentID, c1.name, path = cast(c1.name as varchar(300))
+      FROM dbo.[Software] c1
+      WHERE c1.ParentId = 0
+
+      UNION ALL
+
+      SELECT c2.id, c2.ParentID, c2.name, Path=Cast(tree.path+';'+cast(c2.name as varchar(100)) as varchar(300))
+      FROM dbo.[Software] c2 INNER JOIN tree ON tree.id = c2.ParentID
+    )
+    
+	SELECT tree.id, tree.path
+    FROM tree
+	where tree.id = @ID
+);
+
+20180808
+--Get all child by id
+https://dba.stackexchange.com/questions/191160/list-parent-then-nested-child-items-in-a-single-table
+1)
+CREATE TABLE Software (
+    ID INT,
+    name VARCHAR(150),
+    ParentID INT );
+
+INSERT INTO Software VALUES (1,'Main Product',NULL); 
+INSERT INTO Software VALUES (2,'Next Main Product',NULL); 
+INSERT INTO Software VALUES (3,'Addon Product',1); 
+INSERT INTO Software VALUES (4,'Addon Product',1); 
+INSERT INTO Software VALUES (5,'Sub-Addon Product',3);
+
+2)
+CREATE FUNCTION fnTree(@ID int)
+RETURNS table AS
+RETURN
+(
+    WITH tree AS
+    (
+      SELECT c1.id, c1.parentId, c1.name, [level] = 1, path = cast(c1.id as varchar(100))
+      FROM dbo.[software] c1
+      WHERE c1.id = @ID
+      UNION ALL
+      SELECT c2.id, c2.parentId, c2.name, [level] = tree.[level] + 1, Path=Cast(tree.path+'/'+cast(c2.id as varchar(10)) as varchar(100))
+      FROM dbo.[software] c2 INNER JOIN tree ON tree.id = c2.parentId
+    )
+    SELECT tree.path, tree.id, parentId, REPLICATE('  ', tree.level - 1) + tree.name as name
+    FROM tree
+);
+GO
+
+20180720
+日期时间-->日期
+2008-09-22 15:24:13.790 --> 2008-09-22
+SELECT CONVERT(date, getdate())
+
+如果NULL返回0
+SELECT ISNULL(myColumn, 0) FROM myTable
+
+
+20180713
+把LiveDb的一个表拷贝到TestDb（仅内容）
+insert into GA_Fehlerorte
+select * from [SQL-06].[Adria_WK3].dbo.GA_Fehlerorte 
+
+把LiveDb的一个表拷贝到TestDb（表结构和内容）
+select * into GA_Fehlerorte2
+from [SQL-06].[Adria_WK3].dbo.GA_Fehlerorte
+
+20180710
+把表tblSource的内容拷贝到tblTarget中
+insert into tblTarget
+select * from tblSource
+
+excel和sql server可以通过task/import导入
+
+
+20180705
+删除GA_Verlauf中的最后一行
+WITH  q AS
+        (
+        SELECT TOP 1 *
+        FROM    mytable
+        /* You may want to add ORDER BY here */
+        )
+DELETE
+FROM    q
