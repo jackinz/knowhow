@@ -1,0 +1,26 @@
+﻿
+20190131
+OnClientClick和OnClick不能同时使用，同时使用会不稳定
+应该在OnClick中使用js
+Page.ClientScript.RegisterStartupScript(GetType(), "SpeichernCloseWindow", "Speichern_Click();", true);
+其中Speichern_Click()是js
+        function Speichern_Click() {
+        	GetRadWindow().Close({ refreshGrid: true });
+	}
+
+20190129
+telerik:RadGridDateTimeColumn DataFormatString="{0:d}" DataType="System.DateTime"
+两个声明要一起用，nullable的datetime才可以在filter中正常使用
+不然，会报string和nullableDatetime类型冲突
+
+在js中使用grid中的datafield(keyName,keyValue)
+<telerik:RadGrid>
+	<MasterTableView ClientDataKeyNames="MyId" />
+</telerik:RadGrid>
+
+function GetSelectedGridRows() {
+	rows = $find(gridId).get_masterTableView().get_selectedItems();
+	for(var i = 0; i < rows.length; i++){
+		var rowMyId = row.getDataKeyValue("MyId")
+	}
+}
