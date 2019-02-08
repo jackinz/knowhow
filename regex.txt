@@ -1,4 +1,4 @@
-()	分组
+﻿()	分组
 []	一位
 {}	重复次数
 
@@ -35,6 +35,16 @@ a.*z
 例3
 a或A开头，长度为3的单词
 \b[aA][a-z]{2}\b
+
+例4
+取出所需字段
+                var match = Regex.Match("1000-50", @"\b(\w+)\-(\d{2})\b", RegexOptions.IgnoreCase);
+                if (match.Success)
+                {
+                    customerId = match.Groups[1].Value;
+                    id = match.Groups[2].Value;
+                }
+Regex.Match().Success == Regex.IsMatch()
 
 ---------------------------------
 Regular Expression
