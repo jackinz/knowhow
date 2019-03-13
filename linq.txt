@@ -1,4 +1,11 @@
-﻿20181203
+﻿20190313
+left join, the first match
+	join sb in DAL.Context.Current.GA_Sachbearbeiter on reg.SachbearbeiterUserId equals sb.UserId into sb_join
+	from sb in sb_join.DefaultIfEmpty().Take(1)
+
+join sb in DAL.Context.Current.GA_Sachbearbeiter.Take(1)是错的！
+
+20181203
 categories LEFT JOIN products:
 var q =
     from c in categories
