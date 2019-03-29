@@ -1,4 +1,9 @@
-﻿20190205
+﻿20190328
+check object existing
+c#	if(cObj != null)
+js	if(jObj)
+
+20190205
 -- class in js
 var xiaoming = {
     name: '小明',
