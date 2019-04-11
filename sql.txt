@@ -352,3 +352,8 @@ WITH  q AS
         )
 DELETE
 FROM    q
+
+20180101
+select * from tbl
+SSMS Tools: ssf
+Poor Man's SQL Formatter: Ctrl+K,F

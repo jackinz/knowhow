@@ -1,0 +1,3 @@
+﻿20190403
+黑白显示整个网页
+body{-webkit-filter: grayscale(100%);}
