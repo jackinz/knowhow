@@ -1,0 +1,17 @@
+﻿20190325
+eura.js的valid方法，在其他Protokols里面也用到了
+
+20190327
+telerik的numeric textbox在不同语言下会有不同的分段方式，比如
+德语	1,234
+英语	1.234
+法语	1 234
+都是表示1234。
+最后telerik control用telerik的一套方法，而不是jquery的一套方法终极解决
+
+20190423
+在BL中删除了一个GAO中没用的methode，结果这个methode在Fahrzeugakteview中用到了
+
+20190424
+query的toList()很占资源，只能在最后用一次。
+用2次，archive页load用时30s，用1次，load时间变为3s

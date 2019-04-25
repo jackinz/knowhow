@@ -1,0 +1,15 @@
+﻿编程语言：JS、Java、SQL、PHP、Python、C#
+框架，库：Node.js、Xamarin、React、Vue、Angular、.NET Core
+包管理：npm、yarn、NuGet
+版本管理：Git(GitHub, GitLab, BitBucket)、TFS
+
+客户端框架：React、Vue、Angular
+服务器端：PHP、Node.js
+
+2018年全栈工程师
+HTML5
+CSS3
+Javascript
+React.js
+Node.js + Express.js
+PostgreSQL
