@@ -23,6 +23,9 @@ git add . && git commit -m "MyCommentar"
 git pull
 git push -u origin master
 
+git status && git pull && git push
+git add . && git commit -m "trivial" && git push
+
 查看当前状态
 git status
 git pull
