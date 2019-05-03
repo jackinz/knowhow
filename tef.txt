@@ -1,4 +1,25 @@
-﻿20190325
+﻿20190503
+linq query:
+...
+select new  RuecklieferungPositionListItem {
+	GedrucktSchadteilanhaenger = string.IsNullOrWhiteSpace(g.Key.BarcodeId) // 不能写成g.Key.BarcodeId != null ?  : 1;
+	Mahnung1 = ruecklieferung.Fristende == null ? string.Empty : ruecklieferung.Fristende // 不能写成Mahnung1 = ruecklieferung.Fristende != null ? ruecklieferung.Fristende : string.Empty,
+}
+
+
+20190502
+数据库只是用来存储正确的数据。
+数据储存用数据库，逻辑运算用程序。分分清，如果让数据库做运算就会造成性能低下。比如：
+name = forename + " " + surname。这个逻辑在view中使用，页面加载时间超过30s，如果用cs实现，加载时间小于2s。一个可能的原因是forename和surname会为null，数据库做运算时不报错，但会性能低下。
+
+20190424
+query的toList()很占资源，只能在最后用一次。
+用2次，archive页load用时30s，用1次，load时间变为3s
+
+20190423
+在BL中删除了一个GAO中没用的methode，结果这个methode在Fahrzeugakteview中用到了
+
+20190325
 eura.js的valid方法，在其他Protokols里面也用到了
 
 20190327
@@ -7,11 +28,6 @@ telerik的numeric textbox在不同语言下会有不同的分段方式，比如
 英语	1.234
 法语	1 234
 都是表示1234。
-最后telerik control用telerik的一套方法，而不是jquery的一套方法终极解决
+最后telerik control用telerik的一套方法，而不是jquery的一套方法终极解
 
-20190423
-在BL中删除了一个GAO中没用的methode，结果这个methode在Fahrzeugakteview中用到了
 
-20190424
-query的toList()很占资源，只能在最后用一次。
-用2次，archive页load用时30s，用1次，load时间变为3s
