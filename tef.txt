@@ -1,4 +1,12 @@
-﻿20190503
+﻿20190507
+view使用sql server的cache
+尽量不要使用view
+
+在aspx使用server端的数据
+<%= ServerField %>
+
+
+20190503
 linq query:
 ...
 select new  RuecklieferungPositionListItem {
