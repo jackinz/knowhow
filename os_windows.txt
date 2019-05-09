@@ -1,0 +1,6 @@
+20190509
+shortcuts
+win
+win+pause	open System
+win+x		quick menu
+win+tab		time line

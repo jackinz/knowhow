@@ -1,0 +1,11 @@
+20190509
+<% %>	An embedded code block is server code that executes during the page's render phase.
+<%= %>	is a short cut for Response.Write.
+<%# %>	<%# data-binding expression %> for use in databound controls
+<%$ %> ASP.NET Expression.
+<%@ %> Directive Syntax. to include a namespace, page directives, etc.
+<%-- --%> Server-Side Comments.
+<%: %> Like <%= %> But HtmlEncodes the output
+
+page events
+PreInit, Init, Load, PreRender
