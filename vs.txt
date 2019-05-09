@@ -1,4 +1,4 @@
-20190509
+﻿20190509
 #if DEBUG
             ScriptReference scriptRefGarantieantrag = this.scriptHelpers.GetVersionedScriptReference(this, "~/Scripts/Garantieantrag.js");
             this.RadScriptManager1.Scripts.Add(scriptRefGarantieantrag);
@@ -7,6 +7,56 @@
             ScriptReference scriptRefGarantieantragMin = this.scriptHelpers.GetVersionedScriptReference(this, "~/Scripts/Garantieantrag.min.js");
             RadScriptManager1.Scripts.Add(scriptRefGarantieantragMin);
 #endif
+
+
+发送Email
+1,
+                var nachricht = "Garantieantrag.cs >> CreateNew(customer=" + user.CompID + ",forCustomer=" + forCustomerId + ",fahrzeug=" + fahrzeug.FahrzeugId + ")" + " konnte keine neue GaId erzeugen!";
+                Lib.Log.WriteLog(nachricht);
+                Lib.Log.SendErrorMail(nachricht);
+2,
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
+using System.Linq;
+using System.Net.Mail;
+using System.Text;
+
+namespace TEF.BLL.GAO.Lib
+{
+    using TEF.Net.Mail;
+
+    internal static class Log //REVIEW (Boris): einheitlicher Logger für alle Anwendungen. Am besten über Tef.Common realisieren.
+    {
+        internal static void WriteLog(string text)
+        {
+            var sw = new StreamWriter(@"D:\Logs\TEF.BLL.GAO.txt", true, Encoding.Default);
+            sw.Write(text + Environment.NewLine);
+            sw.Close();
+        }
+
+        internal static void SendErrorMail(string nachricht)
+        {
+            try
+            {
+                var mail = new MailMessage();
+                mail.From = new MailAddress("n.zhou@tef.de");
+                mail.To.Add(new MailAddress("n.zhou@tef.de"));
+                mail.To.Add(new MailAddress("a.krieger@tef.de"));
+                mail.Subject = "Fehler in GA2";
+                mail.Body = nachricht;
+                MailQueue.AddMessage(mail, "SendErrorMail", "TEF.BLL.GAO.Lib.Log", 0);
+            }
+            catch (Exception ex)
+            {
+                WriteLog("Fehler beim Senden der ErrorMail" + Environment.NewLine + "Fehlermeldung: " + ex.Message);
+            }
+        }
+    }
+}
+
+
 
 20190219
 Breakpoint does not work
