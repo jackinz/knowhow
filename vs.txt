@@ -1,2 +1,14 @@
+20190509
+#if DEBUG
+            ScriptReference scriptRefGarantieantrag = this.scriptHelpers.GetVersionedScriptReference(this, "~/Scripts/Garantieantrag.js");
+            this.RadScriptManager1.Scripts.Add(scriptRefGarantieantrag);
+#else
+
+            ScriptReference scriptRefGarantieantragMin = this.scriptHelpers.GetVersionedScriptReference(this, "~/Scripts/Garantieantrag.min.js");
+            RadScriptManager1.Scripts.Add(scriptRefGarantieantragMin);
+#endif
+
 20190219
-Breakpoint works in Debug Modus
+Breakpoint does not work
+1) not in Debug Modus
+2) js must be run in IE, otherwise add "debugger" in js or F12
