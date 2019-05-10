@@ -1,3 +1,17 @@
+﻿20190510
+#if DEBUG
+            ScriptReference scriptRefGarantieantrag = this.scriptHelpers.GetVersionedScriptReference(this, "~/Scripts/Garantieantrag.js");
+            this.RadScriptManager1.Scripts.Add(scriptRefGarantieantrag);
+#else
+
+            ScriptReference scriptRefGarantieantragMin = this.scriptHelpers.GetVersionedScriptReference(this, "~/Scripts/Garantieantrag.min.js");
+            RadScriptManager1.Scripts.Add(scriptRefGarantieantragMin);
+#endif
+
+
+Web/Start Action/Specific Page路径区分大小写
+Garantie/Garantieantrag.aspx?login=1000-50&pass=$$Jack18,.&gaid=GA1000-19-0009
+
 20190509
 <% %>	An embedded code block is server code that executes during the page's render phase.
 <%= %>	is a short cut for Response.Write.

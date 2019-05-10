@@ -1,14 +1,17 @@
-﻿20190509
-#if DEBUG
-            ScriptReference scriptRefGarantieantrag = this.scriptHelpers.GetVersionedScriptReference(this, "~/Scripts/Garantieantrag.js");
-            this.RadScriptManager1.Scripts.Add(scriptRefGarantieantrag);
-#else
+﻿20190510
+--snippets
+https://docs.microsoft.com/de-de/visualstudio/ide/visual-csharp-code-snippets?view=vs-2019
+if tab
+prop
+propfull
+ctor
+~
 
-            ScriptReference scriptRefGarantieantragMin = this.scriptHelpers.GetVersionedScriptReference(this, "~/Scripts/Garantieantrag.min.js");
-            RadScriptManager1.Scripts.Add(scriptRefGarantieantragMin);
-#endif
+--snippet surround with
+choose code, then ctrl+k, ctrl+s
 
 
+20190509
 发送Email
 1,
                 var nachricht = "Garantieantrag.cs >> CreateNew(customer=" + user.CompID + ",forCustomer=" + forCustomerId + ",fahrzeug=" + fahrzeug.FahrzeugId + ")" + " konnte keine neue GaId erzeugen!";
