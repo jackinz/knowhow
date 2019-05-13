@@ -7,3 +7,4 @@ echo Hello World
 
 --wait for a key press to close cmd window
 set /p DUMMY=Hit ENTER to continue...
+set /p=
