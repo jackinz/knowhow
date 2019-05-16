@@ -1,9 +1,38 @@
+20190515
+--all checkin
+@echo off
+c:
+echo // all checkin begin
+cd c:\users\n.zhou\github\languages
+git add . && git commit -m "trivial" && git push
+cd c:\users\n.zhou\github\knowhow
+git add . && git commit -m "trivial" && git push
+cd c:\users\n.zhou\github\diary
+git add . && git commit -m "trivial" && git push
+echo // all checkin end
+set /p=
+
+--all checkout
+@echo off
+c:
+echo // all checkout begin
+cd c:\users\n.zhou\github\languages
+git pull
+cd c:\users\n.zhou\github\knowhow
+git pull
+cd c:\users\n.zhou\github\diary
+git pull
+echo // all checkout end
+set /p=
+
 20190509
 .bat or .cmd
 
 @echo off
 echo Hello World
 
+--emtpy line
+echo.
 
 --wait for a key press to close cmd window
 set /p DUMMY=Hit ENTER to continue...

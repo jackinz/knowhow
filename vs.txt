@@ -1,11 +1,13 @@
 ﻿20190510
 --snippets
 https://docs.microsoft.com/de-de/visualstudio/ide/visual-csharp-code-snippets?view=vs-2019
-if tab or if tab tab
+if tab tab
 prop tab tab
-propfull
-ctor
-~
+ctor tab tab
+~ tab tab
+
+propfull tab
+foreach tab
 
 --snippet surround with
 choose code, then ctrl+k, ctrl+s
