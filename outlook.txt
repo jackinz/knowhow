@@ -1,3 +1,7 @@
+20190524
+cmd中输入outlook.exe /safe
+可以最简打开outlook，所谓最简就是不加载addin
+
 20190205
 -- call back an E-Mail
 1) open E-Mail in Gesendet

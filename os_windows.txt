@@ -1,5 +1,5 @@
 20190509
-shortcuts
+shortcuts：
 win
 win+pause	open System
 win+x		quick menu
