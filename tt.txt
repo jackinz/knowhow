@@ -1,0 +1,5 @@
+20190528
+Text Template
+
+run custom tool
+always works, even solution is running

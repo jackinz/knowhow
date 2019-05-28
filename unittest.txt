@@ -1,0 +1,14 @@
+20190528
+通过vs/Tools/NuGet中安装NUnit和Adapter
+
+lib: NUnit.Framework
+[TestFixture]
+public class MyLogicTest
+{
+	[TestCase(15.2, 1.152)]
+	
+	[Test]
+	public void MyMethod()
+	{
+	}
+}

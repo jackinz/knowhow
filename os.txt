@@ -1,0 +1,14 @@
+unix 60后，1969年
+linux 90后，1991年
+ubuntu 2014年
+
+--desktop
+unix	hp航空，ibm银行，sun电信
+unix-linux	RedHut, Suse, Ubuntu
+apple	unix-ios
+ms	dos-windows
+
+--mobile platform
+apple	unix-ios
+google	linux-android
+已阵亡：微软的Windows手机系统与三星的Tizen系统、诺基亚的塞班系统
