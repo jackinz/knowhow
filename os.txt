@@ -11,4 +11,4 @@ ms	dos-windows
 --mobile platform
 apple	unix-ios
 google	linux-android
-已阵亡：微软的Windows手机系统与三星的Tizen系统、诺基亚的塞班系统
+已阵亡：微软的Windows手机系统、三星的Tizen系统与诺基亚的塞班系统
