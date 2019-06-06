@@ -1,4 +1,9 @@
-﻿20190207
+﻿20190606
+拷贝表1内容到表2
+1，使用insert into
+2，不能包含自动生成列，自增ID列
+
+20190207
 Trigger Oder Pos:
 CREATE TRIGGER [dbo].[Trg_OrderPos_IUD]
    ON  [dbo].[OrderPos] 
@@ -201,7 +206,7 @@ GO
 -- =============================================
 -- Author:		Nzh
 -- Create date: 01.10.2018
--- Description:	bei neuer Position in [GA_Verlauf] ändern [GA_Antraege]/[LastStatusChange]
+-- Description:	bei neuer Position in [GA_Verlauf] ändern [GA_Antraege]/[LastStatusChange] (DateTime)
 -- =============================================
 CREATE TRIGGER TR_GA_Verlauf_I
    ON  [dbo].[GA_Verlauf]

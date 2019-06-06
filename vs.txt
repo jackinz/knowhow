@@ -1,4 +1,18 @@
-﻿20190510
+﻿20190606
+good editor
+1) formatter
+2) snippets
+3) IntelliSense
+
+shortcut
+ctrl + ., enter	remove unused namespace
+
+TFS
+compare with workspace		和工作开始时的版本比较
+compare with latest version	和最新版本比较，如果在工作期间没人提交新的版本，则workspace = latest version
+
+
+20190510
 --snippets
 https://docs.microsoft.com/de-de/visualstudio/ide/visual-csharp-code-snippets?view=vs-2019
 if tab tab

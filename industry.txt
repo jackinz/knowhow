@@ -1,4 +1,50 @@
-﻿编程语言：JS、Java、SQL、PHP、Python、C#
+﻿20190606
+Node.js ist ein JavaScript-basiertes Anwendungsframework zur Entwicklung schneller, skalierbarer Netzwerk-Anwendungen. 
+Herzstück ist Googles V8-JavaScript-Engine, die ursprünglich für Chrome entwickelt wurde. 
+Die Engine erhöht die Performance, indem sie JavaScript direkt in nativen Maschinencode kompiliert (Just-In-Time-Kompilierung).
++++ gleichzeitigen Verarbeitung mehrerer Client-Verbindungen
+
+https://en.wikipedia.org/wiki/List_of_JavaScript_libraries
+--Graphical/visualization (canvas or SVG related)
+See also: List of JavaScript graphics libraries
+AnyChart
+D3.js
+FusionCharts
+Highcharts
+JavaScript InfoVis Toolkit
+p5.js
+Pixi.js
+Plotly !!!
+Processing.js
+Raphaël
+SWFObject
+Teechart
+Three.js
+Velocity.js
+Verge3D
+WhitestormJS
+
+--GUI (Graphical user interface) and widget related
+Angular (application platform) by Google
+AngularJS by Google
+Bootstrap
+Dojo Widgets
+Ext JS by Sencha
+Foundation by ZURB
+jQuery UI
+jQWidgets
+OpenUI5 by SAP
+Polymer (library) by Google
+qooxdoo
+React.js
+SmartClient
+UIkit by YOOtheme
+Vue.js
+Webix
+WinJS
+
+20190425
+编程语言：JS、Java、SQL、PHP、Python、C#
 框架，库：Node.js、Xamarin、React、Vue、Angular、.NET Core
 包管理：npm、yarn、NuGet
 版本管理：Git(GitHub, GitLab, BitBucket)、TFS
