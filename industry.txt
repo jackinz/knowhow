@@ -12,11 +12,11 @@ D3.js
 FusionCharts
 Highcharts
 JavaScript InfoVis Toolkit
-p5.js
-Pixi.js
+p5.js !!! Examples/drawing
+Pixi.js	动画
 Plotly !!!
 Processing.js
-Raphaël
+Raphaël !!!
 SWFObject
 Teechart
 Three.js
