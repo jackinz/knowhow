@@ -1,0 +1,38 @@
+20190612
+--HttpModule in web.config
+1, checkSession; 2, log and email
+
+--Default : BasePage : Page
+-BasePage
+1, protected override void InitializeCulture()
+2, protected void SetColumnVisibleBase(TefRadGrid RadGrid)
+3, protected override void OnInit(EventArgs e) // add .js
+            base.OnInit(e);
+            ScriptHelpers scriptHelpers = new ScriptHelpers();
+
+	    var dl = scriptHelpers.GetVersionedScriptPath(this, Page.ResolveUrl("~/Scripts/HerstellerLogik/DefaultLogic.js"));
+            Page.ClientScript.RegisterClientScriptInclude(GetType(), "ClientDefaultLogic", dl);
+
+            var hl = scriptHelpers.GetVersionedScriptPath(this, Page.ResolveUrl("~/Scripts/HerstellerLogik/" + Lib.GaoConfiguration.Herstellername + ".js"));
+            Page.ClientScript.RegisterClientScriptInclude(GetType(), "ClientHerstellerLogic", hl);
+
+
+-Page
+1, DataContext
+
+--得到版本号
+typeof(Page).Assembly.GetName().Version.ToString()
+System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()
+
+--Email
+SmtpClient
+
+var smtpClient = new SmtpClient(XXX.Common.Configuration.GlobalConfiguration.Maileinstellungen.MailSmtpHost);
+var message = new MailMessage("GA2 <" + GaoConfiguration.GaoMailSenderAddress + ">", "edv@xxx.de", "Fehler GA2 - " + Environment.MachineName, text);
+smtpClient.Send(message);
+
+--Log
+FileStream, StreamWriter
+
+--DB
+edmx
