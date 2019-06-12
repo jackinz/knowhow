@@ -1,0 +1,20 @@
+20190610
+https://www.bilibili.com/video/av46523875
+参考资料
+www.entityframeworktutorial.net
+
+版本
+5.0，6.0
+
+Db first --> Model first --> Code first
+ORM, Object Relation Db Mapping
+
+ADO.NET实体数据模型：可视化工具
+
+
+1，Add Connection/Server name: .\SQLEXPRESS
+2，如果没有主键，edmx就会自动忽略该表
+3，SQL表结构变化不能保存：Tools/Options/Designers/Prevent saving changes that require table re-creation
+
+.dbml	Project right click/Add New Item/LINQ to SQL Classes
+.edmx	Project right click/Add New Item/ADO.NET Entity Data Model
