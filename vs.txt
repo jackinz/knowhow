@@ -1,4 +1,8 @@
-﻿20190606
+﻿20190613
+File nesting
+在Solution Explorer里面右键菜单可见
+
+20190606
 good editor
 1) formatter
 2) snippets
