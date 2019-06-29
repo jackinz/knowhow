@@ -1,0 +1,24 @@
+20190628
+1，前端历史包袱重
+Web生态		since 1990
+移动生态	since 2008
+
+2，是什么和为什么
+全局变量
+前加“window.”
+比如window.msg
+
+node类似browser
+ 
+在a.js中定义
+var msg = 'Yo'
+module.exports = {msg: msg}
+
+在b.js中使用
+var msg = require('./b').msg;
+
+最后把a.js和b.js打包成bundle.js
+
+index.html中只使用bundle.js
+
+3，安装和配置webpack

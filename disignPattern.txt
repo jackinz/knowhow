@@ -1,0 +1,40 @@
+20190628
+--Disign Pattern
+构造器模式
+原型模式
+构建者模式
+工厂模式
+抽象模式
+单例模式
+
+
+--构造器模式
+软件必须要首先考虑可维护性，只有测试代码和玩具怎么快怎么来。
+js中缺类，es6加上了类
+{}表示一个对象
+
+var whh = {};
+whh.name = '王花花';
+whh.gender = '女';
+
+var lsd = {};
+lsd.name = '李栓蛋';
+lsd.gender = '男';
+
+特点：数据不一样，结构一样
+ES5
+function Student(name, gender)
+{
+	this.name = name;
+	this.gender = gender;
+}
+
+ES6
+class Student{
+	constructor(name, gender){
+		this.name = name;
+		this.gender = gender;
+		this.score = 100;
+	}
+}
+
