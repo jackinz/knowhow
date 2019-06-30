@@ -9,7 +9,7 @@ Web生态		since 1990
 比如window.msg
 
 node类似browser
- 
+
 在a.js中定义
 var msg = 'Yo'
 module.exports = {msg: msg}

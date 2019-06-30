@@ -8,7 +8,23 @@
 单例模式
 
 
---构造器模式
+--构造器模式 constructor
+class Student {
+    constructor(name, gender, score) {
+        this.name = name;
+        this.gender = gender;
+        this.score = score;
+    }
+    
+    sayHello() {
+        return `My name is ${this.name} and I'm ${this.gender}`;
+    }
+	
+	this.wrongScore = function(){
+		return 100 - this.score;
+	}
+}
+
 软件必须要首先考虑可维护性，只有测试代码和玩具怎么快怎么来。
 js中缺类，es6加上了类
 {}表示一个对象
@@ -38,3 +54,8 @@ class Student{
 	}
 }
 
+
+--原型模式 prototpye
+Student.prototype.wrongScore = function () {
+    return 100 - this.score;
+};

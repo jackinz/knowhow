@@ -1,4 +1,8 @@
-﻿20190606
+﻿20190630
+Oracle收购了(Sun-Java 2009，MySQL)
+Adobe收购了(Macromedia-Photoshop 2005)
+
+20190606
 Node.js ist ein JavaScript-basiertes Anwendungsframework zur Entwicklung schneller, skalierbarer Netzwerk-Anwendungen. 
 Herzstück ist Googles V8-JavaScript-Engine, die ursprünglich für Chrome entwickelt wurde. 
 Die Engine erhöht die Performance, indem sie JavaScript direkt in nativen Maschinencode kompiliert (Just-In-Time-Kompilierung).
