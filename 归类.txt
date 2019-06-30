@@ -21,7 +21,8 @@ Snippets
 
 --Package Manager
 NuGet
-NPM
+npm
+yarn
 
 --Code Manager
 TFS
@@ -42,7 +43,6 @@ Apache	on Linux
 nginx	on Linux
 lighthttpd	on Linux
 
-
-
-
-
+--浏览器
+chrome
+firefox

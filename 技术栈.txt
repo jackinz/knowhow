@@ -1,0 +1,9 @@
+20190630
+nodejs中带npm
+bootstrap中带normalize.css
+
+js
+开发工具：WebStorm
+包管理：node，npm，webpack
+浏览器：chrome
+前端框架：vue，react，angular

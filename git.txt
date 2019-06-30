@@ -39,15 +39,6 @@ git --version
 git(git)-TFS
 npm(node)-NuGet
 
-IDE
-1, reference
-2, code manage
-3, unittest
-4, intellisence
-5, snippets
-
-
-
 git config --global user.name "nzh"
 git config --global user.email
 git config -l	//查看配置

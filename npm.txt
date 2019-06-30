@@ -9,6 +9,14 @@ npm i （没有node_modules，只有package.json的情况下，自动添加node_
 
 同类产品:yarn, NuGet
 
+可以安装的包有：
+npm
+webpack
+jquery
+vue
+bootstrap
+normalize.css
+
 Methode1: js, css in project (local)
 Methode2: js, css in cdn (server)
 Methode3: js, css in project (local, npm)

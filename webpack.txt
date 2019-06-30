@@ -2,6 +2,7 @@
 1，前端历史包袱重
 Web生态		since 1990
 移动生态	since 2008
+解决新需求和旧标准之间的矛盾
 
 2，是什么和为什么
 全局变量
@@ -11,14 +12,36 @@ Web生态		since 1990
 node类似browser
 
 在a.js中定义
+window.msg = 'Yo' //老方法，全局变量，让人不踏实
+
 var msg = 'Yo'
 module.exports = {msg: msg}
 
 在b.js中使用
 var msg = require('./b').msg;
 
-最后把a.js和b.js打包成bundle.js
+最后把a.js和b.js打包成bundle.js：
+webpack a.js bundle.js
 
 index.html中只使用bundle.js
 
 3，安装和配置webpack
+mpm init -y 
+npm i webpack -g //全局安装
+webpack a.js -o bundle.js
+
+4，entry和output
+module.exports = {
+	entry:{
+		home:'./js/h.js',
+		base:'./js/b.js',
+	}
+	output:{
+		filename: '[name].bundle.js',
+		path:__dirname + '/dist',
+	}
+}
+
+ES6
+生产 export {open};
+消费 import {open} from './base';
