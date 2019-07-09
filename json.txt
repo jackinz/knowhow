@@ -1,0 +1,21 @@
+20190706
+json schema
+"type":"object",
+"properties":{}
+
+"type":"array",
+"items":{}
+
+20190703
+json是xml的替代格式
+有{对象}和[数组]，没有()
+
+基本形式是：“键”:“值”
+
+保证结构和数值范围正确可以用schema（和xml，xml schema类似）
+自动生成schema
+https://www.npmjs.com/package/json-schema-generator
+
+这个schema中有个坑
+对于数组，schema中的 "required": [] 要去除
+

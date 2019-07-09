@@ -1,9 +1,12 @@
+﻿20190702
+Geany		Linux	$sudo
+SublimeText	OS
+
 20190628
 Atom
 SublimeText
 Notepad++
 VS Code
-
 
 --SublimeText
 下载（www.sublimetext.com），安装，运行

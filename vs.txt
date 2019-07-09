@@ -1,4 +1,8 @@
-﻿20190613
+﻿20190706
+formatter json
+shift + alt + f
+
+20190613
 File nesting
 在Solution Explorer里面右键菜单可见
 
