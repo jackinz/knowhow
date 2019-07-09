@@ -1,6 +1,15 @@
 ﻿our ability to learn faster than your competition is your only sustainable competitive advantage. - Arie de Gues
 
 --------------------常用命令--------------------
+// 在新机上拉一个respository
+1，下载安装git
+2，git clone https://github.com/jackinz/knowhow.git
+
+// 在新机上上传改动
+1，git config --global user.name "nzh"
+2，git config --global user.email "2010"
+3，git add . && git commit -m "trivial" && git push
+
 // 本地
 git init
 git status
@@ -26,6 +35,7 @@ git push -u origin master
 git status && git pull && git push
 git add . && git commit -m "trivial" && git push
 
+
 查看当前状态
 git status
 git pull
@@ -36,7 +46,7 @@ www.git-scm.com
 git --version
 
 // Think
-git(git)-TFS
+git(gitHub，gitLab)-TFS
 npm(node)-NuGet
 
 git config --global user.name "nzh"

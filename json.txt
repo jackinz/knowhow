@@ -12,6 +12,9 @@ json是xml的替代格式
 
 基本形式是：“键”:“值”
 
+自动格式化
+http://jsformat.com/javascript-format.html#
+
 保证结构和数值范围正确可以用schema（和xml，xml schema类似）
 自动生成schema
 https://www.npmjs.com/package/json-schema-generator
@@ -19,3 +22,5 @@ https://www.npmjs.com/package/json-schema-generator
 这个schema中有个坑
 对于数组，schema中的 "required": [] 要去除
 
+Schema Reference
+https://json-schema.org/understanding-json-schema/reference/numeric.html

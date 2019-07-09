@@ -1,0 +1,5 @@
+20190709
+https://pip.pypa.io/en/stable/installing/
+
+下载get-pip.py后，cmd运行
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py

@@ -1,3 +1,12 @@
+﻿20190709
+PythonWeb全栈
+Html+Css+Javascript+Python+Django
+或者
+Html+Css+Javascript+Python+Flask
+
+python的源生包管理pip
+nodejs的源生包管理npm
+
 20190630
 nodejs中带npm
 bootstrap中带normalize.css
@@ -7,3 +16,9 @@ js
 包管理：node，npm，webpack
 浏览器：chrome
 前端框架：vue，react，angular
+
+
+python
+Web框架	Django
+人脸识别库	insightface
+Unet

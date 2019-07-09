@@ -1,4 +1,4 @@
-20190630
+﻿20190630
 --IDE
 VisaulStudio	.NET
 IntelliJ		Java
@@ -19,10 +19,11 @@ Intellisense
 Snippets
 
 
---Package Manager
-NuGet
-npm
-yarn
+--Package Manager（包管理工具）
+NuGet (vs)
+npm (nodejs)
+yarn 
+pip (python)
 
 --Code Manager
 TFS
