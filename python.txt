@@ -1,4 +1,8 @@
-20100709
+20190711
+Python Web Django onto IIS
+https://www.youtube.com/watch?v=kXbfHtAvubc
+
+20190709
 Python适合快速开发，C/C++适合高性能硬件
 
 Python是动态语言，它不像其他的静态语言如C、Pascal那样需要书写声明语句。

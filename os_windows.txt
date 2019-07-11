@@ -1,6 +1,13 @@
-20190509
+﻿20190509
 shortcuts：
 win
 win+pause	open System
 win+x		quick menu
+
+多屏
 win+tab		time line
+ctrl+win+左右	切换屏幕
+
+分屏
+用鼠标把目标拖到四角或左右两边	分屏显示
+win+上下左右	移动目标到不同的分屏
