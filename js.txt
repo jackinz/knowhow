@@ -1,4 +1,36 @@
-﻿20190328
+﻿20190711
+一页说明jQuery何时取得control
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function() {
+            alert($("#img1").length);
+        });
+
+        function msg() {
+            alert($("#img1").length);
+         }
+
+         alert("before: " + $("#img1").length);
+    </script>
+</head>
+<body>
+  <img src="http://www.bodenai.com/styles/default/images/logo_m.png" id="img1"/>
+  <input type="button" value="OK" onclick="msg()"/>
+
+  <script>
+    alert("behind: " + $("#img1").length);
+  </script>
+</body>
+</html>
+
+
+20190328
 check object existing
 c#	if(cObj != null)
 js	if(jObj)

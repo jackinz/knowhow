@@ -1,0 +1,11 @@
+20190711
+和cmd相似，但是比cmd强大，是cmd的超集
+4+3
+Get-Date
+Get-Service
+Get-Process
+Get-Service Spooler	看打印机是否工作
+$a = Get-Date
+$b = [datetime]"2020-2-14"
+3 -gt 4
+3 -lt 4

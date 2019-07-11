@@ -1,4 +1,15 @@
-﻿20190706
+﻿20190711
+发布
+https://docs.microsoft.com/zh-cn/dotnet/framework/deployment/deployment-guide-for-developers#clickonce-deployment
+1，ClickOnce部署
+2，InstallAware部署（不大用）
+3，InstallShield部署（没有）
+4，WindowsInstallerXML（WiX）部署
+从2015开始，传统的Installer已经取消的，需要在扩展里安装Installer Projects，究其原因，现在光驱都不用了，一水的网上下载安装。
+
+ClickOnce部署：项目，右键属性，左边发布，系统必备组件，选择，确定，立即发布。
+
+20190706
 formatter json
 shift + alt + f
 
