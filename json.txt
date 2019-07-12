@@ -1,3 +1,31 @@
+20190712
+json
+{
+	"X": 76.69,
+	"Y": 79.22
+}
+
+schema
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "X": {
+            "type": "number",
+            "multipleOf": 0.01
+        },
+        "Y": {
+            "type": "number",
+            "multipleOf": 0.01
+        }
+    },
+    "required": [
+        "X",
+        "Y"
+    ]
+}
+
 20190706
 json schema
 "type":"object",

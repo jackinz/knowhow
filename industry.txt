@@ -50,8 +50,8 @@ WinJS
 20190425
 编程语言：JS、Java、SQL、PHP、Python、C#
 框架，库：Node.js、Xamarin、React、Vue、Angular、.NET Core
-包管理：npm、yarn、NuGet
-版本管理：Git(GitHub, GitLab, BitBucket)、TFS
+包管理：npm、yarn、NuGet 、pip
+版本管理：Git(GitHub, GitLab, BitBucket)、TFS、Gitee
 
 客户端框架：React、Vue、Angular
 服务器端：PHP、Node.js

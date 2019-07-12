@@ -1,4 +1,10 @@
-﻿20190509
+﻿20190712
+win10一个奇怪的错误，不能在桌面新建文件，原因可能是我昨天安装“小鱼便签”造成的
+解决方法：https://appuals.com/how-to-fix-the-could-not-find-this-item-this-is-no-longer-located-in-path-verify-the-items-location-and-try-again/
+其中第4个方法有效
+用winrar，选择delete files after archiving，解决！
+
+20190509
 shortcuts：
 win
 win+pause	open System

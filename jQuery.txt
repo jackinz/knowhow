@@ -1,3 +1,12 @@
 20190711
 使用jQuery最简单的方法
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+onload的最简写法
+<script>
+  $(function() {
+    alert($("#img1").length);
+  });
+</script>
+
+$()是jQuery的特色，不是仅仅$哦

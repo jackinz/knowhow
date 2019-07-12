@@ -1,6 +1,26 @@
-﻿20190702
+﻿Notepad
+VS Code
+Notepad++
+Sublime
+Atom
+Geany
+
+
+20190712
+notepad用utf编码时的bom问题，自己加了3字节
+行选，列选
+录制功能
+插件
+snippet
+intellisense
+自动格式
+自动高亮，括号匹配
+
+
+20190702
 Geany		Linux	$sudo
 SublimeText	OS
+
 
 20190628
 Atom

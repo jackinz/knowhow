@@ -1,3 +1,9 @@
+20190712
+升级pip
+pip install --upgrade pip
+cmd要用admin运行
+
+
 20190709
 https://pip.pypa.io/en/stable/installing/
 

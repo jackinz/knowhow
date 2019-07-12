@@ -1,0 +1,67 @@
+20190712
+python技术栈
+python，pyCharm，pip，Django，pyTest
+
+python的语句(for, if)
+for i in [2, 4, 6]:
+    if i > 3:
+        print(i)
+
+python的输入和输出(input, print)
+name = input("please input you name:")
+print("Hello ", name, "!")
+
+python操作文件-读(open)
+with open('data\\foo.txt', 'r') as f:
+    for line in f:
+        print(line)
+
+python操作文件-写(write)
+with open('/Users/ethan/data2.txt', 'a') as f:
+    f.write('one\n')
+    f.write('two')
+
+\t	tab键
+\n	new line
+
+路径
+"./data/foo.txt" = "data/foo.txt" = "data\\foo.txt" 
+
+获得当前绝对路径
+import os
+os.path.abspath(".") 
+
+新建一个dir
+os.mkdir(os.path.abspath('.') + "\error")
+
+arr = os.path.split(os.path.abspath("read.py"))
+print("路径名",arr[0])
+print("文件名",arr[1])
+
+os.path.abspath("read.py") #路径名+文件名 fullpath
+os.path.abspath(".") #路径名 dirpath
+os.path.abspath('/Users/ethan/coding/python/hello.py') --> hello.py #文件名 file
+
+20190711
+python技术栈，需要下载安装python和pyCharm（IDE）
+python要下载amd64，安装首页要添加path，安装给所有人。pyCharm要注意设置interpreter，使用admin安装，以后就一直可以以admin运行。
+
+https://www.python.org下载python
+	安装win64位版本，首页要勾选add to path，自定义安装选择新的安装目录
+	在cmd中输入py，看到>>>就表示安装成功了
+https://www.jetbrains.com/pycharm/下载pycharm
+	安装community版本，64位(amd 64，不是x86 32)
+
+
+Python Web Django onto IIS
+https://www.youtube.com/watch?v=kXbfHtAvubc
+
+20190709
+Python适合快速开发，C/C++适合高性能硬件
+
+Python是动态语言，它不像其他的静态语言如C、Pascal那样需要书写声明语句。
+
+_单下划线开头：弱“内部使用”标识。对于“from M import *”，将不导入所有以下划线开头的对象，包括包、模块、成员。
+单下划线结尾_：为了避免与python关键字的命名冲突
+__双下划线开头：模块内的成员，表示私有成员，外部无法直接调用
+__双下划线开头双下划线结尾__：指那些包含在用户无法控制的名字空间中的“魔术”对象或属性，如类成员的name 、doc、init、import、file、等。推荐永远不要将这样的命名方式应用于自己的变量或函数。

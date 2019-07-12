@@ -1,0 +1,7 @@
+服务器OS：WindowsServer，centos
+服务器服务软件：IIS，apache，nginx
+数据库：SQLServer，mySql
+Web框架：asp.net，php，Django
+
+nginx并发性好于apache
+数据库主从配置，防止数据丢失
