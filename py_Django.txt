@@ -1,0 +1,36 @@
+20190715
+一，安装Django
+1，下载安装or使用pip
+https://www.djangoproject.com/download/
+or
+pip install Django==2.2.3
+
+2，验证是否安装成功
+>>> import django
+>>> django.get_version()
+
+
+二，Django Hello world
+错误：
+https://www.runoob.com/django/django-first-app.html
+没有django-admin这个命令
+在一个新建的目录下可以！
+
+django-admin startproject mysite
+其中mysite是我自定义的文件夹名，其下会自动生成manage.py及mysite文件夹（内有4个.py文件）
+
+python manage.py runserver 127.0.0.1:8000 //监听8000窗口, 127.0.0.1和8000都是默认值
+上面一句话可以简写为
+py manage.py runserver
+
+三，Django上iis
+WindowsServer
+IIS
+  FastCGI（wfastcgi）
+Django
+
+IIS安装要勾选CGI
+安装wfastcgi	pip install wfastcgi
+拷贝wfastcgi.py到manage.py同一目录下
+添加映射
+web.config

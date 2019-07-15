@@ -1,8 +1,12 @@
+20190715
+pip list
+pip install xxx
+pip uninstall xxx
+
 20190712
 升级pip
 pip install --upgrade pip
 cmd要用admin运行
-
 
 20190709
 https://pip.pypa.io/en/stable/installing/

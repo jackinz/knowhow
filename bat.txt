@@ -1,3 +1,20 @@
+20190715
+--打开多个文件
+@echo off
+echo "morning sir!"
+C:
+cd C:\Program Files (x86)\Mozilla Thunderbird\ 
+start thunderbird.exe
+cd C:\Program Files (x86)\Google\Chrome\Application\
+start chrome.exe
+echo "wish you a nice day!"
+::pause
+
+--开机后立即执行
+bat的快捷方式拷到startup文件夹下
+C:\Users\pccc1\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+
+
 20190515
 --all checkin
 @echo off
