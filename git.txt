@@ -1,5 +1,24 @@
 ﻿our ability to learn faster than your competition is your only sustainable competitive advantage. - Arie de Gues
 
+
+20190806
+查看被删的文件
+git ls-files --deleted
+
+恢复被删的文件，比如“03_src/UpgradeLog.htm”
+git checkout -- 03_src/UpgradeLog.htm
+
+如果要恢复多个被删除的文件，可以使用批处理命令：
+git ls-files -d | xargs git checkout --
+
+20190724
+gitlab控制台第一次输入密码错误
+1，在Credential Manager/Windows Credentials/找到gitlab，删除
+2，clone的文件删除，重新clone一次
+
+进到了vim
+Z Z就可以退出vim回到cmd
+
 --------------------常用命令--------------------
 // 在新机上拉一个respository
 1，下载安装git
@@ -46,8 +65,8 @@ www.git-scm.com
 git --version
 
 // Think
-git(gitHub，gitLab)-TFS
-npm(node)-NuGet
+版本管理：git(gitHub，gitLab)-TFS
+包管理：npm(node)-NuGet
 
 git config --global user.name "nzh"
 git config --global user.email
@@ -156,3 +175,6 @@ git push -u origin master
 git clone https://github.com/jackinz/knowhow.git whh
 git pull
 git push -u origin master
+
+
+4d37af21dbc1cb6d41dd80aeb116a81f0fb430da

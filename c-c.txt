@@ -1,4 +1,12 @@
-﻿加密，解密	encryption, decryption
+﻿20190716
+狗加密原理
+将原始exe通过软件生成一个加密过的exe，给用户时就给这个加密过的exe和drive狗（用户狗，超级狗）
+
+
+
+
+20190501
+加密，解密	encryption, decryption
 
 加密有3种方式
 1，对称加密	aes

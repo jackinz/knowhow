@@ -36,4 +36,4 @@ install package
 emmet
 编辑的时候
 !+Tab:生成空html框架
-dic*3:生成3个div
+div*3:生成3个div

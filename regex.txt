@@ -25,7 +25,7 @@ qq号码是否有效
 regexp = "[1-9][0-9]{4,14}"
 
 Java:	bool qqStr.matches("[1-9][0-9]{4,14}");
-C#:		bool System.Text.RegularExpressions.Regex.IsMatch(qqStr, "[1-9][0-9]{4,14}")
+C#:	bool System.Text.RegularExpressions.Regex.IsMatch(qqStr, "[1-9][0-9]{4,14}")
 
 
 例2
