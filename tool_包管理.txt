@@ -1,0 +1,5 @@
+20191008
+npm (nodejs, Google)
+NuGet (VS, MS)
+pip (Python)
+brew (Mac, Apple)

@@ -1,0 +1,5 @@
+20191008
+vs (ms)
+pyCharm (JetBrains)
+IntelliJ (JetBrains)
+xcode (apple)

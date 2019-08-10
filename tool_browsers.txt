@@ -10,6 +10,9 @@ Google Chrome: 内核WebKit，新增V8引擎提升Js性能
 	渲染引擎：WebKit（由KHTML发展而来），Gecko（Firefox）
 		渲染引擎里包含Js引擎：V8（Chrome）
 
+--清楚缓存
+ctrl+shift+del
+
 Chrome
 chrome://about
 chrome://settings

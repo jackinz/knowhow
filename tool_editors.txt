@@ -1,10 +1,24 @@
-﻿Notepad
+﻿notepad (win)
+xcode (mac)
+vim (mac)
 VS Code
 Notepad++
 Sublime
 Atom
 Geany
 
+20190810
+Sublime的独有亮点
+1, find all
+2, 多处同时操作，ctrl+左键
+
+比如要选出文件中所有的/string
+1, 开启regex
+2，/[a-z]+
+3, find all
+4, 复制粘贴
+
+notepad++还没有这个功能
 
 20190712
 notepad用utf编码时的bom问题，自己加了3字节
