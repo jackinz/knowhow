@@ -1,4 +1,6 @@
 20190811
+Docker是Hypervisor的替代品，SSH是FTP的替代品，Nginx是Apache的替代品，Git是Subversion的替代品
+
 --整合
 vmodell	联合“研发”和“验证”
 devops	联合“开发”和“运维”

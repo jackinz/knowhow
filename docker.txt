@@ -1,0 +1,10 @@
+20190811
+Hypervisor：apt-get，yum
+Docker：docker pull
+
+Docker是Hypervisor的替代品，SSH是FTP的替代品，Nginx是Apache的替代品，Git是Subversion的替代品
+
+docker的作用：
+1，将软件和依赖环境打包在一起
+2，对cpu，内存等资源可以划分上限
+3，快速创建删除
