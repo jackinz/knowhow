@@ -1,4 +1,16 @@
-ï»¿20190630
+20190811
+--ÕûºÏ
+vmodell	ÁªºÏ¡°ÑĞ·¢¡±ºÍ¡°ÑéÖ¤¡±
+devops	ÁªºÏ¡°¿ª·¢¡±ºÍ¡°ÔËÎ¬¡±
+È«Õ»	ÁªºÏ¡°Ç°¶Ë¡±ºÍ¡°ºó¶Ë¡±
+
+--Linux
+Ubuntu/UbuntuServer
+Fedora/Centos
+Docker
+°ü¹ÜÀí£ºRedHat£º yum¡¢dnf¡£Debian£ºaptitude/dpkg
+
+20190630
 --IDE
 VisaulStudio	.NET
 IntelliJ		Java
@@ -13,13 +25,12 @@ WebStorm	JS, JetBrain not free
 Atom
 SublimeText
 
---Editorçš„åŠŸèƒ½
-è‡ªåŠ¨æ ¼å¼åŒ–
+--EditorµÄ¹¦ÄÜ
+×Ô¶¯¸ñÊ½»¯
 Intellisense
 Snippets
 
-
---Package Managerï¼ˆåŒ…ç®¡ç†å·¥å…·ï¼‰
+--Package Manager£¨°ü¹ÜÀí¹¤¾ß£©
 NuGet (vs)
 npm (nodejs)
 yarn 
@@ -30,7 +41,7 @@ TFS
 GitHub
 GitLab
 
---æ•°æ®åº“
+--Êı¾İ¿â
 SQL Server
 Oracle
 MySQL	free
@@ -38,12 +49,12 @@ PostgreSQL	free
 SQLite
 Access
 
---WebæœåŠ¡å™¨
-IIS		on Windows Server
+--Web·şÎñÆ÷
+IIS	on Windows Server
 Apache	on Linux
 nginx	on Linux
 lighthttpd	on Linux
 
---æµè§ˆå™¨
+--ä¯ÀÀÆ÷
 chrome
 firefox
