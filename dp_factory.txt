@@ -1,0 +1,91 @@
+--LogicSchema.cs
+namespace ConsoleApp5
+{
+    using System;
+    using System.Reflection;
+
+    /// <summary>
+    /// Provides static calls to methods from the custom business logic
+    /// </summary>
+    public static class LogicSchema
+    {
+        private static DefaultLogic logic;
+
+        /// <summary>
+        /// Gets the herstellername.
+        /// </summary>
+        public static string Herstellername
+        {
+            get
+            {
+                return "Zh";
+            }
+        }
+
+        /// <summary>
+        /// Gets the custom logic.
+        /// </summary>
+        /// <exception cref="ArgumentNullException">Throws if there's no logic defined for the current manufacturer
+        /// </exception>
+        public static DefaultLogic CustomLogic
+        {
+            get
+            {
+                if (logic == null)
+                {
+                    var types = Assembly.GetExecutingAssembly().GetTypes();
+                    //foreach (var type in types)
+                    //{
+                    //    Debug.WriteLine(type.Name);
+                    //}
+
+                    Type myType = Type.GetType("ConsoleApp5." + Herstellername + "Logic");
+                    if (myType == null)
+                    {
+                        throw new ArgumentNullException("Keine Konfiguration für Hersteller '" + Herstellername + "' vorhanden!");
+                    }
+
+                    logic = (DefaultLogic)Activator.CreateInstance(myType);
+                }
+
+                return logic;
+            }
+        }
+    }
+}
+
+--DefaultLogic.cs
+namespace ConsoleApp5
+{
+    public class DefaultLogic
+    {
+        public virtual string SayHello()
+        {
+            return "Hello";
+        }
+    }
+}
+
+--ZhLogic.cs
+namespace ConsoleApp5
+{
+    public class ZhLogic : DefaultLogic
+    {
+        public override string SayHello()
+        {
+            return "Ni Hao";
+        }
+    }
+}
+
+--DeLogic.cs
+namespace ConsoleApp5
+{
+    public class DeLogic : DefaultLogic
+    {
+    }
+}
+
+
+--main
+var str = LogicSchema.CustomLogic.SayHello();
