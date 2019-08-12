@@ -4,6 +4,7 @@
 20190806
 查看被删的文件
 git ls-files --deleted
+git ls-files
 
 恢复被删的文件，比如“03_src/UpgradeLog.htm”
 git checkout -- 03_src/UpgradeLog.htm
@@ -100,7 +101,7 @@ git checkout -	//回到上个版本
 git log -p
 
 
---P6 标签tag
+--P6 标签
 git add . && git commit -m "MyCommentar"
 
 git log --online
