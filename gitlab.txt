@@ -1,3 +1,8 @@
+20190814
+本地能用，上传到gitlab然后下载就不能用了
+1，CRLF和LF的问题。git config --global core.autocrlf false //将设置中自动转换功能关闭
+2，.gitignore后添加，里面有些必要组件没上传到gitlab。
+
 20190806
 管理员管理
 1，登录

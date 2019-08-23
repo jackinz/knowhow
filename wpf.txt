@@ -1,0 +1,8 @@
+20190822
+Visibility.Collapsed和Visibility.Hidden的异动：
+Collapsed: Do not display the element, and do not reserve space for it in layout.
+Hidden: Do not display the element, but reserve space for the element in layout.
+Visible: Display the element.
+
+viewport
+就是浏览器中打开空白页面的白色处

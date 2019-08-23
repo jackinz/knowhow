@@ -1,4 +1,9 @@
-﻿1, Netscape (>90%, over) JavaScript 
+﻿20190822
+chrome查看cookie
+设置/隐私设置和安全性/网站设置/cookie/查看所有Cookie和网站数据
+
+20190810
+1, Netscape (>90%, over) JavaScript 
 2, MS IE6 (2002, >95%, over)
 3, Chrome, Firefox, Safari
 

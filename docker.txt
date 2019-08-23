@@ -1,3 +1,10 @@
+20190821
+1，image（镜像），可以从https://hub.docker.com/上面pull
+2，contain（容器）
+3，.pd（模型）
+
+docker的管理工具：minikube
+
 20190811
 Hypervisor：apt-get，yum
 Docker：docker pull

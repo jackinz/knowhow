@@ -1,5 +1,16 @@
 ﻿our ability to learn faster than your competition is your only sustainable competitive advantage. - Arie de Gues
 
+20190823
+回到master
+git checkout master
+
+20190819
+github的三个功能
+Star 的作用是收藏，目的是方便以后查找。
+Watch 的作用是关注，目的是等作者更新的时候，你可以收到Email通知。
+Fork 的作用是参与，目的是你增加新的内容，然后 Pull Request，把你的修改和主仓库原来的内容合并。
+
+评价项目质量好坏的一个重要标准就是看Star和Fork的数量，如果看到个Star超过100以上的，基本上这个项目是靠谱的，如果超过1000过，那已经算是很流行了，至于一万以上的，基本上都是如雷贯耳的存在了。
 
 20190806
 查看被删的文件
