@@ -1,6 +1,19 @@
+20190824
+安装Gitlab Extension for Visual Studio，并连接。
+When you login with 2FA :
+In GitLab, [top right] go to Settings then Access Tokens (left menu)
+Enter a name & expire time (optional).
+Check off "api" as the scope.
+Click "Create Personal Access Token". This will appear in a textbox at the TOP of the page.
+In Visual Studio, click "Connect" beside GitLab.
+Enter your GitLab Username and paste in the Access Token.
+Change it to "API v4" instead of "API v4 OAUTH2".
+Make sure "Two Factor Authentication" is NOT checked.
+Save. You're DONE.
+
 20190814
 本地能用，上传到gitlab然后下载就不能用了
-1，CRLF和LF的问题。git config --global core.autocrlf false //将设置中自动转换功能关闭
+1，CRLF和LF的问题。git config --global core.autocrlf input //将设置中自动转换功能
 2，.gitignore后添加，里面有些必要组件没上传到gitlab。
 
 20190806
