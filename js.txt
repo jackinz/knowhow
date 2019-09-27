@@ -47,3 +47,8 @@ var xiaoming = {
 };
 
 console.log(xiaoming.name);
+
+20171021
+Lokal funktioniert, aber Live nicht
+1,Versionsnummer geändert?
+2,min nicht geändert?

@@ -1,0 +1,9 @@
+20190908
+View：xmal + cs
+ViewModel： xmal
+
+赋初值的几种可能
+1，在xmal中
+2，在cs中
+3，默认值（0，false，enum的第一值）
+4，配置文件中
