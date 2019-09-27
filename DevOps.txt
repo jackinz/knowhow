@@ -1,0 +1,6 @@
+20190811
+DevOps
+2008年由Patrick Deois提出
+整合Development（开发）和Operations（运维）
+
+让“开发”，“测试”和“运维”用同一个系统进行交互，而不是3套独立的系统。

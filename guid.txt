@@ -1,13 +1,13 @@
 ﻿20190715
 周宁
-MD5（32位）4字节
+MD5（32位Hex）128字节
 1b53c028b7a4068ff8f0fff4ebb200e2
 
 周宁
-SHA256（64位）8字节
+SHA256（64位Hex）256字节
 d3baee63177e207dfaddab2167d939407c0a67cc4624427d216317c5cb8d373c
 
-GUID格式（128位16字节，32位16进制数字）
+GUID格式（32位Hex，128位16字节）
 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 .net生成一个guid

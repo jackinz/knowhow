@@ -1,0 +1,11 @@
+20190822
+要删除一个ticket
+admin进入ticket，更多/删除
+
+创建ticket时，要先选择project
+
+20190808
+角色：admin, developer, user
+进度：todo, in process, in review, done
+
+develope的权限可以改变进度

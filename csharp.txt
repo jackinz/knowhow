@@ -1,0 +1,84 @@
+20190822
+struct和class
+struct是结构，不能被继承
+
+ref和out
+2者都是传址，2者在function和使用时都要加关键字
+ref必须赋初值，out不必
+
+20190717
+委托，将函数名作为参数，类似C中的指针
+//-----------------------------------------------------例一
+using System;
+
+delegate int NumberChanger(int n);
+namespace DelegateAppl
+{
+   class TestDelegate
+   {
+      static int num = 10;
+      public static int AddNum(int p)
+      {
+         num += p;
+         return num;
+      }
+
+      public static int MultNum(int q)
+      {
+         num *= q;
+         return num;
+      }
+      public static int getNum()
+      {
+         return num;
+      }
+
+      static void Main(string[] args)
+      {
+         // 创建委托实例
+         NumberChanger nc1 = new NumberChanger(AddNum);
+         NumberChanger nc2 = new NumberChanger(MultNum);
+         // 使用委托对象调用方法
+         nc1(25);
+         Console.WriteLine("Value of Num: {0}", getNum());
+         nc2(5);
+         Console.WriteLine("Value of Num: {0}", getNum());
+         Console.ReadKey();
+      }
+   }
+}
+//-----------------------------------------------------
+//-----------------------------------------------------例二
+// 小张类
+public class MrZhang
+    {
+    // 其实买车票的悲情人物是小张
+    public static void BuyTicket()
+    {
+            Console.WriteLine("NND,每次都让我去买票，鸡人呀！");
+    }
+
+    public static void BuyMovieTicket()
+    {
+        Console.WriteLine("我去，自己泡妞，还要让我带电影票！");
+    }
+}
+
+//小明类
+class MrMing
+{
+    // 声明一个委托，其实就是个“命令”
+    public delegate void BugTicketEventHandler();
+
+    public static void Main(string[] args)
+    {
+        // 这里就是具体阐述这个命令是干什么的，本例是MrZhang.BuyTicket“小张买车票”
+        BugTicketEventHandler myDelegate = new BugTicketEventHandler(MrZhang.BuyTicket);
+
+        myDelegate += MrZhang.BuyMovieTicket;
+        // 这时候委托被附上了具体的方法
+        myDelegate();
+        Console.ReadKey();
+    }
+}
+//-----------------------------------------------------

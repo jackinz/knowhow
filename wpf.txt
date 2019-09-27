@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 20190908
 Viewï¼šxmal + cs
 ViewModelï¼š xmal
@@ -7,3 +8,13 @@ ViewModelï¼š xmal
 2ï¼Œåœ¨csä¸­
 3ï¼Œé»˜è®¤å€¼ï¼ˆ0ï¼Œfalseï¼Œenumçš„ç¬¬ä¸€å€¼ï¼‰
 4ï¼Œé…ç½®æ–‡ä»¶ä¸­
+=======
+20190822
+Visibility.CollapsedºÍVisibility.HiddenµÄÒì¶¯£º
+Collapsed: Do not display the element, and do not reserve space for it in layout.
+Hidden: Do not display the element, but reserve space for the element in layout.
+Visible: Display the element.
+
+viewport
+¾ÍÊÇä¯ÀÀÆ÷ÖĞ´ò¿ª¿Õ°×Ò³ÃæµÄ°×É«´¦
+>>>>>>> 738af73164a5ef802c121a63fff5e38bddd669a5
