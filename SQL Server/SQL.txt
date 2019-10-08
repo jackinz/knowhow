@@ -1,0 +1,182 @@
+﻿
+20181212
+Get column count of a table:
+SELECT COUNT(*)
+  FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE table_name = 'KAT_Fahrzeuge'
+   --AND table_catalog = 'database_name'
+
+
+拷贝表1内容到表2，不成功的原因可能是因为表结构不同，或者有自动列，需要去除自动列拷贝
+
+// 得到所有非自动生成的列名
+select c.name, c.*
+ from sys.columns c
+inner join sys.tables t on c.object_id = t.object_id
+where t.name = 'GA_Antraege_Material' and is_computed = 0
+order by c.name
+
+Poor Man's T-SQL Formatter
+PlugIn for SSMS, VS, Notepad++
+Ctrl+K F
+
+20181001
+Trigger:
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		Nzh
+-- Create date: 01.10.2018
+-- Description:	bei neuer Position in [GA_Verlauf] ändern [GA_Antraege]/[LastStatusChange]
+-- =============================================
+CREATE TRIGGER TR_GA_Verlauf_I
+   ON  [dbo].[GA_Verlauf]
+   AFTER INSERT
+AS 
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for trigger here
+	UPDATE [GA_Antraege]
+		SET    [GA_Antraege].[LastStatusChange] = GetDate()
+		FROM   [GA_Antraege]
+			   JOIN inserted
+				 ON [GA_Antraege].[GA_ID] = inserted.[GA_ID]
+
+END
+GO
+
+
+
+20180912
+--从GA_Verlauf表中，选出最后StatusId
+select verl.GA_ID,verl.StatusId from 
+(
+select ga_id, max(datum) as MaxDatum
+from ga_verlauf
+group by ga_id
+) a
+inner join ga_verlauf verl on a.GA_ID = verl.GA_ID and a.MaxDatum = verl.Datum
+
+20180814
+--检验function foo是否存在，如存在则删之
+IF EXISTS (SELECT *
+           FROM   sys.objects
+           WHERE  object_id = OBJECT_ID(N'[dbo].[foo]')
+                  AND type IN ( N'FN', N'IF', N'TF', N'FS', N'FT' ))
+  DROP FUNCTION [dbo].[foo]
+
+GO
+
+
+--get path from id
+1)
+CREATE TABLE Software (
+    ID INT,
+    ParentID INT,
+    name VARCHAR(150)
+);
+
+INSERT INTO Software VALUES (1,0,'a'); 
+INSERT INTO Software VALUES (2,1,'b'); 
+INSERT INTO Software VALUES (3,1,'c'); 
+INSERT INTO Software VALUES (4,2,'d'); 
+
+目标：输入4，给出a;b;d
+
+2)
+CREATE FUNCTION fnTree(@ID int)
+RETURNS table AS
+RETURN
+(
+    WITH tree AS
+    (
+      SELECT c1.id, c1.ParentID, c1.name, path = cast(c1.name as varchar(300))
+      FROM dbo.[Software] c1
+      WHERE c1.ParentId = 0
+
+      UNION ALL
+
+      SELECT c2.id, c2.ParentID, c2.name, Path=Cast(tree.path+';'+cast(c2.name as varchar(100)) as varchar(300))
+      FROM dbo.[Software] c2 INNER JOIN tree ON tree.id = c2.ParentID
+    )
+    
+	SELECT tree.id, tree.path
+    FROM tree
+	where tree.id = @ID
+);
+
+20180808
+--Get all child by id
+https://dba.stackexchange.com/questions/191160/list-parent-then-nested-child-items-in-a-single-table
+1)
+CREATE TABLE Software (
+    ID INT,
+    name VARCHAR(150),
+    ParentID INT );
+
+INSERT INTO Software VALUES (1,'Main Product',NULL); 
+INSERT INTO Software VALUES (2,'Next Main Product',NULL); 
+INSERT INTO Software VALUES (3,'Addon Product',1); 
+INSERT INTO Software VALUES (4,'Addon Product',1); 
+INSERT INTO Software VALUES (5,'Sub-Addon Product',3);
+
+2)
+CREATE FUNCTION fnTree(@ID int)
+RETURNS table AS
+RETURN
+(
+    WITH tree AS
+    (
+      SELECT c1.id, c1.parentId, c1.name, [level] = 1, path = cast(c1.id as varchar(100))
+      FROM dbo.[software] c1
+      WHERE c1.id = @ID
+      UNION ALL
+      SELECT c2.id, c2.parentId, c2.name, [level] = tree.[level] + 1, Path=Cast(tree.path+'/'+cast(c2.id as varchar(10)) as varchar(100))
+      FROM dbo.[software] c2 INNER JOIN tree ON tree.id = c2.parentId
+    )
+    SELECT tree.path, tree.id, parentId, REPLICATE('  ', tree.level - 1) + tree.name as name
+    FROM tree
+);
+GO
+
+20180720
+日期时间-->日期
+2008-09-22 15:24:13.790 --> 2008-09-22
+SELECT CONVERT(date, getdate())
+
+如果NULL返回0
+SELECT ISNULL(myColumn, 0) FROM myTable
+
+
+20180713
+把LiveDb的一个表拷贝到TestDb（仅内容）
+insert into GA_Fehlerorte
+select * from [SQL-06].[Adria_WK3].dbo.GA_Fehlerorte 
+
+把LiveDb的一个表拷贝到TestDb（表结构和内容）
+select * into GA_Fehlerorte2
+from [SQL-06].[Adria_WK3].dbo.GA_Fehlerorte
+
+20180710
+把表tblSource的内容拷贝到tblTarget中
+insert into tblTarget
+select * from tblSource
+
+excel和sql server可以通过task/import导入
+
+
+20180705
+删除GA_Verlauf中的最后一行
+WITH  q AS
+        (
+        SELECT TOP 1 *
+        FROM    mytable
+        /* You may want to add ORDER BY here */
+        )
+DELETE
+FROM    q

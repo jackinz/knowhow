@@ -1,3 +1,17 @@
 ﻿20190403
 黑白显示整个网页
 body{-webkit-filter: grayscale(100%);}
+
+
+1,
+patting, margin
+
+2,
+floating:right
+
+3, in one line
+ctrl1 style="position:relative; top:-7px; left:12px; display:inline-block;"
+ctrl2 style="position:relative; top:-7px; left:12px; display:inline-block;"
+
+4, position optimise
+style="position:relative; top:-2px"

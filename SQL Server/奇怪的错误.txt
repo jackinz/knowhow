@@ -1,0 +1,15 @@
+﻿20170926
+--calculated column报错
+colSum AS col1 + col2
+注意colSum不能作为新的加数！
+colSum2 AS col1 + col2 + col3 --> OK
+colSum2 AS colSum + col3 --> Error! 
+
+
+20170925
+--表找不到
+ConnectionString有问题
+
+--删除数据库db，删不了
+原因：db是数据库下拉列表中的当前项，正在使用中，所以不能删
+方法：数据库下拉列表选择master，再删数据库db

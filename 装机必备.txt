@@ -1,0 +1,17 @@
+7zip
+WinMerge
+Greenshot
+Notepad++
+Multiscript
+Metal Build Database.dbml¸üÐÂ
+NimbleText, NimbleSet
+
+SQL Server
+-Poor man's T-SQL
+-SSMS Tools
+
+Visual Studio
+-Code Maid
+-Newton Json
+-Web Essential: Bundler & Minifier
+-NUnit, Adapter

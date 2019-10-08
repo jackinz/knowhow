@@ -2,3 +2,22 @@
 录制功能
 查找计数
 文件夹内文件的内容查找
+
+20181221
+Ctrl+C Copy
+Ctrl+V Paste
+Ctrl+X Cut
+Ctrl+F Find
+Ctrl+H Replace
+Ctrl+A Select All
+Ctrl+S Save
+Ctrl+N New
+Ctrl+O Open
+Ctrl+P Print
+Ctrl+W Close
+Ctrl+G Goto
+
+Shift+左右	选择
+Pos1		行首
+Ende		行末
+Shift+Alt+上下	矩形选择

@@ -11,3 +11,9 @@ ctrl + n
 ctrl + e = f5 execute
 ctrl + r result window open/close
 
+Ctrl+E	F5
+Ctrl+R	关闭显示结果窗
+Ctrl+J	提示框
+Ctrl+L	计划任务
+Ctrl+1	数据库连接
+Ctrl+2	不详

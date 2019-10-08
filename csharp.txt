@@ -1,3 +1,15 @@
+20191007
+1,控件的状态
+disabled
+invisible
+default value
+
+2,控件
+checkbox, dropdownlist, button, inputbox
+
+数据层
+WK3Context-Repository-Service
+
 20190822
 struct和class
 struct是结构，不能被继承
@@ -55,7 +67,7 @@ public class MrZhang
     // 其实买车票的悲情人物是小张
     public static void BuyTicket()
     {
-            Console.WriteLine("NND,每次都让我去买票，鸡人呀！");
+		Console.WriteLine("NND,每次都让我去买票，鸡人呀！");
     }
 
     public static void BuyMovieTicket()
@@ -82,3 +94,705 @@ class MrMing
     }
 }
 //-----------------------------------------------------
+20190116
+[业余程序员]
+Confusion
+1，!IsPostBack
+2，Transaction
+3，ViewState
+
+Error
+1, Multilanguage ID,Text
+2, Multilanguage Culture: DateTime, Decimal Format
+3, Multilanguage nvarchar for special character
+
+[What i've known]
+JavaScript alert("hello"), debugger, console.log("hello");
+Chrome F12
+IE right click / proporty
+
+Datetype Convert: object, string, datetime, int, float
+Date Validation: Mandatory Field, Value Validation
+
+Postback: ViewState
+Postback: (Page.IsPostBack)
+Page event sequence: OnInit, OnLoad, OnItemCommand/OnClick, OnPreRender
+
+SQL select * from
+Table, View, Trigger, Stored Procedure, User Definded Function
+CRUD
+
+TFS: check in/check out, compare, merge, branch
+Scrum: new, developing, develped, testing, tested, released, done
+
+2 Sides: client side (JS, StateView), server side (C#, Session)
+3 Layers: Html, Logic, DB
+Client/Server: Client JavaScrit, quick / Server C#, stable
+不要自己写control(DatePicker, Grid)，光一个culture就有无穷工作量
+
+
+new feature in .NET Framework 4.0
+ViewState
+ClientID	ctl00_MasterPageBody_ctl01_Textbox1
+
+a control level / a page level
+web farm (multiserver)/ web garden (one server multiprozessor)
+
+
+20181220
+编译错误，报TEST里面没有gao.dll，然后找到gao.dll的文件夹，的确没有，build之后也没有
+这时应该确定，错误在GAO
+最后问题的确出在GAO，有一个licenses.licx文件有错。
+
+20181217
+一个好的编辑器，可以矩形选择，可以格式化SQL，可以回到上个工作点。
+
+SqlMetal 数据库的变化-->database.dbml
+Run custom tool database.dbml-->database.designer
+
+20181210
+经过多少努力，我才明白了这么些事：
+1, .vs,obj和bin3个文件夹是不要CheckIn的
+2, .Designer是自动生成的，通过项目的property控制
+3, 版本控制的倒退，很麻烦！
+
+20181207
+数据存在一个地方，如果有依赖，就使用trigger
+例如：GarantyBegin，从3个Datum生成，但是这个GarantieBegin非常重要，应该使用自动列
+GA_GU的是否可以发广告，应该也存在一个地方
+
+
+20181119
+--MS桌面程序开发
+MFC + .NET API --> WinForm --> WPF
+
+--WPF和WinForm比较
+为什么用WPF？
+1，Winform从2006年起就停止开发了
+2，WPF对屏幕自适应更好（Panel）
+3，WPF亮点：数据绑定，MVVC设计模式(Model、View、Viewmodel)
+
+速成推荐winform，深入学习推荐qt或者electron 。qt既有常规拖控件的widgets，又有类似于前端界面的qml和webengine，程序还能跑在安卓/ios上，强烈推荐。
+WinForm在所有Win平台直接能跑，WPF要.net 4.0以上。
+
+WPF底层是DirectX，用GPU绘图
+WinForm底层是GDI/GDI+，用CPU绘图（不用DirectX接口）
+
+WPF数据逻辑，业务逻辑，显示逻辑分离
+WinForm都合在一起
+
+--WPF
+WPF：XAML，MVVM
+
+
+
+
+
+20181116
+SSD（手掌大小）, MVNE（USB-Stick大小）
+塔式服务器，机架服务器和刀片服务器
+
+20181114
+组策略
+Grupperichtlinie（gpedit.msc）
+
+
+
+20181011
+如果报错地点具体某一行代码，一般是Infrastructure出错。有可能就是reference里面的问题。
+Garantieantrag.cs在dll里面，不在web里，Alex帮助找到。
+
+20181004
+.NET	SQL Server
+Java	Oracle
+Ruby	MySQL
+Python	PostgreSQL，MySQL
+面向对象语言	关系型数据库
+
+Impedance Mismatch，阻抗不匹配
+
+Linux 是操作系统的内核，就好比汽车的发动机，虽然重要，但是本身并不足以使用，必须配合各种零件，装配成一辆汽车以后才能行驶。Ian Murdock 想做的就是，将 Linux 装配成一辆全功能的汽车。
+
+
+20181001
+F11，可以知道来自何方
+
+
+20180507
+父类-抽象类-接口
+被继承的类。相同方法，比如猫狗都有个方法叫(){输出"叫了一声";}"
+有抽象方法的父类。相同方法名，一个方法"叫(){}"，狗具体实现"叫(){输出"汪汪"}"，猫具体实现"叫(){输出"喵喵"}"
+只有抽象方法的父类。接口
+
+
+20180501
+一个程序里面有一个很精巧的东西。
+比如罗马数字，前一个字母和后一个字母比较，如果小就把前一个数字设为负。
+比如快乐数字，如果平方和出现4就不是，如果出现1就是。
+
+
+var str = "Hallo";
+var arr = str.select(d => d);	// arr = [H, a, l, l, o]
+
+[Test]
+stubs, mocks, fakes
+
+
+20180313
+技术陷阱
+新增选项比较简单，直接在数据库表中增加一行
+删除选项比较麻烦，因为要兼容旧的表单，删除的那项在旧表单中还要正常显示
+
+20180312
+升级之后怪事多，还是不要在开发时升级
+
+
+20180125
+在实际中的业务逻辑很没逻辑
+1，Zulieferer还没收到货就决定同意还是拒绝了
+2，Hersteller给Zulieferer发了信索赔，还没有得到答案，就把索赔case删掉了
+
+20180122
+提升性能的办法
+1，减少不必要的劳动
+2，不要频繁打断。在repeater中不要有new/database query
+
+20180119
+javascript:	domControl = documnet.getElementById("myId");
+jQuery:		jqControl = $("#myId");
+		jqControl = $("#<%= myId.ClientID %>"); 
+Telerik:	trConrol = $find("myId");
+
+20180110
+Python拍森
+1，简单易学，开发快，所以用于原型快速搭建（快鱼吃慢鱼）
+2，很多非程序员使用，人工智能库丰富
+3，性能差一点，但是简单是王道（拼音胜五笔）
+
+20180108
+项目经验之数据库
+1，sql server验证还是windows验证
+选用sql server密码验证好，网站发布后，用户Rolle不知道怎么加，使用密码验证（SQL Server验证）一定可以使用数据库。
+
+2，是否使用autovalue做ID
+客户使用的表，还是不要用autovalue。客户喜欢掌控的感觉。
+
+20180108
+项目经验之服务器
+1，防火墙
+关闭防火墙，别的机才能访问你。如果不想关闭防火墙，那就要开放端口，比如80。
+服务器必须开放一个端口，这是做服务器的必要条件。
+
+
+20180108
+项目经验
+把一个项目从一台机移植到另一台机，不能光移Project，而要移Solution。在Solution中包含了Project和packages。packages中包含了reference所需的库。-->待验证，是的！
+
+
+20180108
+开发日记
+需要多看cnblogs
+我们往往在开发项目里，会使用一些第三方的dll, 如：Newtonsoft.Json.dll (它为我们提供了进行序列化和反序列化解决方案， 很有用，也很稳定，还很有名气)。
+
+学习NuGet
+http://www.cnblogs.com/Dlonghow/archive/2012/03/16/2399993.html
+
+
+20180108
+我现在的技术欠缺：Entity Framework, MVC
+
+
+20171212
+SQL
+select * into tbl1 from server.db.tbl2
+insert into tbNew select * from tbOld
+
+
+20171211
+html convert	? --> &auml;
+url convert		? --> %C3%A4
+
+' ' --url--> %20
+
+call stack
+Debug/Windows/Call Stack
+
+
+
+20171127
+SQL Server安装有2部分，1数据库引擎，2SSMS（免费）
+连接本地数据库“服务器名”有3种可能：.,localhost,计算机名称
+
+想知道本机IP方法
+1，内部IP：cmd中输入ipconfig
+2，外部IP:google中输入what's my ip
+
+20171121
+Control四步曲
+1，Visible
+2，Enable
+3，DefaultValue
+4，Mandatoryfield
+其中1，2可以组合出3种权限：不可见，可见不可改，可见可改
+
+大中小
+有时候很难判断是大还是小，这时中就起作用了。因为中，让大小区分了开来。德奥意，苏阿巴。
+
+发布的难点
+0，安装IIS
+	Systemsteuerung/Progaramme und Features/Windows-Features aktivieren oder deaktivieren
+	Internetinformationsdienste/WWW-Dienste/Anwendungsentwicklungsfeatures
+1，IIS配置
+	In Anwendung konvertieren
+2，文件夹配置
+	Sicherheit中添加IUSR
+
+
+20171016
+多人合作，联系总是免不了的
+1，Fahrzeugakteview，在gao中有，在FahrzeugeModule也有（Jan）
+2，WebkatLite，在gao中有，在kat3中也有（Gerhard）
+3，Dichtheitspruefung，在ga中有，在protokoll中也有（Ralf）
+4，Rolle，在gao中有，在portal中也有（Gerhard）
+
+
+20171013
+Boris会的
+1，Dropdownlist增加一条请选择，在databound事件中插入
+2，Outlook Com-Add-Ins aktivieren 
+3，Alex一个类没有checkin，在Csc Fehler中第一条找到线索
+
+Alex会的
+1，ts的contact，要先build，再run custom tool
+2，数据库表增加了新列，edmx双击打开，右键update model from database
+
+Christian会的
+1，alt+shift+上下，矩形选择
+2，cache，connectionstring错误，会导致奇怪的错误
+
+
+20170928
+传统的编程，文字都写在程序里，在界面看到文字，可以通过在源程序中找对应文字找到位置；数据库表名也写在程序里，知道里表名，可以通过在源程序中找对应表名找到位置。
+现代编程，讲究参数，结果就是找到位置好难啊!
+
+20150721
+DOM and jQuery
+DOM:
+var img = document.getElementById("myId");
+read: var str = img.src;
+write: img.src = "../image/myPic.png";
+
+jQuery:
+var img = $(#myId);
+read: var str = img.attr("src");
+write: img.attr("src", "../image/myPic.png");
+
+三部曲
+1，变样子
+2，取得数据
+3，按取得的数据变样子
+
+20150709
+VisualStudio
+go back to the last position: ctrl+-
+
+
+20150708
+sql überwachen
+1, connection string:Application Name=nzh;
+2, SQL Server Management Studio
+Extras / SQL Server Profiler / Ereignisauswahl / Spaltenfilter / Wie:nzh, OK, Ausführen
+
+
+20150624
+--how to run a udf?
+Programmierbarkeit/Funktionen/Tabellenwertfunktionen/udf_XXX/right click
+Skript für Funktion als / select in / Neues Abfrage-Editor-Fenster
+
+
+20150519
+Dropdownlist
+2 funktions: edit and show. When options to delete, there is problem to show. 
+
+20150427
+LinQ
+firstCheck.DeliveryDate > new DateTime(2013, 1, 1)
+
+SQL
+firstCheck.DeliveryDate > '20130101'
+
+20150420
+notepad++
+macro record: only record keyboard input
+
+
+20150416
+--function or method ?
+method is function in class (object)
+function has explicit input/output. methode can have implicit input/output
+
+--attribute or property ?
+attribute --> (field, property)
+reason: readyonly attribute zu realize
+
+--argument or parameter ?
+first argument, then parameter
+function add(myParameter), add(myArgument)
+
+Class(Field, Protpery, Method) FPM
+Function(Argument)
+
+params, in C# if parameter is array
+
+partial, one class to two classes split
+used by asp.net, linq, entity framework
+
+
+
+20150415
+sealed
+1, all members in sealed class should NOT begin with protected (only private, public possible)
+2, sealed class is leaf class, should NOT be inherited
+
+
+20150414
+WCF (Windows Communication Foundation)
+.svc, erweiterte WebService
+WebService nur http, WCF http, tcp. WebService nur eine Richtung, WCF beide m?glich
+binding: basicHttpBinding (old), wsHttpBinding (>= .NET3.0)
+
+
+20150413
+Obsolete [i:]
+
+[Obsolete("Diese Funktion wird übergangsweise verwendet. Funktion newFunction bei Gelegenheit anpassen und benutzen")]
+public void oldFunction()
+{...}
+
+public void newFunction()
+{...}
+
+
+20150410
+--Left Join in SQL
+select Emp.Name, Dept.Name 
+from Employee Emp 
+left join Department Dept 
+on Emp.DeptID = Dept.ID
+
+--Left Join in LinQ
+var query = from emp in ListOfEmployees
+join dept in ListOfDepartment
+on emp.DeptID equals dept.ID into JoinedEmpDept 
+from dept in JoinedEmpDept.DefaultIfEmpty()
+select new                          
+{
+  EmployeeName = emp.Name,
+  DepartmentName = dept != null ? dept.Name : null                          
+};
+
+
+20150409
+Don't delete Project from Solution. 
+If do, reference also deleted. Alt+Enter to add the reference again.
+
+
+20150225
+1, software develepment ruler: don't too deep. Because of the change is always necessary.
+2, Copy DB data to excel: 1 choose, 2 right click, don't ctrl+c
+
+
+20150224
+--left join, right join, inner join
+left join means the first table all to show
+
+--group by
+select shipperid, count(shipperid) 
+from  orders
+group by shipperid
+
+1, select * from orders (group by shipperid)
+2, select count(shipperid) from orders group by shipperid
+
+20150223
+List
+var weekdays = new List<DropDownListItem>(); // ok
+List<DropDownListItem> weekdays = null; // error
+
+
+20150220
+input from client must be approved by the server side.
+F12, mouse choose the control, remove disabled="disabled", then the value will be changed on the client side.
+
+20150211
+AG	Sold-To	AuftragerGeber
+RE	Bill-To	RechnungEmpf?nger
+RG	Payer	RechnungGeber
+WE	Ship-To	WarenEmpf?nger
+ZE	End-User
+
+
+20150210
+- Unittest
+1, Vorteil: Muss Gro?projekt nicht starten. 2, Run/Debug, in Debug funktioniert Breakpoint
+
+namespace UnitTest
+{
+    [TestClass]
+    public class Weekday_Tests : MultiCustomerUnitTest
+    {
+        [TestMethod]
+        public void TestWeekdayTranslations()
+        {
+            RunMultiCustomerAllDb(TestWeekdayTranslations);
+        }
+
+        /// <summary>
+        /// Testet, ob in einer beliebigen Sprache / Fallback-Sprache immer 7 Wochentage zurückgegeben werden, auch wenn für die Sprache selber keine übersetzungen vorhanden sind.
+        /// </summary>
+        /// <param name="provider">Der Dataprovider für den DB-Zugriff</param>
+        /// <returns></returns>
+        public string TestWeekdayTranslations(UnitTestDataProvider provider)
+        {
+            var cultures = provider.DataContext.TXT_Cultures.Count(c => c.Status == true);
+            var list = TEF.BLL.Statics.StaticLists.GetWeekdays(11, 2);
+            const int expectedNumberOfWeekdays = 7;
+
+            if (list.Count != expectedNumberOfWeekdays)
+            {
+                return "TEF.BLL.Statics.StaticLists.GetWeekdays(int, int) liefert eine falsche Anzahl an Wochentagen!";
+            }
+
+            return "";
+        }
+    }
+}
+
+- Reisemobil
+	Fahrwerk
+		Fahrgestell
+		Auflaufeinrichtung
+		Radbremse
+		Bereifung,Wagenheber
+	Aufbau
+		Bug, Boden
+		Heck, Dach
+		Rechte Seite
+		Linke Seite
+		Verkleidungen
+		Dachreling, Leiter
+		Fenster, ?ffnungen
+		Dach?ffnungen
+		Folien, Schriftzüge
+		Tür
+		Verbrauchsmaterial
+	Ausbau
+		Küche unten
+		Küche oben
+		Toilettenraum innen
+		Toilettenraum au?en, Tür
+		kleiderschrank
+		Bug unten
+		Bug oben
+		Heck unten
+		Heck oben
+		M?belverbinder, Kanten
+		Furnier- und Innenwandplatten
+	Interieur
+		Polster, Teppichboden
+		Vorh?nge, Stores
+		Textilausstattung
+		Polster- und Dekostoffe		
+	Energierversorgung
+		Truma - Heizung, Gebl?se
+		Truma - Umluftteile
+		Alde - Heizung
+		Alde - Kleinteile
+		Fu?bodenheizung
+		Wasserversorgung
+		Wasserversorgung Kleinteile
+		Wassertanks
+		Gasinstallation
+		Elektrische Anlagen: innen
+		Elektrische Anlagen: au?en
+		Elektroversorgung: Kleinteile
+	Zubeh?r
+		Extras
+
+
+20150205
+- parameter transport between 2 pages
+Page1: (aspx)
+	var regressIds = [];
+	for (var i = 0; i < selectedRows.length; i++) {
+		regressIds.push(selectedRows[i].RegressId);
+	}
+
+	WindowDyn_Open("../Windows/RegressStorniert.aspx?stornoIds=" + regressIds, ...);
+
+Page2: (cs)
+	string stornoIds = Request.QueryString["stornoIds"];
+
+	if (!String.IsNullOrEmpty(stornoIds))
+	{
+		var ids = stornoIds.Split(',');
+		LblStorniertInfo.Text = "M?chten Sie " + ids.Count() + " Position(en) wirklich stornieren?";
+	}
+
+
+- Callback to use
+var __lastAction__ = null;
+function WindowDyn_Open(url, winname, width, height, title, action) {
+    var oWnd = $find(winname);
+    if (__lastAction__) {
+        oWnd.remove_close(__lastAction__);
+        __lastAction__ = null;
+    }
+    if (oWnd == null) return;
+    oWnd.Show();
+
+    oWnd.SetUrl(url);
+    oWnd.SetSize(width, height);
+    oWnd.Minimize();
+    oWnd.Maximize();
+    oWnd.Restore();
+    if (title != "") {
+        oWnd.SetTitle(title);
+    }
+    if (action) {
+        oWnd.add_close(action);
+        __lastAction__ = action;
+    }
+    oWnd.Center();
+}
+
+z.B.:
+Parentpage
+WindowDyn_Open("../Windows/RegressStorniert.aspx?stornoIds=" + regressIds, "RadWin1", 300, 300, "Stornieren", LiveExportStornieren);
+
+function LiveExportStornieren(sender, args) {
+
+    if (args && args.get_argument()) {
+        var alleArg = args.get_argument();
+        if (alleArg.Save) {
+            var oWndAbl = radopen("../Garantie/LiveExport.aspx?type=regress_storno&stornoIds=" + alleArg.Action, "RadWin2");
+            oWndAbl.title = translRegress;
+            oWndAbl.set_height(300);
+            oWndAbl.set_width(600);
+            oWndAbl.Center();
+        }
+    }
+
+}
+
+Windowspage
+	function BtOK_Click() {
+		var stornoIds = "<%= Request.QueryString["stornoIds"] %>";
+
+		var oWnd = GetRadWindow();
+		var arg = new Object();
+		arg.Save = true;
+		arg.Action = stornoIds;
+		oWnd.close(arg);
+	}
+                
+	function GetRadWindow() {
+		var oWindow = null;
+		if (window.radWindow) oWindow = window.radWindow;
+		else if (window.frameElement.radWindow) oWindow = window.frameElement.radWindow;
+		return oWindow;
+	}
+
+
+- WebService Ajax
+                function aktualisiereApUngelesenHersteller(userCompId) {
+                    $.ajax({
+                        type: "POST",
+                        url: "Services/InfoService.asmx/GibAnzahlApUngelesenHersteller",
+                        data: "{userCompId:'" + userCompId + "'}",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: aktualisiereAnlieferungsdurchsichtArchivKnoten,
+                        failure: fehlerAnlieferungsdurchsicht
+                    });
+                };
+
+                function aktualisiereAnlieferungsdurchsichtArchivKnoten(result) {
+                    $("#Anlieferungsdurchsicht_archiv").text(gibKnotenText($('#Anlieferungsdurchsicht_archiv').text(), result.d));
+                }
+
+                function fehlerAnlieferungsdurchsicht() {
+                    alert("Fehler Anlieferungsdurchsichtsanzahl 235");
+                }
+
+20150127
+[C#]
+string.IsNullOrEmpty(myStr) statt myStr == ""
+
+20150126
+[Allgemein]
+Kundenwunsch:
+1, Grid Einstellung zu speichern --> Session
+2, Repeater Position zu bleiben --> Ajax, LinkButton ist nicht gut für Ajax
+
+
+20150123
+[DB]
+Trigger,StoredProcedure,UserDefinedFunction
+-rechtsklick / ?ndern zu schauen, ?nderung durch "ausführen" zu speichern
+-rechtsklick / Script für Trigger als / Drop und Create in / 
+-aktivieren und deaktivieren (Icon mit einem roten Pfeil)
+
+[Ajax]
+.aspx
+<telerik:RadAjaxManager runat="server" ID="RadAjaxManager1" DefaultLoadingPanelID="RadAjaxLoadingPanel1" />
+<telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server" />
+<telerik:RadSkinManager ID="QsfSkinManager" runat="server" Skin="Default" />
+
+.cs onLoad()				
+var ajaxManager = RadAjaxManager.GetCurrent(Page);
+ajaxManager.AjaxSettings.AddAjaxSetting(RgAktGarantieantraege, RgAktGarantieantraege);
+ajaxManager.AjaxSettings.AddAjaxSetting(RgAktGarantieantraege, RadToolTipManager1);
+
+
+20150122
+[Grid]
+GridSettingsPersister zu speichern
+1, Page Size
+2, Group-by expressions
+3, Sort expressions
+4, Filter expressions
+5, Column settings (Width, OrderIndex, Display, Visible, CurrentFilterFunction, CurrentFilterValue)
+
+[Session]
+Session can save not only int,string but also object[] 
+
+
+20150121
+[C#]
+Console Solution ein Projekt als Startprojekt auszuw?hlen:
+Projekt Eigenschaften / ddl auszuw?hlen. Wenn ddl leer ist, Framework zuerst neu ausw?hlen.
+
+[JavaScript]
+2 Events in RadToolTipManager
+OnClientBeforeShow	für UI
+OnClientRequestStart	für Daten
+
+
+20150116
+[C#]
+	var pageSizeChangedEvent = e as GridPageSizeChangedEventArgs;
+	HttpContext.Current.Session[PageSizeSessionKey] = pageSizeChangedEvent.NewPageSize;
+
+
+[C#]
+OnInt() --> OnLoad() --> OnItemCommand() --> OnPreRender()
+
+
+20150113
+[JavaScript] [Chrome]
+console.log("log");
+console.debug("debug");
+console.info("info");
+
+in Chrome/F12 to display these info. like alert("blabla")

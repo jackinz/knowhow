@@ -13,6 +13,7 @@ shortcuts：
 win
 win+pause	open System
 win+x		quick menu
+win+e		文件浏览器
 
 多屏
 win+tab		time line

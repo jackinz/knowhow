@@ -1,0 +1,16 @@
+1,
+Händler-Sachbearbeiter-Zulieferer
+Unterhändler-GeneralImporteur-Sachbearbeier(Geschätsleitung,Außendienst)-Zulieferer
+
+2,
+1-(2,6)-3,4,5
+1-3-17-1-3-17-18-3
+
+3,
+Rücklieferung zwischen Händler und SA
+Rücklieferung zwischen SA und Zulieferer
+Garantieantrag ist zwischen Händler und SA
+Regress ist zwischen SA und Zulieferer
+
+4, 4 Rolls in Business Logic
+Sold-To, Ship-To, Payer, Bill-To
