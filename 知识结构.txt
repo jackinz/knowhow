@@ -1,0 +1,28 @@
+﻿前端
+VS
+Bootstrap(Twitter)
+JQuery
+Web Essential
+TypeScript
+RegularExpress
+
+后端
+VS
+EntityFramework
+RegularExpress
+
+数据库
+SSMS
+Poorman's SQL Formatter
+SSMS Tools
+
+AI
+Ubuntu
+TensorFlow(Google)
+Python
+Docker
+
+
+工具
+版本管理Git，GitHub，TFS
+包管理NPM，NuGet

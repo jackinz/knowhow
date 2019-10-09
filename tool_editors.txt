@@ -7,6 +7,8 @@ Sublime
 Atom
 Geany
 
+
+
 20190810
 Sublime的独有亮点
 1, find all
@@ -51,3 +53,23 @@ emmet
 编辑的时候
 !+Tab:生成空html框架
 div*3:生成3个div
+
+20181221
+文本编辑器常用快捷键
+Ctrl+C Copy
+Ctrl+V Paste
+Ctrl+X Cut
+Ctrl+F Find
+Ctrl+H Replace
+Ctrl+A Select All
+Ctrl+S Save
+Ctrl+N New
+Ctrl+O Open
+Ctrl+P Print
+Ctrl+W Close
+Ctrl+G Goto
+
+Shift+左右	选择
+Pos1		行首
+Ende		行末
+Shift+Alt+上下	矩形选择

@@ -1,4 +1,10 @@
-﻿20190711
+﻿20191007
+VS插件有3种，都在Tools菜单下：
+1, Get Tools and Features（MS原厂）
+2, Extensions and Updates（第三方，会改变VS的菜单栏，.VSIX，Marketplace下载，CodeMaid, NCrunch, ReSharp, NuGet）
+3, NuGet Package Manager（第三方，可升级，NUnit, Newtonsoft.Json, JQuery, EntityFramework）
+
+20190711
 发布
 https://docs.microsoft.com/zh-cn/dotnet/framework/deployment/deployment-guide-for-developers#clickonce-deployment
 1，ClickOnce部署
@@ -30,6 +36,11 @@ TFS
 compare with workspace		和工作开始时的版本比较
 compare with latest version	和最新版本比较，如果在工作期间没人提交新的版本，则workspace = latest version
 
+Ctrl+K Ctrl+K	书签添加删除
+Ctrl+K Ctrl+C	添加注释
+Ctrl+K Ctrl+U	消除注释
+Ctrl+- Ctrl+Shift+-	前后工作点
+Ctrl+. 提示
 
 20190510
 --snippets
@@ -100,3 +111,15 @@ namespace TEF.BLL.GAO.Lib
 Breakpoint does not work
 1) not in Debug Modus
 2) js must be run in IE, otherwise add "debugger" in js or F12
+
+20150828
+ctrl+.	Methode generieren.
+
+20170926
+shift+箭头	选择
+
+20170811
+F5			run the project in debug mode
+Ctrl + F5	run the project without debugging
+Ctrl + -	go back to the old position
+alt + Enter	add References

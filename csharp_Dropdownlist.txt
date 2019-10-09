@@ -1,0 +1,25 @@
+﻿20171018
+设置初值
+1，只要设value。一般不要设text，如果设text，要考虑text有重复的情况。
+2，先设置datasource，后设置初值。初值可以在DDL_PreRender中设。
+
+CtrlInit - PageInit - PageLoad - CtrlDataBinding - CtrlDataBound - CtrlLoad - PagePreRender - CtrlPreRender
+PageInit - PageLoad - PagePreRender
+
+20171006
+取得datasource和设置初值
+Page_Load()---DDL_OnPreRender()
+
+Dropdownlist获得列表数据在Onload()或之前
+Dropdownlist设置初值在ddl_OnPreRender()，要先设置datasourse，后设置初值
+
+
+20170330
+增加一个选项，比如“请选择”，在OnDataBound()里
+Page_Int()---Page_Load()---DDL_OnDataBound()---Page_PreRender()
+
+        protected void RcbReason_OnDataBound(object sender, EventArgs e)
+        {
+            var combo = (RadComboBox)sender;
+            combo.Items.Insert(0, new RadComboBoxItem(TEF.Common.Translations.KeineAuswahl, null));
+        }

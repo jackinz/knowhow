@@ -1,0 +1,19 @@
+﻿20181203
+categories LEFT JOIN products:
+var q =
+    from c in categories
+    join p in products on c.Category equals p.Category into ps
+    from p in ps.DefaultIfEmpty()
+    select new { Category = c, ProductName = p == null ? "(No products)" : p.ProductName };
+
+
+inner join with multikeys:
+var result = from x in entity
+             join y in entity2
+             on new { X1= x.field1, X2= x.field2 } equals new { X1=y.field1, X2= y.field2 }
+             select new 
+             {
+               /// Columns
+              };
+
+x.field1可以是"常量"

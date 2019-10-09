@@ -1,4 +1,27 @@
-﻿20190606
+﻿20191007
+1,
+crud
+
+2,
+select myColumn, count(myColumn) 
+from myTable
+group by myColumn
+
+3,
+inner join
+left outer join 
+
+4,
+trigger, view, stored procedure
+
+5, Performance
+--SSMS / Extras / SQL Server Profiler
+Ereignisauswahl / Spaltenfilter... / Wie XXX
+--VS ConnectionString Application Name XXX
+"Server=WEB-TEST;Database=Hymer_WK3;User ID=web-kat;Password=web-kat;Trusted_Connection=False;Application Name=XXX;"
+
+
+20190606
 拷贝表1内容到表2
 1，使用insert into
 2，不能包含自动生成列，自增ID列

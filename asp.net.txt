@@ -23,3 +23,8 @@ Garantie/Garantieantrag.aspx?login=1000-50&pass=$$Jack18,.&gaid=GA1000-19-0009
 
 page events
 PreInit, Init, Load, PreRender
+
+页面event顺序
+CtrlInit - PageInit - 
+PageLoad - CtrlDataBinding - CtrlDataBound(添加选项，比如“请选择”) - CtrlLoad - 
+PagePreRender - CtrlPreRender（设置初值）

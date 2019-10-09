@@ -1,0 +1,10 @@
+SSMS Tools
+1，ssf, enter
+2，*后按Tab
+3，编辑区点到表名，按F12定位到表
+4，在结果区点右键
+5，History
+6，生成所有表
+
+Poor Man's T-SQL Formatter
+1，Ctrl+K D

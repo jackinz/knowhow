@@ -1,0 +1,31 @@
+DECLARE @owner_tbl TABLE(
+        [owner] VARCHAR(50)
+)
+
+DECLARE @auto_tbl TABLE(
+        [owner] VARCHAR(50),
+        [auto] VARCHAR(50),
+        [year]VARCHAR(4)
+)
+
+INSERT INTO @owner_tbl SELECT 'john'
+INSERT INTO @owner_tbl SELECT 'james'
+INSERT INTO @owner_tbl SELECT 'jeff'        
+
+INSERT INTO @auto_tbl SELECT 'john','corvette','1968'
+INSERT INTO @auto_tbl SELECT 'john','prius','2008'
+INSERT INTO @auto_tbl SELECT 'james','f-150','2004'
+INSERT INTO @auto_tbl SELECT 'james','cadillac','2002'
+INSERT INTO @auto_tbl SELECT 'james','accord','2009'
+INSERT INTO @auto_tbl SELECT 'jeff','tesla','2010'
+INSERT INTO @auto_tbl SELECT 'jeff','hyundai','1996'
+
+;WITH Autos AS(
+        SELECT  *,
+                ROW_NUMBER() OVER(PARTITION BY a.owner ORDER BY a.year) ROWID
+        FROM    @auto_tbl a
+)
+SELECT  *
+FROM    Autos
+WHERE   ROWID = 1
+ORDER BY owner

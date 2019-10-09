@@ -1,0 +1,75 @@
+﻿20111101
+SQL Server T-SQL
+EXEC sp_help GA_Antraege_Material
+EXEC sp_fkeys GA_Antraege_Material
+
+想知道表1中的列3来自哪个表
+法一：鼠标展开表1，选第二个文件夹key。或者自动创建create SQL。
+法二：exec sp_help 表1
+
+想知道表2被哪些表引用了
+exec sp_fkeys 表2
+
+20171019
+t-sql select first detail record
+场景：1，GA和一个新列：最后的post。2，GA和GA_Verlauf最后的一个GaStatus
+
+
+
+20171006
+Wo sind triggers in TXT_Catalog：Trigger
+
+
+20170929
+transaction
+...code...
+rollback
+
+...code...将被执行后恢复，相当于不执行
+
+20170927 NULL
+IS NULL或者ISNULL
+CASE WHEN ReceivedOn IS NULL THEN 4 ELSE 3 END
+CASE ISNULL(ReceivedOn,3) WHEN 3 THEN 3 ELSE 4 END
+
+一定要用IS，
+CASE ReceivedOn WHEN NULL THEN 3 ELSE 4 END --> error
+CASE WHEN ReceivedOn = NULL THEN 3 ELSE 4 END --> error
+
+20170830 Left outer join, Linq
+select txt.CultureId,* from KAT_Artikel art
+left outer join KAT_Artikel_Txt txt on art.Artikelnummer = txt.Artikelnummer and txt.CultureId = 2
+where art.Artikelnummer = '207 10917'
+--> return result
+
+select txt.CultureId,* from KAT_Artikel art
+left outer join KAT_Artikel_Txt txt on art.Artikelnummer = txt.Artikelnummer
+where art.Artikelnummer = '207 10917' and txt.CultureId = 2
+--> return null
+
+Linq:
+join txt in Context.Current.KAT_Artikel_Txt on new { mat.Artikelnummer, CultureId = 2} equals new {txt.Artikelnummer, txt.CultureId} into txt_join
+from txt in txt_join.DefaultIfEmpty()
+
+
+
+20170809
+使用临时表temp
+; with temp as (
+)
+
+
+20170803
+get string "2,5"
+FOR XML PATH('')
+
+SELECT FahrzeugId,  
+       StatusList = STUFF((  
+           SELECT ','  + CONVERT(varchar(1), status)  
+           FROM   KAT_Fahrzeuge_Status AS b  
+           WHERE  b.FahrzeugId = a.FahrzeugId FOR XML PATH('')  
+       ), 1 , 1 , '')
+FROM   KAT_Fahrzeuge_Status AS a
+GROUP BY FahrzeugId
+
+CONVERT(varchar(10), columnname)

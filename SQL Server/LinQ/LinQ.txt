@@ -1,0 +1,16 @@
+﻿--left outer join
+var query =	from person in people
+            
+		join pet in pets on person equals pet.Owner into gjjjjjj
+		from subpet in gjjjjjj.DefaultIfEmpty()
+            
+	    	select new { person.FirstName, PetName = subpet?.Name ?? String.Empty };
+
+
+--多语言
+            var statusList = (from infostatus in context.GA_Info_Status
+                              from cat in context.TXT_Catalog.Where(c => c.Name == infostatus.BezeichnungCatalogName).DefaultIfEmpty()
+                              from txt in context.TXT_Text.Where(t1 => t1.CatalogId == cat.Id && t1.CultureId == user.SprachID).DefaultIfEmpty()
+                              from txtDe in context.TXT_Text.Where(t2 => t2.CatalogId == cat.Id && t2.CultureId == 1).DefaultIfEmpty()
+                              where infostatus.Aktiv
+                              select FromEntity(infostatus, cat, txt, txtDe)).ToList();

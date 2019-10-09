@@ -1,5 +1,9 @@
 ﻿our ability to learn faster than your competition is your only sustainable competitive advantage. - Arie de Gues
 
+20191007
+git参考文章
+http://rogerdudler.github.io/git-guide/index.zh.html
+
 20191002
 --恢复一个文件到改动前
 git checkout -- filename.txt

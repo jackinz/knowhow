@@ -1,0 +1,16 @@
+﻿--Trigger有2类
+after触发器：之后触发，有insert，update，delete三种
+instead of触发器：之前触法
+
+--口诀
+create trigger MyTrigger on MyTable
+after insert,update,delete
+as
+
+--sql server的隐藏表
+inserted：insert，update后
+deleted：delete
+
+--性能优化
+SET NOCOUNT ON;
+不显示受影响行数
