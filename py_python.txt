@@ -1,3 +1,17 @@
+20191011
+site-packages包：C:\Program Files\Python37\Lib\site-packages
+安装cv2：pip install opencv-python
+cmd和python的关系。cmd> python>>>。在cmd中按“python”进入python，在python中按“ctrl+z，回车”回到cmd
+pip和pip3。如果机上只有python3.7，那么pip=pip3。如果既有2又有3，那么pip就是对2的，pip3是对3的。
+用完pip install xxx，在site-packages中就会增加相应的包。
+不能升级pip。python -m pip install --upgrade pip。在后面填--user就可以了：python -m pip install --upgrade pip --user
+from 文件 import 函数
+
+20191010
+把123456，取前3位
+"%03d" %12 = '012'
+"%3d" %12 = ' 12'
+
 20191004
 file操作
 open()
@@ -10,6 +24,7 @@ a写（追加）
 +又读又写
 b二进制，比如图片
 例句：f = open("abc.txt", "a+") #用又读又写的方式打开abc.txt，文件不存在则创建，追加方式，a+是个好参数
+如果是log文件，就使用“a+”参数
 
 如果要使用f.read()或者f.readline()就要使用参数r或者r+。r+也是一个好参数（可读可写）
 

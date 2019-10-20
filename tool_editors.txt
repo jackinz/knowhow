@@ -8,6 +8,18 @@ Atom
 Geany
 
 
+20191020
+Sublime Snippets
+1，安装emmet
+Preferences / Package Control / 输入Install Package / 输入emmet
+2，新建页面中选择Sytax
+ctrl+shift+p / 输入html 
+3，然后开始各种爽
+!+tab
+lorem+tab
+div*3+tab
+li*3+tab
+p#myId+tab
 
 20190810
 Sublime的独有亮点
@@ -47,12 +59,16 @@ VS Code
 --SublimeText
 下载（www.sublimetext.com），安装，运行
 ctrl+shift+p 呼出contextmenu
-install package control
+preferences / package control
 install package
 emmet
 编辑的时候
+1,ctrl+shift+p, 输入html，选择Set Syntax: html
+2,开始各种爽
 !+Tab:生成空html框架
+lorem+Tab:生成乱数假文
 div*3:生成3个div
+p#myId+Tab：生成<p id="myId"></p>
 
 20181221
 文本编辑器常用快捷键

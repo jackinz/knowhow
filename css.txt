@@ -1,8 +1,14 @@
-﻿20190403
+﻿20191014
+显示边界
+<div style="border:solid 1px" />
+
+20190403
+
 黑白显示整个网页
+
 body{-webkit-filter: grayscale(100%);}
 
-
+20190101
 1,
 patting, margin
 

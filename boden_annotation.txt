@@ -1,0 +1,9 @@
+20191013
+这两天改一个错误，是一个下拉框。一会出现一会儿隐藏。我找到了这个下拉框的id（cboDataSets），就从这个id出发开始找。无果。其实是因为显示/隐藏的不是这个combobox，而是更上层的uxHdfFileNavigationSectionView。
+
+if (state.HdfNavigationVisibility == Visibility.Collapsed)
+                
+{
+
+	ShowHideFrameNavigation(uxHdfFileNavigationSectionView, true); //这里不能是false
+}
