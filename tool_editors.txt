@@ -13,6 +13,9 @@ VS Code
 1, 命令行code .
 2, 包管理安装语言
 3，包管理安装theme
+亮点：
+1，和git结合，可以编辑后直接push
+2，和cmd结合，可以直接显示输出
 
 20191020
 --Sublime Snippets
