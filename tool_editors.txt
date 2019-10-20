@@ -9,7 +9,13 @@ Geany
 
 
 20191020
-Sublime Snippets
+VS Code
+1, 命令行code .
+2, 包管理安装语言
+3，包管理安装theme
+
+20191020
+--Sublime Snippets
 1，安装emmet
 Preferences / Package Control / 输入Install Package / 输入emmet
 2，新建页面中选择Sytax
@@ -20,6 +26,9 @@ lorem+tab
 div*3+tab
 li*3+tab
 p#myId+tab
+
+--安装格式化工具HTML-CSS-JS Prettify
+右键菜单
 
 20190810
 Sublime的独有亮点
