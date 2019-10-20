@@ -1,6 +1,13 @@
+20191020
+git add . && git commit -m "trivial" && git push
+git pull
+
+git branch b1
+git checkout b1
+
+checkout是一个最有用的命令，前面所有的努力，都是为了在checkout时出现的变化
+
 20190810
 Subversion
 Git
 TFS
-
-
