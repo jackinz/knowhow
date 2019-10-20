@@ -1,8 +1,13 @@
 20190810
-win£º
+win:
 cmd
 shell
 git bash
 
-mac+linux£º
+ubuntu:
+terminal
+konsole
+
+mac+linux:
 bash
+vim
