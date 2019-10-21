@@ -152,7 +152,7 @@ git log -p
 --P6 标签
 git add . && git commit -m "MyCommentar"
 
-git log --online
+git log --oneline
 
 // 打标签
 git tag -a v1 -m "详细描述"

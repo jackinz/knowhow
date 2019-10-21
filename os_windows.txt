@@ -1,4 +1,12 @@
-﻿20190730
+20191020
+msconfig
+ipconfig
+win+pause --> 控制面板，硬件管理
+win+i 
+开始右键 --> Computer management
+
+
+20190730
 不进垃圾箱删除
 shift+del
 
