@@ -1,2 +1,21 @@
+20191109
+JVM
+JDK
+Java (ME, SE, EE) MicroEdition, StandardEdition, EnterpriseEdition, 都包含了JVM
+JavaEE针对Web开发，有Spring框架
+
+HelloWorld
+1、下载Java SE SDK后安装
+2、系统变量里添加C:\Program Files\Java\jdk-13.0.1\bin
+	win+pause/高级系统设置/高级 环境变量.../系统变量
+3、Helloworld程序Hello.java。//坑：文件名必须和main所在的类名相同
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello, world!");
+    }
+}
+4、cmd运行javac Hello.java后生成一个Hello.class
+java Hello即可见"Hello World"
+
 20190717
 spring，servlet，Redis

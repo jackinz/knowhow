@@ -1,3 +1,14 @@
+﻿20191023
+包和它们的好朋友们
+nodejs的好朋友
+npm
+less，gulp，koala
+vue
+
+sublime好朋友
+emmet
+html prettify
+
 20191020
 包管理的前世今生
 1，下载第三方库，然后复制粘贴到自己的项目中

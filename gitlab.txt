@@ -1,3 +1,7 @@
+20191105
+保护分支 ，一般master是被保护的
+选择一个project，左边栏Settings/Repository/Protected Branches/选择一个Branch就可以protect或者选择一个branch点击Unprotect
+
 20191009
 1，小杜登不上
 用户名昨天被我修改了，ducunfan-->cunfan.du。然后要清除浏览器cache
