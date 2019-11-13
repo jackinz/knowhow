@@ -1,3 +1,13 @@
+20191012
+入口不知道
+1，BodenAlgo：Demo_ui/app/main.py。0000改localhost
+2，电视hdmi：精选
+
+20191009
+今天小杜的机上不了gitlab，是因为浏览器有缓存
+小许的机不能push，是因为windows有缓存
+正好印证了我昨天的理论--权限缓存理论，大部分的疑难杂症都源于此
+
 20191008
 在国外技术参考多用StackOverflow，在国内多用csdn
 
