@@ -1,5 +1,13 @@
 ﻿our ability to learn faster than your competition is your only sustainable competitive advantage. - Arie de Gues
 
+20191021
+commit错了一个version怎么办？
+git reset --hard 版本号
+
+push错了一个version怎么办?
+git reset --hard 版本号
+git push -f //推一个旧版本到远程库
+
 20191007
 git参考文章
 http://rogerdudler.github.io/git-guide/index.zh.html
@@ -152,7 +160,7 @@ git log -p
 --P6 标签
 git add . && git commit -m "MyCommentar"
 
-git log --online
+git log --oneline
 
 // 打标签
 git tag -a v1 -m "详细描述"

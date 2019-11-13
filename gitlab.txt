@@ -1,3 +1,13 @@
+20191105
+保护分支 ，一般master是被保护的
+选择一个project，左边栏Settings/Repository/Protected Branches/选择一个Branch就可以protect或者选择一个branch点击Unprotect
+
+20191009
+1，小杜登不上
+用户名昨天被我修改了，ducunfan-->cunfan.du。然后要清除浏览器cache
+2，继海登不上
+yuhuihui之前的记录可能有问题，在控制面板的单据凭证中删除关于gitlab的记录，然后重新登录即可。
+
 20190824
 安装Gitlab Extension for Visual Studio，并连接。
 When you login with 2FA :

@@ -1,8 +1,25 @@
-﻿20190403
+﻿20191020
+display:flex
+display:grid
+
+2种经典布局
+布局1：2列，左列固定宽度，右列自适应
+
+
+布局2：3行，header和footer固定高度，content自适应高度
+
+
+20191014
+显示边界
+<div style="border:solid 1px" />
+
+20190403
+
 黑白显示整个网页
+
 body{-webkit-filter: grayscale(100%);}
 
-
+20190101
 1,
 patting, margin
 

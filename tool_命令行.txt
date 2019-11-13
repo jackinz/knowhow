@@ -1,8 +1,17 @@
+20191020
+在windows的3个命令行工具中，多用tab键，会有惊喜
+cd t + tab，就会自动补全t开头的文件夹
+
 20190810
-win��
+win:
 cmd
 shell
 git bash
 
-mac+linux��
+ubuntu:
+terminal
+konsole
+
+mac+linux:
 bash
+vim

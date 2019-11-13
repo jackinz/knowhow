@@ -1,4 +1,12 @@
+20191111
+Apache是纯粹的web服务器
+Tomcat和IIS因为具有了解释执行服务器端代码的能力，可以称作为轻量级应用服务器或带有服务器功能的Web服务器。Weblogic、WebSphere因为能提供强大的J2EE功能，毫无疑问是绝对的应用服务器。
+对于处于中间位置的Tomcat，它可以配合纯Web服务器Apache一起使用，也可以作为应用服务器的辅助与应用服务器一起部署.
+
+参考：http://hongyitong.github.io/2017/02/16/WEB%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81HTTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8C%BA%E5%88%AB%E8%8C%83/
+
+
 20190715
 iis
 apache
-nginx������x��
+nginx（恩金x）
