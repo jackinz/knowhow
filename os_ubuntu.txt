@@ -1,3 +1,7 @@
+20191124
+whereis
+find
+
 20191020
 history | grep 'docker'
 查看历史记录中带"docker"的命令

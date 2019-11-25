@@ -1,4 +1,10 @@
-﻿20191007
+﻿20191125
+一览所有表的行数
+select 'Error' as 'Table', count(*) as 'Count' from MAIN.[Error]
+union
+select 'ShortcutDefinition', count(*) from MAIN.[ShortcutDefinition]
+
+20191007
 1,
 crud
 

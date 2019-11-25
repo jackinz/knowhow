@@ -1,4 +1,9 @@
-﻿20191020
+﻿20191118
+显示颜色
+color:red;
+不是color：“red”，
+
+20191020
 display:flex
 display:grid
 

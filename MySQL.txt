@@ -1,0 +1,82 @@
+20191119
+show create table xxx \G;
+create table user(name varchar(11)) default charset=utf8;	--使用utf8做表的编码
+
+show variables like '%char%';	--查看
+
+set character_set_server=utf8;
+set character_set_database=utf8;
+show variables like '%char%';	--修改后查看
+
+set global character_set_database=utf8;
+set global character_set_server=utf8;
+show variables like '%char%';	--修改后查看
+
+修改mysql配置文件/etc/my.cnf：
+[mysqld]
+character-set-server=utf8 
+[client]
+default-character-set=utf8 
+[mysql]
+default-character-set=utf8
+
+20191115
+查看centos版本
+cat /etc/redhat-release
+
+查看开放了哪些端口
+iptables -L -n
+
+iptables文件的内容，用vi /etc/sysconfig/iptables查看编辑（i，ZZ退出）
+*filter
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+-A INPUT -p icmp -j ACCEPT
+-A INPUT -i lo -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 9000 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 81 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 82 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 139 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 389 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 445 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 901 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 3306 -j ACCEPT
+-A INPUT -j REJECT --reject-with icmp-host-prohibited
+-A FORWARD -j REJECT --reject-with icmp-host-prohibited
+
+
+
+20191114
+检查一个mysql是否装好
+mysql -u root -p
+输入密码后，看到Welcome to the MySQL monitor... 就表示成功了！
+
+mysql> show databases;
+回车就可以看到database列表了。注意s和;
+
+简化：
+mysql -uroot -p123456
+用户名是root，密码是123456
+
+show databases;
+use mydb;
+...
+exit;
+
+sql查看数据表结构
+describe 表名
+
+连接远程MySQL
+mysql -h 192.168.0.101 -P 3306 -u root -p
+
+20191109
+https://www.bilibili.com/video/av39807944?p=2
+show database;
+select * from table1;
+
+
+MySQL下载
+https://dev.mysql.com/downloads/mysql/
+选择MySQL Community Server

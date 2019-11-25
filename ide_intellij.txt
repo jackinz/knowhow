@@ -1,0 +1,17 @@
+20191121
+注释	ctrl+/
+代码格式化	ctrl+alt+l
+snippets	
+/** + enter	method注释
+psvm	main
+sout	System.out.println();
+
+
+如何使用IntelliJ IDEA
+0, SDK装好。cmd运行java -version
+1, 配置项目的SDK
+File/Project Structure/Platform Settings/SDKs
+File/Project Structure/Project/Project SDK
+2, 配置项目的Template
+Run/Edit Configurations.../Templates
+一般选择Application。Main class要设定

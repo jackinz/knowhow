@@ -1,0 +1,20 @@
+20191020
+--Snippets
+1，安装emmet
+Preferences / Package Control / 输入Install Package / 输入emmet
+2，新建页面中选择Sytax
+ctrl+shift+p / 输入html 
+3，然后开始各种爽
+!+tab
+lorem+tab
+div*3+tab
+li*3+tab
+p#myId+tab
+
+--Format
+安装格式化工具HTML-CSS-JS Prettify
+右键菜单
+
+20190808
+find all
+ctrl+单击：多个插入点
