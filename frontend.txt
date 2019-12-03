@@ -1,0 +1,34 @@
+
+20191203
+前端工程化
+要安装的东西npm，vue，webpack
+1，npm install
+会得到一个文件夹"node_modules"
+2，npm run dev/serve/start 具体看package.json
+3，然后得到dist文件夹，把里面的内容拷贝到web服务器下即部署成功，map文件可以删除。
+
+20191126
+今天的前端已经不是我认识的当前的前端了。
+我以为前端只是html+css+javascript
+但到今天，都要使用各种框架，包管理工具，打包工具
+光点html已经跑不起来，前端也要通过serve跑起来
+前端的库也越来越多，opencvjs，tensorflowjs
+3D，2D库也越来越多，threejs，openlayer
+
+我需要重新学习前端了。
+
+Vue教程
+https://learning.dcloud.io/
+ElementUI教程
+https://www.bilibili.com/video/av50341412/?spm_id_from=333.788.videocard.19
+Webpack教程
+https://www.bilibili.com/video/av76526834
+
+20190810
+三大件：
+  html-骨骼
+  css-皮肤
+  javascript-神经	java和javascript的关系是雷锋和雷锋塔的关系。除了名字像，没啥关系。
+
+前端是服务员，要甜美，有礼貌
+后端是厨房，闲人免进
