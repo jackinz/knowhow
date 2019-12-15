@@ -1,3 +1,16 @@
+20191206
+select * from myTable;
+-- 这是注释
+#这也是注释
+
+IF (a=1) THEN
+  #无返回值的statement;
+ELSE
+  IF (a != 2) THEN
+    #无返回值的statement;
+  END IF;
+END IF;
+
 20191119
 show create table xxx \G;
 create table user(name varchar(11)) default charset=utf8;	--使用utf8做表的编码
