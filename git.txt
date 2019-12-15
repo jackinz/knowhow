@@ -1,5 +1,13 @@
 ﻿our ability to learn faster than your competition is your only sustainable competitive advantage. - Arie de Gues
 
+20191215
+git stash
+git stash list
+git stash pop
+
+https://blog.csdn.net/daguanjia11/article/details/73810577
+
+
 20191021
 commit错了一个version怎么办？
 git reset --hard 版本号
