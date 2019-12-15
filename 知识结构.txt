@@ -4,11 +4,12 @@ Bootstrap(Twitter)
 JQuery
 Web Essential
 TypeScript
-RegularExpress
 
 后端
 VS
 EntityFramework
+
+前后端
 RegularExpress
 
 数据库
