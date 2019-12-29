@@ -1,5 +1,13 @@
 ﻿our ability to learn faster than your competition is your only sustainable competitive advantage. - Arie de Gues
 
+20191230
+如何修改上一次commit的message？
+git commit --amend
+进入vi编辑器后，i进入编辑模式
+修改后，按esc，再按shift+z+z保存退出
+git pull
+git push
+
 20191021
 commit错了一个version怎么办？
 git reset --hard 版本号
