@@ -8,6 +8,8 @@ git commit --amend
 git pull
 git push
 
+
+
 20191021
 commit错了一个version怎么办？
 git reset --hard 版本号
