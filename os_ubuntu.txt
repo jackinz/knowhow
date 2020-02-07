@@ -1,3 +1,22 @@
+﻿20200207
+Ubuntu的坑
+1,输入法不能装ibus,要装google pinyin
+	装了ibus,vscode只能选一行,文本编辑,点击一行就整行消失
+2,Dolphin也满是坑
+	不能用smb,不能图片预览,不能解压缩
+3,翻墙
+	开小飞机,选择Proxy,再选择System Proxy
+
+sudo apt search
+sudo apt install
+
+20200111 
+删除文件夹下所有内容 
+rm -rf * 
+
+Linux可视化文件管理器 
+WinSCP
+
 20191216
 --拷贝c盘下面的dist.zip到101的home/www/test
 scp c:/dist.zip root@192.168.0.101:/home/www/test
@@ -21,3 +40,4 @@ find
 20191020
 history | grep 'docker'
 查看历史记录中带"docker"的命令
+
