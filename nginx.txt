@@ -1,0 +1,3 @@
+20190113
+django发布新版本后，要重新加载python：
+systemctl restart supervisord
