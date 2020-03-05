@@ -1,4 +1,45 @@
-﻿20191118
+﻿20200301
+div试金石
+style="border:1px solid"
+
+20200221
+高度满屏
+html,body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+--传统布局
+盒状模型
+依赖：display 属性 + position属性 + float属性
+
+--flex布局
+.box{
+  display: -webkit-flex; /* Safari */
+  display: flex;
+}
+传统布局的float属性、clear属性和vertical-align属性将失效。
+
+布局：
+flex-direction: row（默认值） | row-reverse | column | column-reverse;
+flex-wrap: nowrap（默认值，不换行） | wrap | wrap-reverse;
+flex-flow：flex-direction+flex-wrap
+flex-flow: row wrap (项目页面布局)
+
+居中：
+justify-content: center（水平居中）| space-between
+align-items: center （垂直居中）| stretch
+
+自适应：
+flex-grow（空间富余的情况）：0（默认值，不增长）| 1 | 2
+flex-shrink（空间不足的情况）：1（默认值，会被缩小）| 0（不会缩小） 
+flex-basis：auto（默认值） | 350px
+flex：flex-grow+flex-shrink+flex-basis
+flex: auto = flex: 1 1 auto
+flex: none = flex: 0 0 auto
+
+20191118
 显示颜色
 color:red;
 不是color：“red”，

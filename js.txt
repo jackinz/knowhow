@@ -1,4 +1,8 @@
-﻿20190711
+﻿20200222
+window.location.host
+window.location.url
+
+20190711
 一页说明jQuery何时取得control
 <!DOCTYPE html>
 <html lang="en">

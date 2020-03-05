@@ -1,0 +1,8 @@
+20200305
+nvidia-cuda-pyTorch(facebook), tensorflow(google)
+
+3d框
+pointrcnn
+
+2d框
+maskrcnn
