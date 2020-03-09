@@ -1,0 +1,27 @@
+3D-去地线
+RANSAC
+
+3D-贴边
+最小面积法
+最短距离法
+找L
+
+2D-tracking
+正视->顶视
+
+3D-recognition
+point-rcnn
+
+2D-recognition
+mask-rcnn(赵奕bat，小王baw)
+
+2D-polygon
+
+
+recognition
+yolo detection
+
+
+传输
+grpc、grpcweb
+http，python flasl，ajax、axios
