@@ -1,5 +1,7 @@
 ﻿our ability to learn faster than your competition is your only sustainable competitive advantage. - Arie de Gues
 
+20200506
+merge时出错，到了一个新的节点，不在master，git push一下就ok
 
 20191230
 如何修改上一次commit的message？
