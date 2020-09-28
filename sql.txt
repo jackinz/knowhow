@@ -1,4 +1,16 @@
-﻿20191125
+20200928
+--update one table from another
+sql server:
+UPDATE 
+     t1
+SET 
+     t1.column = t2.column
+FROM 
+     Table1 t1 
+     INNER JOIN Table2 t2 
+     ON t1.id = t2.id;
+
+20191125
 一览所有表的行数
 select 'Error' as 'Table', count(*) as 'Count' from MAIN.[Error]
 union
