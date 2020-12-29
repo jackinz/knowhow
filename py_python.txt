@@ -1,117 +1,124 @@
+20201129
+hello world
+1，下载安装，要勾选第二个方框（将python3.x加到系统路径）
+2，cmd，python
+3，在>>>python环境中print('hello world')
+4，exit()离开python环境
+
 20191011
-site-packages����C:\Program Files\Python37\Lib\site-packages
-��װcv2��pip install opencv-python
-cmd��python�Ĺ�ϵ��cmd> python>>>����cmd�а���python������python����python�а���ctrl+z���س����ص�cmd
-pip��pip3���������ֻ��python3.7����ôpip=pip3���������2����3����ôpip���Ƕ�2�ģ�pip3�Ƕ�3�ġ�
-����pip install xxx����site-packages�оͻ�������Ӧ�İ���
-��������pip��python -m pip install --upgrade pip���ں�����--user�Ϳ����ˣ�python -m pip install --upgrade pip --user
-from �ļ� import ����
+site-packages包：C:\Program Files\Python37\Lib\site-packages
+安装cv2：pip install opencv-python
+cmd和python的关系。cmd> python>>>。在cmd中按“python”进入python，在python中按“ctrl+z，回车”回到cmd
+pip和pip3。如果机上只有python3.7，那么pip=pip3。如果既有2又有3，那么pip就是对2的，pip3是对3的。
+用完pip install xxx，在site-packages中就会增加相应的包。
+不能升级pip。python -m pip install --upgrade pip。在后面填--user就可以了：python -m pip install --upgrade pip --user
+from 文件 import 函数
 
 20191010
-��123456��ȡǰ3λ
+把123456，取前3位
 "%03d" %12 = '012'
 "%3d" %12 = ' 12'
 
 20191004
-file����
+file操作
 open()
 write()
 close()
-��Ҫ����
-rֻ��
-wд���������ǰ�����ݣ�
-aд��׷�ӣ�
-+�ֶ���д
-b�����ƣ�����ͼƬ
-���䣺f = open("abc.txt", "a+") #���ֶ���д�ķ�ʽ��abc.txt���ļ��������򴴽���׷�ӷ�ʽ��a+�Ǹ��ò���
-�����log�ļ�����ʹ�á�a+������
+重要参数
+r只读
+w写（先清除以前的内容）
+a写（追加）
++又读又写
+b二进制，比如图片
+例句：f = open("abc.txt", "a+") #用又读又写的方式打开abc.txt，文件不存在则创建，追加方式，a+是个好参数
+如果是log文件，就使用“a+”参数
 
-���Ҫʹ��f.read()����f.readline()��Ҫʹ�ò���r����r+��r+Ҳ��һ���ò������ɶ���д��
+如果要使用f.read()或者f.readline()就要使用参数r或者r+。r+也是一个好参数（可读可写）
 
 20190823
-���ݱ�������á����ơ���ͼƬ�á���Ƭǽ��
-���ƿ⣺wordcloud
-��Ƭǽ�⣺PIL
+数据表达：文字用“词云”，图片用“照片墙”
+词云库：wordcloud
+照片墙库：PIL
 
 20190718
-�����ݴ������˹�����
+从数据处理到人工智能
 
-���ݱ�ʾ�����ú��ʷ�ʽ�ó����������
+数据表示：采用合适方式用程序表达数据
 
-�������������ݹ�һ��������ת�����쳣ֵ����
+数据清理：数据归一化、数据转换、异常值处理
 
-����ͳ�ƣ����ݵĸ�Ҫ���⣬�������ֲ�����λ����
+数据统计：数据的概要理解，数量、分布、中位数等
 
-���ݿ��ӻ���ֱ��չʾ�����ں��ķ�ʽ
+数据可视化：直观展示数据内涵的方式
 
-�����ھ򣺴����ݷ������֪ʶ������������ļ�ֵ
+数据挖掘：从数据分析获得知识，产生数据外的价值
 
-�˹����ܣ�����/����/ͼ��/�Ӿ��ȷ�����ȷ��������
+人工智能：数据/语言/图像/视觉等方面深度分析与决策
 
 20190712
-python����ջ
-python��pyCharm��pip��Django��pyTest
+python技术栈
+python，pyCharm，pip，Django，pyTest
 
-python�����(for, if)
+python的语句(for, if)
 for i in [2, 4, 6]:
     if i > 3:
         print(i)
 
-python����������(input, print)
+python的输入和输出(input, print)
 name = input("please input you name:")
 print("Hello ", name, "!")
 
-python�����ļ�-��(open)
+python操作文件-读(open)
 with open('data\\foo.txt', 'r') as f:
     for line in f:
         print(line)
 
-python�����ļ�-д(write)
+python操作文件-写(write)
 with open('/Users/ethan/data2.txt', 'a') as f:
     f.write('one\n')
     f.write('two')
 
-\t	tab��
+\t	tab键
 \n	new line
 
-·��
+路径
 "./data/foo.txt" = "data/foo.txt" = "data\\foo.txt" 
 
-��õ�ǰ����·��
+获得当前绝对路径
 import os
 os.path.abspath(".") 
 
-�½�һ��dir
+新建一个dir
 os.mkdir(os.path.abspath('.') + "\error")
 
 arr = os.path.split(os.path.abspath("read.py"))
-print("·����",arr[0])
-print("�ļ���",arr[1])
+print("路径名",arr[0])
+print("文件名",arr[1])
 
-os.path.abspath("read.py") #·����+�ļ��� fullpath
-os.path.abspath(".") #·���� dirpath
-os.path.abspath('/Users/ethan/coding/python/hello.py') --> hello.py #�ļ��� file
+os.path.abspath("read.py") #路径名+文件名 fullpath
+os.path.abspath(".") #路径名 dirpath
+os.path.abspath('/Users/ethan/coding/python/hello.py') --> hello.py #文件名 file
 
 20190711
-python����ջ����Ҫ���ذ�װpython��pyCharm��IDE��
-pythonҪ����amd64����װ��ҳҪ����path����װ�������ˡ�pyCharmҪע������interpreter��ʹ��admin��װ���Ժ��һֱ������admin���С�
+python技术栈，需要下载安装python和pyCharm（IDE）
+python要下载amd64，安装首页要添加path，安装给所有人。pyCharm要注意设置interpreter，使用admin安装，以后就一直可以以admin运行。
 
-https://www.python.org����python
-	��װwin64λ�汾����ҳҪ��ѡadd to path���Զ��尲װѡ���µİ�װĿ¼
-	��cmd������py������>>>�ͱ�ʾ��װ�ɹ���
-https://www.jetbrains.com/pycharm/����pycharm
-	��װcommunity�汾��64λ(amd 64������x86 32)
+https://www.python.org下载python
+	安装win64位版本，首页要勾选add to path，自定义安装选择新的安装目录
+	在cmd中输入py，看到>>>就表示安装成功了
+https://www.jetbrains.com/pycharm/下载pycharm
+	安装community版本，64位(amd 64，不是x86 32)
 
 
 Python Web Django onto IIS
 https://www.youtube.com/watch?v=kXbfHtAvubc
 
 20190709
-Python�ʺϿ��ٿ�����C/C++�ʺϸ�����Ӳ��
+Python适合快速开发，C/C++适合高性能硬件
 
-Python�Ƕ�̬���ԣ������������ľ�̬������C��Pascal������Ҫ��д������䡣
+Python是动态语言，它不像其他的静态语言如C、Pascal那样需要书写声明语句。
 
-_���»��߿�ͷ�������ڲ�ʹ�á���ʶ�����ڡ�from M import *�������������������»��߿�ͷ�Ķ��󣬰�������ģ�顢��Ա��
-���»��߽�β_��Ϊ�˱�����python�ؼ��ֵ�������ͻ
-__˫�»��߿�ͷ��ģ���ڵĳ�Ա����ʾ˽�г�Ա���ⲿ�޷�ֱ�ӵ���
-__˫�»��߿�ͷ˫�»��߽�β__��ָ��Щ�������û��޷����Ƶ����ֿռ��еġ�ħ������������ԣ������Ա��name ��doc��init��import��file���ȡ��Ƽ���Զ��Ҫ��������������ʽӦ�����Լ��ı���������
+_单下划线开头：弱“内部使用”标识。对于“from M import *”，将不导入所有以下划线开头的对象，包括包、模块、成员。
+单下划线结尾_：为了避免与python关键字的命名冲突
+__双下划线开头：模块内的成员，表示私有成员，外部无法直接调用
+__双下划线开头双下划线结尾__：指那些包含在用户无法控制的名字空间中的“魔术”对象或属性，如类成员的name 、doc、init、import、file、等。推荐永远不要将这样的命名方式应用于自己的变量或函数。
