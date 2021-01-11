@@ -1,6 +1,62 @@
-20191230
-~~被删除的文字~~
+20210111
+> We believe that writing is about content, about what you want to say - not about fancy formatting. --Ulysses for Mac
 
-`单行代码`
+***
 
-```多行代码```
+# Header1
+* Apple
+* Banane
+* Orange
+
+## Header2
+1. Jan
+2. Feb
+3. Mar.
+   
+***
+
+### Format
+**粗体**
+*斜体*
+***粗体加斜体***
+~~删除线~~
+- [ ] checkbox - not checked
+- [x] checkbox - checked
+
+***
+
+#### 引用
+> 面朝大海
+> 春暖花开
+
+***
+
+##### Link
+[Google](https://www.google.de "my title for link")
+
+***
+
+###### Table
+|name|age|figure|
+|----|----:|:-----------:|
+|mary|18|22,33,44|
+|sunny|28|21,12,12|
+|ivory|22|21,24,32|
+
+***
+
+## 单行单码
+`hello world`
+
+## 多行代码
+```go
+package main
+
+import "fmt"
+
+func main(){
+	fmt.Println("hello world");
+}
+```
+
+***

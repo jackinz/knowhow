@@ -1,3 +1,7 @@
+20201214
+result set to string:
+https://stackoverflow.com/questions/4819412/convert-sql-server-result-set-into-string
+
 20200928
 --update one table from another
 sql server:
