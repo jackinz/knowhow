@@ -1,4 +1,27 @@
-﻿20190205
+﻿20210327
+Telerik Grid的妙用，行选
+function RowSelected(sender, args) {
+	alert(args.getDataKeyValue('ZuliefererId'))
+}
+
+<RadGrid>
+	<ClientSettings>
+		<ClientEvents OnRowSelected="RowSelected" OnRowDeselected="RowDeselected" OnRowSelecting="RowSelecting" />
+	</ClientSettings>
+	<MasterTableView DataKeyNames="BarcodeId" ClientDataKeyNames="ZuliefererId">
+	</MasterTableView>
+</RadGrid>
+
+
+20210112
+RadToolTip。可以是文字，也可以是img，被施加对象不能是asp:image很奇怪，最后用了telerik:RadImageButton搞定
+            <telerik:RadTextBox RenderMode="Lightweight" runat="server" ID="TextBox1" Text="Show RadToolTip"></telerik:RadTextBox>
+            <telerik:RadToolTip RenderMode="Lightweight" ID="RadToolTip1" runat="server" TargetControlID="TextBox1" ShowEvent="OnClick"
+                                Position="MiddleRight" RelativeTo="Element">
+                RadToolTip
+            </telerik:RadToolTip>
+
+20190205
 --NachDemEditfensterGridZuAktualisieren
 
 GpdrEdit.aspx --> Urkunde/Archiv.aspx

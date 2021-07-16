@@ -1,4 +1,8 @@
-﻿20191007
+﻿20210324
+1， 在断点调试模式，可以鼠标悬停变量，打pin固定变量窗口
+2， System.Linq.Dynamic。可以在linq表达式里使用.where(strFilter).tolist()
+
+20191007
 VS插件有3种，都在Tools菜单下：
 1, Get Tools and Features（MS原厂）
 2, Extensions and Updates（第三方，会改变VS的菜单栏，.VSIX，Marketplace下载，CodeMaid, NCrunch, ReSharp, NuGet）

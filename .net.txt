@@ -1,0 +1,8 @@
+20210310
+一个控件在哪些地方被使用了？
+在代码中寻找xxx.ascx
+
+RadCheckBox在页面中显示异常，有重影
+<telerik:RadCheckBox runat="server" ID="RadCheckBox1" Checked="true" Text="Include taxes" AutoPostBack="false">
+</telerik:RadCheckBox>
+后来只能使用asp:CheckBox
