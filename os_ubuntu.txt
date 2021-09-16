@@ -1,4 +1,10 @@
-﻿20200207
+﻿20210916
+ping -t 网址
+tracert 网址
+ipconfig
+ctrl+c退出
+
+20200207
 Ubuntu的坑
 1,输入法不能装ibus,要装google pinyin
 	装了ibus,vscode只能选一行,文本编辑,点击一行就整行消失
