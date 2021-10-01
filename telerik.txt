@@ -1,4 +1,45 @@
-﻿20210327
+﻿20211001
+cs --> js
+cs
+                _searchButton.OnClientClicking = "checkCustomerId";
+                _searchButton.CommandArgument = GaoSession.User.CompID;
+				
+
+js
+function checkCustomerId(sender, args)
+{
+	var msg = args.get_commandArgument();
+	alert(msg);
+}
+
+
+----------------------------------
+js --> cs
+js
+                $.ajax({
+                    type: "post",
+                    url: "../Services/InfoService.asmx/GetGaguWarningMessage",
+                    data: "{vin: '" + vin + "'}",
+					async: false,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        if (result.d != "") {
+                            args.set_cancel(!window.confirm(result.d));
+                        }
+                    }
+                })
+				
+cs
+        [WebMethod(EnableSession = true)]
+        public bool GetGaguWarningMessage(string vin)
+        {
+            return true;
+        }
+----------------------------------
+前端先判断后，决定是否到后端继续，要使用ajax，并且将async置为false，表示同步。Ajax默认是异步的，这是ajax的优点，但这里必须要同步，等待后端的结果出来再继续。
+
+20210327
 Telerik Grid的妙用，行选
 function RowSelected(sender, args) {
 	alert(args.getDataKeyValue('ZuliefererId'))
