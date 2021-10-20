@@ -1,4 +1,37 @@
-﻿20200222
+﻿20211020
+前端输入后，在前端判断并拦截。要使用ajax，并且async:false
+js:
+            function checkCustomerId(sender, args) {
+                var tb = $find("RtbSucheVin");
+                if (!tb) {
+                    return;
+                }
+
+                var vin = tb.get_value();
+                if (!vin) {
+                    return;
+                }
+
+                $.ajax({
+                    type: "post",
+                    url: "../Services/InfoService.asmx/GetGaguWarningMessage",
+                    data: "{vin: '" + vin + "'}",
+                    async: false,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        if (result.d != "") {
+                            args.set_cancel(!window.confirm(result.d));
+                        }
+                    }
+                })
+            }
+
+html:
+_searchButton.OnClientClicking = "checkCustomerId";
+
+
+20200222
 window.location.host
 window.location.url
 
