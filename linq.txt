@@ -1,4 +1,13 @@
-﻿20190313
+﻿20211020
+group by合并几行内容到一行
+var tbVerlauf = 
+	from u in Context.Current.GA_Regress_Verlauf
+	join rv in Context.Current.GA_Info_Regress_Status on u.StatusId equals rv.StatusId
+	join txt in Context.Current.TXT_Text on new { cn = rv.BezeichnungCatalogName, cl = cultureId } equals new { cn = txt.CatalogName, cl = txt.CultureId }
+	group new { u, txt } by new { u.GA_ID, u.GA_POS_ID, u.MAT_POS_ID } into g
+	select new { GA_ID = g.Key.GA_ID, GA_POS_ID = g.Key.GA_POS_ID, MAT_POS_ID = g.Key.MAT_POS_ID, Verlauf = string.Join(", ", g.Select(v => v.u.StatusId + " (" + v.txt.Text + ") " + v.u.Erfasst + " " + v.u.ErfasstVon)) };
+
+20190313
 left join, the first match
 	join sb in DAL.Context.Current.GA_Sachbearbeiter on reg.SachbearbeiterUserId equals sb.UserId into sb_join
 	from sb in sb_join.DefaultIfEmpty().Take(1)
