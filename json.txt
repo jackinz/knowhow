@@ -1,3 +1,14 @@
+20211108
+{"json":"this is a json"}
+
+ç”¨åˆ°çš„5ç§æ ‡ç‚¹ç¬¦å·
+{}
+[]
+,
+""
+:
+
+
 20190712
 json
 {
@@ -35,20 +46,20 @@ json schema
 "items":{}
 
 20190703
-jsonÊÇxmlµÄÌæ´ú¸ñÊ½
-ÓĞ{¶ÔÏó}ºÍ[Êı×é]£¬Ã»ÓĞ()
+jsonï¿½ï¿½xmlï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
+ï¿½ï¿½{ï¿½ï¿½ï¿½ï¿½}ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½]ï¿½ï¿½Ã»ï¿½ï¿½()
 
-»ù±¾ĞÎÊ½ÊÇ£º¡°¼ü¡±:¡°Öµ¡±
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½Ç£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:ï¿½ï¿½Öµï¿½ï¿½
 
-×Ô¶¯¸ñÊ½»¯
+ï¿½Ô¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½
 http://jsformat.com/javascript-format.html#
 
-±£Ö¤½á¹¹ºÍÊıÖµ·¶Î§ÕıÈ·¿ÉÒÔÓÃschema£¨ºÍxml£¬xml schemaÀàËÆ£©
-×Ô¶¯Éú³Éschema
+ï¿½ï¿½Ö¤ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Î§ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½schemaï¿½ï¿½ï¿½ï¿½xmlï¿½ï¿½xml schemaï¿½ï¿½ï¿½Æ£ï¿½
+ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½schema
 https://www.npmjs.com/package/json-schema-generator
 
-Õâ¸öschemaÖĞÓĞ¸ö¿Ó
-¶ÔÓÚÊı×é£¬schemaÖĞµÄ "required": [] ÒªÈ¥³ı
+ï¿½ï¿½ï¿½schemaï¿½ï¿½ï¿½Ğ¸ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£¬schemaï¿½Ğµï¿½ "required": [] ÒªÈ¥ï¿½ï¿½
 
 Schema Reference
 https://json-schema.org/understanding-json-schema/reference/numeric.html
