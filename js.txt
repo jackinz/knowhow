@@ -1,7 +1,9 @@
 20220207
 3种对话框：alert, confirm, prompt。都时类window下面的方法。
+1, alert
 alert("Hello world")
 
+2, confirm
 if (confirm('Are you sure you want to save this thing into the database?')) {
   // Save it!
   console.log('Thing was saved to the database.');
@@ -10,10 +12,15 @@ if (confirm('Are you sure you want to save this thing into the database?')) {
   console.log('Thing was not saved to the database.');
 }
 
+3, prompt
 var person = prompt("请输入您的姓名", "比尔盖茨");
 if (person != null) {
     document.getElementById("demo").innerHTML = "你好 " + person + "！今天过的怎么样？";
 }
+
+2种打印变量的方法
+1, alert("aaa")
+2, console.log("aaa")
 
 
 20211020
