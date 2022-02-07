@@ -1,4 +1,22 @@
-﻿20211020
+20220207
+3种对话框：alert, confirm, prompt。都时类window下面的方法。
+alert("Hello world")
+
+if (confirm('Are you sure you want to save this thing into the database?')) {
+  // Save it!
+  console.log('Thing was saved to the database.');
+} else {
+  // Do nothing!
+  console.log('Thing was not saved to the database.');
+}
+
+var person = prompt("请输入您的姓名", "比尔盖茨");
+if (person != null) {
+    document.getElementById("demo").innerHTML = "你好 " + person + "！今天过的怎么样？";
+}
+
+
+20211020
 前端输入后，在前端判断并拦截。要使用ajax，并且async:false
 js:
             function checkCustomerId(sender, args) {
