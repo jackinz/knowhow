@@ -1,3 +1,9 @@
+20220209
+object --> json: JSON.stringify(obj)
+json --> object: JSON.parse(str)
+
+输出带缩减的json JSON.parse(str, "\t")
+
 20211108
 {"json":"this is a json"}
 
@@ -46,20 +52,11 @@ json schema
 "items":{}
 
 20190703
-json��xml�������ʽ
-��{����}��[����]��û��()
+format
+http://jsformat.com/javascript-format.html
 
-������ʽ�ǣ�������:��ֵ��
-
-�Զ���ʽ��
-http://jsformat.com/javascript-format.html#
-
-��֤�ṹ����ֵ��Χ��ȷ������schema����xml��xml schema���ƣ�
-�Զ�����schema
+schema
 https://www.npmjs.com/package/json-schema-generator
-
-���schema���и���
-�������飬schema�е� "required": [] Ҫȥ��
 
 Schema Reference
 https://json-schema.org/understanding-json-schema/reference/numeric.html
