@@ -1,26 +1,38 @@
+20220210
+1ÔºåÊó†ÂàôÂª∫ÊúâÂàôÁî®
+2ÔºåËøΩÂä†Ê∑ªÂä†
+3ÔºåËá™Âä®ÂÖ≥Èó≠ÔºåAppendTextË¶ÅÊâãÂä®ÂÖ≥Èó≠ÔºåÊàñ‰ΩøÁî®using block
+
+static async Task Main(string[] args)
+{
+    string path = @"c:\MyTest.txt";
+    string text = DateTime.Now.ToString() + "\r\n" + "aaa";
+    await File.AppendAllTextAsync(path, text);
+}
+
 20191007
-1,øÿº˛µƒ◊¥Ã¨
+1,Êéß‰ª∂ÁöÑÁä∂ÊÄÅ
 disabled
 invisible
 default value
 
-2,øÿº˛
+2,Êéß‰ª∂
 checkbox, dropdownlist, button, inputbox
 
- ˝æ›≤„
+Êï∞ÊçÆÂ±Ç
 WK3Context-Repository-Service
 
 20190822
-struct∫Õclass
-struct «Ω·ππ£¨≤ªƒ‹±ªºÃ≥–
+structÂíåclass
+structÊòØÁªìÊûÑÔºå‰∏çËÉΩË¢´ÁªßÊâø
 
-ref∫Õout
-2’ﬂ∂º «¥´÷∑£¨2’ﬂ‘⁄function∫Õ π”√ ±∂º“™º”πÿº¸◊÷
-ref±ÿ–Î∏≥≥ı÷µ£¨out≤ª±ÿ
+refÂíåout
+2ËÄÖÈÉΩÊòØ‰º†ÂùÄÔºå2ËÄÖÂú®functionÂíå‰ΩøÁî®Êó∂ÈÉΩË¶ÅÂä†ÂÖ≥ÈîÆÂ≠ó
+refÂøÖÈ°ªËµãÂàùÂÄºÔºåout‰∏çÂøÖ
 
 20190717
-ŒØÕ–£¨Ω´∫Ø ˝√˚◊˜Œ™≤Œ ˝£¨¿‡À∆C÷–µƒ÷∏’Î
-//-----------------------------------------------------¿˝“ª
+ÂßîÊâòÔºåÂ∞ÜÂáΩÊï∞Âêç‰Ωú‰∏∫ÂèÇÊï∞ÔºåÁ±ª‰ººC‰∏≠ÁöÑÊåáÈíà
+//-----------------------------------------------------‰æã‰∏Ä
 using System;
 
 delegate int NumberChanger(int n);
@@ -47,10 +59,10 @@ namespace DelegateAppl
 
       static void Main(string[] args)
       {
-         // ¥¥Ω®ŒØÕ– µ¿˝
+         // ÂàõÂª∫ÂßîÊâòÂÆû‰æã
          NumberChanger nc1 = new NumberChanger(AddNum);
          NumberChanger nc2 = new NumberChanger(MultNum);
-         //  π”√ŒØÕ–∂‘œÛµ˜”√∑Ω∑®
+         // ‰ΩøÁî®ÂßîÊâòÂØπË±°Ë∞ÉÁî®ÊñπÊ≥ï
          nc1(25);
          Console.WriteLine("Value of Num: {0}", getNum());
          nc2(5);
@@ -60,46 +72,46 @@ namespace DelegateAppl
    }
 }
 //-----------------------------------------------------
-//-----------------------------------------------------¿˝∂˛
-// –°’≈¿‡
+//-----------------------------------------------------‰æã‰∫å
+// Â∞èÂº†Á±ª
 public class MrZhang
     {
-    // ∆‰ µ¬Ú≥µ∆±µƒ±Ø«È»ÀŒÔ «–°’≈
+    // ÂÖ∂ÂÆû‰π∞ËΩ¶Á•®ÁöÑÊÇ≤ÊÉÖ‰∫∫Áâ©ÊòØÂ∞èÂº†
     public static void BuyTicket()
     {
-		Console.WriteLine("NND,√ø¥Œ∂º»√Œ“»•¬Ú∆±£¨º¶»À—Ω£°");
+		Console.WriteLine("NND,ÊØèÊ¨°ÈÉΩËÆ©ÊàëÂéª‰π∞Á•®ÔºåÈ∏°‰∫∫ÂëÄÔºÅ");
     }
 
     public static void BuyMovieTicket()
     {
-        Console.WriteLine("Œ“»•£¨◊‘º∫≈›Ê§£¨ªπ“™»√Œ“¥¯µÁ”∞∆±£°");
+        Console.WriteLine("ÊàëÂéªÔºåËá™Â∑±Ê≥°Â¶ûÔºåËøòË¶ÅËÆ©ÊàëÂ∏¶ÁîµÂΩ±Á•®ÔºÅ");
     }
 }
 
-//–°√˜¿‡
+//Â∞èÊòéÁ±ª
 class MrMing
 {
-    // …˘√˜“ª∏ˆŒØÕ–£¨∆‰ µæÕ «∏ˆ°∞√¸¡Ó°±
+    // Â£∞Êòé‰∏Ä‰∏™ÂßîÊâòÔºåÂÖ∂ÂÆûÂ∞±ÊòØ‰∏™‚ÄúÂëΩ‰ª§‚Äù
     public delegate void BugTicketEventHandler();
 
     public static void Main(string[] args)
     {
-        // ’‚¿ÔæÕ «æﬂÃÂ≤˚ ˆ’‚∏ˆ√¸¡Ó «∏… ≤√¥µƒ£¨±æ¿˝ «MrZhang.BuyTicket°∞–°’≈¬Ú≥µ∆±°±
+        // ËøôÈáåÂ∞±ÊòØÂÖ∑‰ΩìÈòêËø∞Ëøô‰∏™ÂëΩ‰ª§ÊòØÂπ≤‰ªÄ‰πàÁöÑÔºåÊú¨‰æãÊòØMrZhang.BuyTicket‚ÄúÂ∞èÂº†‰π∞ËΩ¶Á•®‚Äù
         BugTicketEventHandler myDelegate = new BugTicketEventHandler(MrZhang.BuyTicket);
 
         myDelegate += MrZhang.BuyMovieTicket;
-        // ’‚ ±∫ÚŒØÕ–±ª∏Ω…œ¡ÀæﬂÃÂµƒ∑Ω∑®
+        // ËøôÊó∂ÂÄôÂßîÊâòË¢´ÈôÑ‰∏ä‰∫ÜÂÖ∑‰ΩìÁöÑÊñπÊ≥ï
         myDelegate();
         Console.ReadKey();
     }
 }
 //-----------------------------------------------------
 20190116
-[“µ”‡≥Ã–Ú‘±]
+[‰∏ö‰ΩôÁ®ãÂ∫èÂëò]
 Confusion
-1£¨!IsPostBack
-2£¨Transaction
-3£¨ViewState
+1Ôºå!IsPostBack
+2ÔºåTransaction
+3ÔºåViewState
 
 Error
 1, Multilanguage ID,Text
@@ -128,7 +140,7 @@ Scrum: new, developing, develped, testing, tested, released, done
 2 Sides: client side (JS, StateView), server side (C#, Session)
 3 Layers: Html, Logic, DB
 Client/Server: Client JavaScrit, quick / Server C#, stable
-≤ª“™◊‘º∫–¥control(DatePicker, Grid)£¨π‚“ª∏ˆcultureæÕ”–Œﬁ«Óπ§◊˜¡ø
+‰∏çË¶ÅËá™Â∑±ÂÜôcontrol(DatePicker, Grid)ÔºåÂÖâ‰∏Ä‰∏™cultureÂ∞±ÊúâÊó†Á©∑Â∑•‰ΩúÈáè
 
 
 new feature in .NET Framework 4.0
@@ -140,95 +152,95 @@ web farm (multiserver)/ web garden (one server multiprozessor)
 
 
 20181220
-±‡“Î¥ÌŒÛ£¨±®TEST¿Ô√Ê√ª”–gao.dll£¨»ª∫Û’“µΩgao.dllµƒŒƒº˛º–£¨µƒ»∑√ª”–£¨build÷Æ∫Û“≤√ª”–
-’‚ ±”¶∏√»∑∂®£¨¥ÌŒÛ‘⁄GAO
-◊Ó∫ÛŒ Ã‚µƒ»∑≥ˆ‘⁄GAO£¨”–“ª∏ˆlicenses.licxŒƒº˛”–¥Ì°£
+ÁºñËØëÈîôËØØÔºåÊä•TESTÈáåÈù¢Ê≤°Êúâgao.dllÔºåÁÑ∂ÂêéÊâæÂà∞gao.dllÁöÑÊñá‰ª∂Â§πÔºåÁöÑÁ°ÆÊ≤°ÊúâÔºåbuild‰πãÂêé‰πüÊ≤°Êúâ
+ËøôÊó∂Â∫îËØ•Á°ÆÂÆöÔºåÈîôËØØÂú®GAO
+ÊúÄÂêéÈóÆÈ¢òÁöÑÁ°ÆÂá∫Âú®GAOÔºåÊúâ‰∏Ä‰∏™licenses.licxÊñá‰ª∂ÊúâÈîô„ÄÇ
 
 20181217
-“ª∏ˆ∫√µƒ±‡º≠∆˜£¨ø…“‘æÿ–Œ—°‘Ò£¨ø…“‘∏Ò ΩªØSQL£¨ø…“‘ªÿµΩ…œ∏ˆπ§◊˜µ„°£
+‰∏Ä‰∏™Â•ΩÁöÑÁºñËæëÂô®ÔºåÂèØ‰ª•Áü©ÂΩ¢ÈÄâÊã©ÔºåÂèØ‰ª•Ê†ºÂºèÂåñSQLÔºåÂèØ‰ª•ÂõûÂà∞‰∏ä‰∏™Â∑•‰ΩúÁÇπ„ÄÇ
 
-SqlMetal  ˝æ›ø‚µƒ±‰ªØ-->database.dbml
+SqlMetal Êï∞ÊçÆÂ∫ìÁöÑÂèòÂåñ-->database.dbml
 Run custom tool database.dbml-->database.designer
 
 20181210
-æ≠π˝∂‡…Ÿ≈¨¡¶£¨Œ“≤≈√˜∞◊¡À’‚√¥–© ¬£∫
-1, .vs,obj∫Õbin3∏ˆŒƒº˛º– «≤ª“™CheckInµƒ
-2, .Designer «◊‘∂Ø…˙≥…µƒ£¨Õ®π˝œÓƒøµƒpropertyøÿ÷∆
-3, ∞Ê±æøÿ÷∆µƒµπÕÀ£¨∫‹¬È∑≥£°
+ÁªèËøáÂ§öÂ∞ëÂä™ÂäõÔºåÊàëÊâçÊòéÁôΩ‰∫ÜËøô‰πà‰∫õ‰∫ãÔºö
+1, .vs,objÂíåbin3‰∏™Êñá‰ª∂Â§πÊòØ‰∏çË¶ÅCheckInÁöÑ
+2, .DesignerÊòØËá™Âä®ÁîüÊàêÁöÑÔºåÈÄöËøáÈ°πÁõÆÁöÑpropertyÊéßÂà∂
+3, ÁâàÊú¨ÊéßÂà∂ÁöÑÂÄíÈÄÄÔºåÂæàÈ∫ªÁÉ¶ÔºÅ
 
 20181207
- ˝æ›¥Ê‘⁄“ª∏ˆµÿ∑Ω£¨»Áπ˚”–“¿¿µ£¨æÕ π”√trigger
-¿˝»Á£∫GarantyBegin£¨¥”3∏ˆDatum…˙≥…£¨µ´ «’‚∏ˆGarantieBegin∑«≥£÷ÿ“™£¨”¶∏√ π”√◊‘∂Ø¡–
-GA_GUµƒ «∑Òø…“‘∑¢π„∏Ê£¨”¶∏√“≤¥Ê‘⁄“ª∏ˆµÿ∑Ω
+Êï∞ÊçÆÂ≠òÂú®‰∏Ä‰∏™Âú∞ÊñπÔºåÂ¶ÇÊûúÊúâ‰æùËµñÔºåÂ∞±‰ΩøÁî®trigger
+‰æãÂ¶ÇÔºöGarantyBeginÔºå‰ªé3‰∏™DatumÁîüÊàêÔºå‰ΩÜÊòØËøô‰∏™GarantieBeginÈùûÂ∏∏ÈáçË¶ÅÔºåÂ∫îËØ•‰ΩøÁî®Ëá™Âä®Âàó
+GA_GUÁöÑÊòØÂê¶ÂèØ‰ª•ÂèëÂπøÂëäÔºåÂ∫îËØ•‰πüÂ≠òÂú®‰∏Ä‰∏™Âú∞Êñπ
 
 
 20181119
---MS◊¿√Ê≥Ã–Úø™∑¢
+--MSÊ°åÈù¢Á®ãÂ∫èÂºÄÂèë
 MFC + .NET API --> WinForm --> WPF
 
---WPF∫ÕWinForm±»Ωœ
-Œ™ ≤√¥”√WPF£ø
-1£¨Winform¥”2006ƒÍ∆æÕÕ£÷πø™∑¢¡À
-2£¨WPF∂‘∆¡ƒª◊‘  ”¶∏¸∫√£®Panel£©
-3£¨WPF¡¡µ„£∫ ˝æ›∞Û∂®£¨MVVC…Ëº∆ƒ£ Ω(Model°¢View°¢Viewmodel)
+--WPFÂíåWinFormÊØîËæÉ
+‰∏∫‰ªÄ‰πàÁî®WPFÔºü
+1ÔºåWinform‰ªé2006Âπ¥Ëµ∑Â∞±ÂÅúÊ≠¢ÂºÄÂèë‰∫Ü
+2ÔºåWPFÂØπÂ±èÂπïËá™ÈÄÇÂ∫îÊõ¥Â•ΩÔºàPanelÔºâ
+3ÔºåWPF‰∫ÆÁÇπÔºöÊï∞ÊçÆÁªëÂÆöÔºåMVVCËÆæËÆ°Ê®°Âºè(Model„ÄÅView„ÄÅViewmodel)
 
-ÀŸ≥…Õ∆ºˆwinform£¨…Ó»Î—ßœ∞Õ∆ºˆqtªÚ’ﬂelectron °£qtº»”–≥£πÊÕœøÿº˛µƒwidgets£¨”÷”–¿‡À∆”⁄«∞∂ÀΩÁ√Êµƒqml∫Õwebengine£¨≥Ã–Úªπƒ‹≈‹‘⁄∞≤◊ø/ios…œ£¨«ø¡“Õ∆ºˆ°£
-WinForm‘⁄À˘”–Win∆ΩÃ®÷±Ω”ƒ‹≈‹£¨WPF“™.net 4.0“‘…œ°£
+ÈÄüÊàêÊé®ËçêwinformÔºåÊ∑±ÂÖ•Â≠¶‰π†Êé®ËçêqtÊàñËÄÖelectron „ÄÇqtÊó¢ÊúâÂ∏∏ËßÑÊãñÊéß‰ª∂ÁöÑwidgetsÔºåÂèàÊúâÁ±ª‰ºº‰∫éÂâçÁ´ØÁïåÈù¢ÁöÑqmlÂíåwebengineÔºåÁ®ãÂ∫èËøòËÉΩË∑ëÂú®ÂÆâÂçì/ios‰∏äÔºåÂº∫ÁÉàÊé®Ëçê„ÄÇ
+WinFormÂú®ÊâÄÊúâWinÂπ≥Âè∞Áõ¥Êé•ËÉΩË∑ëÔºåWPFË¶Å.net 4.0‰ª•‰∏ä„ÄÇ
 
-WPFµ◊≤„ «DirectX£¨”√GPUªÊÕº
-WinFormµ◊≤„ «GDI/GDI+£¨”√CPUªÊÕº£®≤ª”√DirectXΩ”ø⁄£©
+WPFÂ∫ïÂ±ÇÊòØDirectXÔºåÁî®GPUÁªòÂõæ
+WinFormÂ∫ïÂ±ÇÊòØGDI/GDI+ÔºåÁî®CPUÁªòÂõæÔºà‰∏çÁî®DirectXÊé•Âè£Ôºâ
 
-WPF ˝æ›¬ﬂº≠£¨“µŒÒ¬ﬂº≠£¨œ‘ æ¬ﬂº≠∑÷¿Î
-WinForm∂º∫œ‘⁄“ª∆
+WPFÊï∞ÊçÆÈÄªËæëÔºå‰∏öÂä°ÈÄªËæëÔºåÊòæÁ§∫ÈÄªËæëÂàÜÁ¶ª
+WinFormÈÉΩÂêàÂú®‰∏ÄËµ∑
 
 --WPF
-WPF£∫XAML£¨MVVM
+WPFÔºöXAMLÔºåMVVM
 
 
 
 
 
 20181116
-SSD£® ÷’∆¥Û–°£©, MVNE£®USB-Stick¥Û–°£©
-À˛ Ω∑˛ŒÒ∆˜£¨ª˙º‹∑˛ŒÒ∆˜∫Õµ∂∆¨∑˛ŒÒ∆˜
+SSDÔºàÊâãÊéåÂ§ßÂ∞èÔºâ, MVNEÔºàUSB-StickÂ§ßÂ∞èÔºâ
+Â°îÂºèÊúçÂä°Âô®ÔºåÊú∫Êû∂ÊúçÂä°Âô®ÂíåÂàÄÁâáÊúçÂä°Âô®
 
 20181114
-◊È≤ﬂ¬‘
-Grupperichtlinie£®gpedit.msc£©
+ÁªÑÁ≠ñÁï•
+GrupperichtlinieÔºàgpedit.mscÔºâ
 
 
 
 20181011
-»Áπ˚±®¥Ìµÿµ„æﬂÃÂƒ≥“ª––¥˙¬Î£¨“ª∞„ «Infrastructure≥ˆ¥Ì°£”–ø…ƒ‹æÕ «reference¿Ô√ÊµƒŒ Ã‚°£
-Garantieantrag.cs‘⁄dll¿Ô√Ê£¨≤ª‘⁄web¿Ô£¨Alex∞Ô÷˙’“µΩ°£
+Â¶ÇÊûúÊä•ÈîôÂú∞ÁÇπÂÖ∑‰ΩìÊüê‰∏ÄË°å‰ª£Á†ÅÔºå‰∏ÄËà¨ÊòØInfrastructureÂá∫Èîô„ÄÇÊúâÂèØËÉΩÂ∞±ÊòØreferenceÈáåÈù¢ÁöÑÈóÆÈ¢ò„ÄÇ
+Garantieantrag.csÂú®dllÈáåÈù¢Ôºå‰∏çÂú®webÈáåÔºåAlexÂ∏ÆÂä©ÊâæÂà∞„ÄÇ
 
 20181004
 .NET	SQL Server
 Java	Oracle
 Ruby	MySQL
-Python	PostgreSQL£¨MySQL
-√ÊœÚ∂‘œÛ”Ô—‘	πÿœµ–Õ ˝æ›ø‚
+Python	PostgreSQLÔºåMySQL
+Èù¢ÂêëÂØπË±°ËØ≠Ë®Ä	ÂÖ≥Á≥ªÂûãÊï∞ÊçÆÂ∫ì
 
-Impedance Mismatch£¨◊Ëøπ≤ª∆•≈‰
+Impedance MismatchÔºåÈòªÊäó‰∏çÂåπÈÖç
 
-Linux  «≤Ÿ◊˜œµÕ≥µƒƒ⁄∫À£¨æÕ∫√±»∆˚≥µµƒ∑¢∂Øª˙£¨À‰»ª÷ÿ“™£¨µ´ «±æ…Ì≤¢≤ª◊„“‘ π”√£¨±ÿ–Î≈‰∫œ∏˜÷÷¡„º˛£¨◊∞≈‰≥…“ª¡æ∆˚≥µ“‘∫Û≤≈ƒ‹–– ª°£Ian Murdock œÎ◊ˆµƒæÕ «£¨Ω´ Linux ◊∞≈‰≥…“ª¡æ»´π¶ƒ‹µƒ∆˚≥µ°£
+Linux ÊòØÊìç‰ΩúÁ≥ªÁªüÁöÑÂÜÖÊ†∏ÔºåÂ∞±Â•ΩÊØîÊ±ΩËΩ¶ÁöÑÂèëÂä®Êú∫ÔºåËôΩÁÑ∂ÈáçË¶ÅÔºå‰ΩÜÊòØÊú¨Ë∫´Âπ∂‰∏çË∂≥‰ª•‰ΩøÁî®ÔºåÂøÖÈ°ªÈÖçÂêàÂêÑÁßçÈõ∂‰ª∂ÔºåË£ÖÈÖçÊàê‰∏ÄËæÜÊ±ΩËΩ¶‰ª•ÂêéÊâçËÉΩË°åÈ©∂„ÄÇIan Murdock ÊÉ≥ÂÅöÁöÑÂ∞±ÊòØÔºåÂ∞Ü Linux Ë£ÖÈÖçÊàê‰∏ÄËæÜÂÖ®ÂäüËÉΩÁöÑÊ±ΩËΩ¶„ÄÇ
 
 
 20181001
-F11£¨ø…“‘÷™µ¿¿¥◊‘∫Œ∑Ω
+F11ÔºåÂèØ‰ª•Áü•ÈÅìÊù•Ëá™‰ΩïÊñπ
 
 
 20180507
-∏∏¿‡-≥ÈœÛ¿‡-Ω”ø⁄
-±ªºÃ≥–µƒ¿‡°£œ‡Õ¨∑Ω∑®£¨±»»Á√®π∑∂º”–∏ˆ∑Ω∑®Ω–(){ ‰≥ˆ"Ω–¡À“ª…˘";}"
-”–≥ÈœÛ∑Ω∑®µƒ∏∏¿‡°£œ‡Õ¨∑Ω∑®√˚£¨“ª∏ˆ∑Ω∑®"Ω–(){}"£¨π∑æﬂÃÂ µœ÷"Ω–(){ ‰≥ˆ"ÕÙÕÙ"}"£¨√®æﬂÃÂ µœ÷"Ω–(){ ‰≥ˆ"ﬂ˜ﬂ˜"}"
-÷ª”–≥ÈœÛ∑Ω∑®µƒ∏∏¿‡°£Ω”ø⁄
+Áà∂Á±ª-ÊäΩË±°Á±ª-Êé•Âè£
+Ë¢´ÁªßÊâøÁöÑÁ±ª„ÄÇÁõ∏ÂêåÊñπÊ≥ïÔºåÊØîÂ¶ÇÁå´ÁãóÈÉΩÊúâ‰∏™ÊñπÊ≥ïÂè´(){ËæìÂá∫"Âè´‰∫Ü‰∏ÄÂ£∞";}"
+ÊúâÊäΩË±°ÊñπÊ≥ïÁöÑÁà∂Á±ª„ÄÇÁõ∏ÂêåÊñπÊ≥ïÂêçÔºå‰∏Ä‰∏™ÊñπÊ≥ï"Âè´(){}"ÔºåÁãóÂÖ∑‰ΩìÂÆûÁé∞"Âè´(){ËæìÂá∫"Ê±™Ê±™"}"ÔºåÁå´ÂÖ∑‰ΩìÂÆûÁé∞"Âè´(){ËæìÂá∫"ÂñµÂñµ"}"
+Âè™ÊúâÊäΩË±°ÊñπÊ≥ïÁöÑÁà∂Á±ª„ÄÇÊé•Âè£
 
 
 20180501
-“ª∏ˆ≥Ã–Ú¿Ô√Ê”–“ª∏ˆ∫‹æ´«…µƒ∂´Œ˜°£
-±»»Á¬ﬁ¬Ì ˝◊÷£¨«∞“ª∏ˆ◊÷ƒ∏∫Õ∫Û“ª∏ˆ◊÷ƒ∏±»Ωœ£¨»Áπ˚–°æÕ∞—«∞“ª∏ˆ ˝◊÷…ËŒ™∏∫°£
-±»»ÁøÏ¿÷ ˝◊÷£¨»Áπ˚∆Ω∑Ω∫Õ≥ˆœ÷4æÕ≤ª «£¨»Áπ˚≥ˆœ÷1æÕ «°£
+‰∏Ä‰∏™Á®ãÂ∫èÈáåÈù¢Êúâ‰∏Ä‰∏™ÂæàÁ≤æÂ∑ßÁöÑ‰∏úË•ø„ÄÇ
+ÊØîÂ¶ÇÁΩóÈ©¨Êï∞Â≠óÔºåÂâç‰∏Ä‰∏™Â≠óÊØçÂíåÂêé‰∏Ä‰∏™Â≠óÊØçÊØîËæÉÔºåÂ¶ÇÊûúÂ∞èÂ∞±ÊääÂâç‰∏Ä‰∏™Êï∞Â≠óËÆæ‰∏∫Ë¥ü„ÄÇ
+ÊØîÂ¶ÇÂø´‰πêÊï∞Â≠óÔºåÂ¶ÇÊûúÂπ≥ÊñπÂíåÂá∫Áé∞4Â∞±‰∏çÊòØÔºåÂ¶ÇÊûúÂá∫Áé∞1Â∞±ÊòØ„ÄÇ
 
 
 var str = "Hallo";
@@ -239,23 +251,23 @@ stubs, mocks, fakes
 
 
 20180313
-ºº ıœ›⁄Â
-–¬‘ˆ—°œÓ±»ΩœºÚµ•£¨÷±Ω”‘⁄ ˝æ›ø‚±Ì÷–‘ˆº”“ª––
-…æ≥˝—°œÓ±»Ωœ¬È∑≥£¨“ÚŒ™“™ºÊ»›æ…µƒ±Ìµ•£¨…æ≥˝µƒƒ«œÓ‘⁄æ…±Ìµ•÷–ªπ“™’˝≥£œ‘ æ
+ÊäÄÊúØÈô∑Èò±
+Êñ∞Â¢ûÈÄâÈ°πÊØîËæÉÁÆÄÂçïÔºåÁõ¥Êé•Âú®Êï∞ÊçÆÂ∫ìË°®‰∏≠Â¢ûÂä†‰∏ÄË°å
+Âà†Èô§ÈÄâÈ°πÊØîËæÉÈ∫ªÁÉ¶ÔºåÂõ†‰∏∫Ë¶ÅÂÖºÂÆπÊóßÁöÑË°®ÂçïÔºåÂà†Èô§ÁöÑÈÇ£È°πÂú®ÊóßË°®Âçï‰∏≠ËøòË¶ÅÊ≠£Â∏∏ÊòæÁ§∫
 
 20180312
-…˝º∂÷Æ∫Ûπ÷ ¬∂‡£¨ªπ «≤ª“™‘⁄ø™∑¢ ±…˝º∂
+ÂçáÁ∫ß‰πãÂêéÊÄ™‰∫ãÂ§öÔºåËøòÊòØ‰∏çË¶ÅÂú®ÂºÄÂèëÊó∂ÂçáÁ∫ß
 
 
 20180125
-‘⁄ µº ÷–µƒ“µŒÒ¬ﬂº≠∫‹√ª¬ﬂº≠
-1£¨Zuliefererªπ√ª ’µΩªıæÕæˆ∂®Õ¨“‚ªπ «æ‹æ¯¡À
-2£¨Hersteller∏¯Zulieferer∑¢¡À–≈À˜≈‚£¨ªπ√ª”–µ√µΩ¥∞∏£¨æÕ∞—À˜≈‚case…æµÙ¡À
+Âú®ÂÆûÈôÖ‰∏≠ÁöÑ‰∏öÂä°ÈÄªËæëÂæàÊ≤°ÈÄªËæë
+1ÔºåZuliefererËøòÊ≤°Êî∂Âà∞Ë¥ßÂ∞±ÂÜ≥ÂÆöÂêåÊÑèËøòÊòØÊãíÁªù‰∫Ü
+2ÔºåHerstellerÁªôZuliefererÂèë‰∫Ü‰ø°Á¥¢ËµîÔºåËøòÊ≤°ÊúâÂæóÂà∞Á≠îÊ°àÔºåÂ∞±ÊääÁ¥¢ËµîcaseÂà†Êéâ‰∫Ü
 
 20180122
-Ã·…˝–‘ƒ‹µƒ∞Ï∑®
-1£¨ºı…Ÿ≤ª±ÿ“™µƒ¿Õ∂Ø
-2£¨≤ª“™∆µ∑±¥Ú∂œ°£‘⁄repeater÷–≤ª“™”–new/database query
+ÊèêÂçáÊÄßËÉΩÁöÑÂäûÊ≥ï
+1ÔºåÂáèÂ∞ë‰∏çÂøÖË¶ÅÁöÑÂä≥Âä®
+2Ôºå‰∏çË¶ÅÈ¢ëÁπÅÊâìÊñ≠„ÄÇÂú®repeater‰∏≠‰∏çË¶ÅÊúânew/database query
 
 20180119
 javascript:	domControl = documnet.getElementById("myId");
@@ -264,42 +276,42 @@ jQuery:		jqControl = $("#myId");
 Telerik:	trConrol = $find("myId");
 
 20180110
-Python≈ƒ…≠
-1£¨ºÚµ•“◊—ß£¨ø™∑¢øÏ£¨À˘“‘”√”⁄‘≠–ÕøÏÀŸ¥ÓΩ®£®øÏ”„≥‘¬˝”„£©
-2£¨∫‹∂‡∑«≥Ã–Ú‘± π”√£¨»Àπ§÷«ƒ‹ø‚∑·∏ª
-3£¨–‘ƒ‹≤Ó“ªµ„£¨µ´ «ºÚµ• «Õıµ¿£®∆¥“Ù §ŒÂ± £©
+PythonÊãçÊ£Æ
+1ÔºåÁÆÄÂçïÊòìÂ≠¶ÔºåÂºÄÂèëÂø´ÔºåÊâÄ‰ª•Áî®‰∫éÂéüÂûãÂø´ÈÄüÊê≠Âª∫ÔºàÂø´È±ºÂêÉÊÖ¢È±ºÔºâ
+2ÔºåÂæàÂ§öÈùûÁ®ãÂ∫èÂëò‰ΩøÁî®Ôºå‰∫∫Â∑•Êô∫ËÉΩÂ∫ì‰∏∞ÂØå
+3ÔºåÊÄßËÉΩÂ∑Æ‰∏ÄÁÇπÔºå‰ΩÜÊòØÁÆÄÂçïÊòØÁéãÈÅìÔºàÊãºÈü≥ËÉú‰∫îÁ¨îÔºâ
 
 20180108
-œÓƒøæ≠—È÷Æ ˝æ›ø‚
-1£¨sql server—È÷§ªπ «windows—È÷§
-—°”√sql server√‹¬Î—È÷§∫√£¨Õ¯’æ∑¢≤º∫Û£¨”√ªßRolle≤ª÷™µ¿‘ı√¥º”£¨ π”√√‹¬Î—È÷§£®SQL Server—È÷§£©“ª∂®ø…“‘ π”√ ˝æ›ø‚°£
+È°πÁõÆÁªèÈ™å‰πãÊï∞ÊçÆÂ∫ì
+1Ôºåsql serverÈ™åËØÅËøòÊòØwindowsÈ™åËØÅ
+ÈÄâÁî®sql serverÂØÜÁ†ÅÈ™åËØÅÂ•ΩÔºåÁΩëÁ´ôÂèëÂ∏ÉÂêéÔºåÁî®Êà∑Rolle‰∏çÁü•ÈÅìÊÄé‰πàÂä†Ôºå‰ΩøÁî®ÂØÜÁ†ÅÈ™åËØÅÔºàSQL ServerÈ™åËØÅÔºâ‰∏ÄÂÆöÂèØ‰ª•‰ΩøÁî®Êï∞ÊçÆÂ∫ì„ÄÇ
 
-2£¨ «∑Ò π”√autovalue◊ˆID
-øÕªß π”√µƒ±Ì£¨ªπ «≤ª“™”√autovalue°£øÕªßœ≤ª∂’∆øÿµƒ∏–æı°£
-
-20180108
-œÓƒøæ≠—È÷Æ∑˛ŒÒ∆˜
-1£¨∑¿ª«Ω
-πÿ±’∑¿ª«Ω£¨±µƒª˙≤≈ƒ‹∑√Œ ƒ„°£»Áπ˚≤ªœÎπÿ±’∑¿ª«Ω£¨ƒ«æÕ“™ø™∑≈∂Àø⁄£¨±»»Á80°£
-∑˛ŒÒ∆˜±ÿ–Îø™∑≈“ª∏ˆ∂Àø⁄£¨’‚ «◊ˆ∑˛ŒÒ∆˜µƒ±ÿ“™Ãıº˛°£
-
+2ÔºåÊòØÂê¶‰ΩøÁî®autovalueÂÅöID
+ÂÆ¢Êà∑‰ΩøÁî®ÁöÑË°®ÔºåËøòÊòØ‰∏çË¶ÅÁî®autovalue„ÄÇÂÆ¢Êà∑ÂñúÊ¨¢ÊéåÊéßÁöÑÊÑüËßâ„ÄÇ
 
 20180108
-œÓƒøæ≠—È
-∞—“ª∏ˆœÓƒø¥”“ªÃ®ª˙“∆÷≤µΩ¡Ì“ªÃ®ª˙£¨≤ªƒ‹π‚“∆Project£¨∂¯“™“∆Solution°£‘⁄Solution÷–∞¸∫¨¡ÀProject∫Õpackages°£packages÷–∞¸∫¨¡ÀreferenceÀ˘–Ëµƒø‚°£-->¥˝—È÷§£¨ «µƒ£°
+È°πÁõÆÁªèÈ™å‰πãÊúçÂä°Âô®
+1ÔºåÈò≤ÁÅ´Â¢ô
+ÂÖ≥Èó≠Èò≤ÁÅ´Â¢ôÔºåÂà´ÁöÑÊú∫ÊâçËÉΩËÆøÈóÆ‰Ω†„ÄÇÂ¶ÇÊûú‰∏çÊÉ≥ÂÖ≥Èó≠Èò≤ÁÅ´Â¢ôÔºåÈÇ£Â∞±Ë¶ÅÂºÄÊîæÁ´ØÂè£ÔºåÊØîÂ¶Ç80„ÄÇ
+ÊúçÂä°Âô®ÂøÖÈ°ªÂºÄÊîæ‰∏Ä‰∏™Á´ØÂè£ÔºåËøôÊòØÂÅöÊúçÂä°Âô®ÁöÑÂøÖË¶ÅÊù°‰ª∂„ÄÇ
 
 
 20180108
-ø™∑¢»’º«
-–Ë“™∂‡ø¥cnblogs
-Œ“√«Õ˘Õ˘‘⁄ø™∑¢œÓƒø¿Ô£¨ª· π”√“ª–©µ⁄»˝∑Ωµƒdll, »Á£∫Newtonsoft.Json.dll (À¸Œ™Œ“√«Ã·π©¡ÀΩ¯–––Ú¡–ªØ∫Õ∑¥–Ú¡–ªØΩ‚æˆ∑Ω∞∏£¨ ∫‹”–”√£¨“≤∫‹Œ»∂®£¨ªπ∫‹”–√˚∆¯)°£
+È°πÁõÆÁªèÈ™å
+Êää‰∏Ä‰∏™È°πÁõÆ‰ªé‰∏ÄÂè∞Êú∫ÁßªÊ§çÂà∞Âè¶‰∏ÄÂè∞Êú∫Ôºå‰∏çËÉΩÂÖâÁßªProjectÔºåËÄåË¶ÅÁßªSolution„ÄÇÂú®Solution‰∏≠ÂåÖÂê´‰∫ÜProjectÂíåpackages„ÄÇpackages‰∏≠ÂåÖÂê´‰∫ÜreferenceÊâÄÈúÄÁöÑÂ∫ì„ÄÇ-->ÂæÖÈ™åËØÅÔºåÊòØÁöÑÔºÅ
 
-—ßœ∞NuGet
+
+20180108
+ÂºÄÂèëÊó•ËÆ∞
+ÈúÄË¶ÅÂ§öÁúãcnblogs
+Êàë‰ª¨ÂæÄÂæÄÂú®ÂºÄÂèëÈ°πÁõÆÈáåÔºå‰ºö‰ΩøÁî®‰∏Ä‰∫õÁ¨¨‰∏âÊñπÁöÑdll, Â¶ÇÔºöNewtonsoft.Json.dll (ÂÆÉ‰∏∫Êàë‰ª¨Êèê‰æõ‰∫ÜËøõË°åÂ∫èÂàóÂåñÂíåÂèçÂ∫èÂàóÂåñËß£ÂÜ≥ÊñπÊ°àÔºå ÂæàÊúâÁî®Ôºå‰πüÂæàÁ®≥ÂÆöÔºåËøòÂæàÊúâÂêçÊ∞î)„ÄÇ
+
+Â≠¶‰π†NuGet
 http://www.cnblogs.com/Dlonghow/archive/2012/03/16/2399993.html
 
 
 20180108
-Œ“œ÷‘⁄µƒºº ı«∑»±£∫Entity Framework, MVC
+ÊàëÁé∞Âú®ÁöÑÊäÄÊúØÊ¨†Áº∫ÔºöEntity Framework, MVC
 
 
 20171212
@@ -320,60 +332,60 @@ Debug/Windows/Call Stack
 
 
 20171127
-SQL Server∞≤◊∞”–2≤ø∑÷£¨1 ˝æ›ø‚“˝«Ê£¨2SSMS£®√‚∑—£©
-¡¨Ω”±æµÿ ˝æ›ø‚°∞∑˛ŒÒ∆˜√˚°±”–3÷÷ø…ƒ‹£∫.,localhost,º∆À„ª˙√˚≥∆
+SQL ServerÂÆâË£ÖÊúâ2ÈÉ®ÂàÜÔºå1Êï∞ÊçÆÂ∫ìÂºïÊìéÔºå2SSMSÔºàÂÖçË¥πÔºâ
+ËøûÊé•Êú¨Âú∞Êï∞ÊçÆÂ∫ì‚ÄúÊúçÂä°Âô®Âêç‚ÄùÊúâ3ÁßçÂèØËÉΩÔºö.,localhost,ËÆ°ÁÆóÊú∫ÂêçÁß∞
 
-œÎ÷™µ¿±æª˙IP∑Ω∑®
-1£¨ƒ⁄≤øIP£∫cmd÷– ‰»Îipconfig
-2£¨Õ‚≤øIP:google÷– ‰»Îwhat's my ip
+ÊÉ≥Áü•ÈÅìÊú¨Êú∫IPÊñπÊ≥ï
+1ÔºåÂÜÖÈÉ®IPÔºöcmd‰∏≠ËæìÂÖ•ipconfig
+2ÔºåÂ§ñÈÉ®IP:google‰∏≠ËæìÂÖ•what's my ip
 
 20171121
-ControlÀƒ≤Ω«˙
-1£¨Visible
-2£¨Enable
-3£¨DefaultValue
-4£¨Mandatoryfield
-∆‰÷–1£¨2ø…“‘◊È∫œ≥ˆ3÷÷»®œﬁ£∫≤ªø…º˚£¨ø…º˚≤ªø…∏ƒ£¨ø…º˚ø…∏ƒ
+ControlÂõõÊ≠•Êõ≤
+1ÔºåVisible
+2ÔºåEnable
+3ÔºåDefaultValue
+4ÔºåMandatoryfield
+ÂÖ∂‰∏≠1Ôºå2ÂèØ‰ª•ÁªÑÂêàÂá∫3ÁßçÊùÉÈôêÔºö‰∏çÂèØËßÅÔºåÂèØËßÅ‰∏çÂèØÊîπÔºåÂèØËßÅÂèØÊîπ
 
-¥Û÷––°
-”– ±∫Ú∫‹ƒ—≈–∂œ «¥Ûªπ «–°£¨’‚ ±÷–æÕ∆◊˜”√¡À°£“ÚŒ™÷–£¨»√¥Û–°«¯∑÷¡Àø™¿¥°£µ¬∞¬“‚£¨À’∞¢∞Õ°£
+Â§ß‰∏≠Â∞è
+ÊúâÊó∂ÂÄôÂæàÈöæÂà§Êñ≠ÊòØÂ§ßËøòÊòØÂ∞èÔºåËøôÊó∂‰∏≠Â∞±Ëµ∑‰ΩúÁî®‰∫Ü„ÄÇÂõ†‰∏∫‰∏≠ÔºåËÆ©Â§ßÂ∞èÂå∫ÂàÜ‰∫ÜÂºÄÊù•„ÄÇÂæ∑Â••ÊÑèÔºåËãèÈòøÂ∑¥„ÄÇ
 
-∑¢≤ºµƒƒ—µ„
-0£¨∞≤◊∞IIS
+ÂèëÂ∏ÉÁöÑÈöæÁÇπ
+0ÔºåÂÆâË£ÖIIS
 	Systemsteuerung/Progaramme und Features/Windows-Features aktivieren oder deaktivieren
 	Internetinformationsdienste/WWW-Dienste/Anwendungsentwicklungsfeatures
-1£¨IIS≈‰÷√
+1ÔºåIISÈÖçÁΩÆ
 	In Anwendung konvertieren
-2£¨Œƒº˛º–≈‰÷√
-	Sicherheit÷–ÃÌº”IUSR
+2ÔºåÊñá‰ª∂Â§πÈÖçÁΩÆ
+	Sicherheit‰∏≠Ê∑ªÂä†IUSR
 
 
 20171016
-∂‡»À∫œ◊˜£¨¡™œµ◊‹ «√‚≤ª¡Àµƒ
-1£¨Fahrzeugakteview£¨‘⁄gao÷–”–£¨‘⁄FahrzeugeModule“≤”–£®Jan£©
-2£¨WebkatLite£¨‘⁄gao÷–”–£¨‘⁄kat3÷–“≤”–£®Gerhard£©
-3£¨Dichtheitspruefung£¨‘⁄ga÷–”–£¨‘⁄protokoll÷–“≤”–£®Ralf£©
-4£¨Rolle£¨‘⁄gao÷–”–£¨‘⁄portal÷–“≤”–£®Gerhard£©
+Â§ö‰∫∫Âêà‰ΩúÔºåËÅîÁ≥ªÊÄªÊòØÂÖç‰∏ç‰∫ÜÁöÑ
+1ÔºåFahrzeugakteviewÔºåÂú®gao‰∏≠ÊúâÔºåÂú®FahrzeugeModule‰πüÊúâÔºàJanÔºâ
+2ÔºåWebkatLiteÔºåÂú®gao‰∏≠ÊúâÔºåÂú®kat3‰∏≠‰πüÊúâÔºàGerhardÔºâ
+3ÔºåDichtheitspruefungÔºåÂú®ga‰∏≠ÊúâÔºåÂú®protokoll‰∏≠‰πüÊúâÔºàRalfÔºâ
+4ÔºåRolleÔºåÂú®gao‰∏≠ÊúâÔºåÂú®portal‰∏≠‰πüÊúâÔºàGerhardÔºâ
 
 
 20171013
-Borisª·µƒ
-1£¨Dropdownlist‘ˆº”“ªÃı«Î—°‘Ò£¨‘⁄databound ¬º˛÷–≤Â»Î
-2£¨Outlook Com-Add-Ins aktivieren 
-3£¨Alex“ª∏ˆ¿‡√ª”–checkin£¨‘⁄Csc Fehler÷–µ⁄“ªÃı’“µΩœﬂÀ˜
+Boris‰ºöÁöÑ
+1ÔºåDropdownlistÂ¢ûÂä†‰∏ÄÊù°ËØ∑ÈÄâÊã©ÔºåÂú®databound‰∫ã‰ª∂‰∏≠ÊèíÂÖ•
+2ÔºåOutlook Com-Add-Ins aktivieren 
+3ÔºåAlex‰∏Ä‰∏™Á±ªÊ≤°ÊúâcheckinÔºåÂú®Csc Fehler‰∏≠Á¨¨‰∏ÄÊù°ÊâæÂà∞Á∫øÁ¥¢
 
-Alexª·µƒ
-1£¨tsµƒcontact£¨“™œ»build£¨‘Ÿrun custom tool
-2£¨ ˝æ›ø‚±Ì‘ˆº”¡À–¬¡–£¨edmxÀ´ª˜¥Úø™£¨”“º¸update model from database
+Alex‰ºöÁöÑ
+1ÔºåtsÁöÑcontactÔºåË¶ÅÂÖàbuildÔºåÂÜçrun custom tool
+2ÔºåÊï∞ÊçÆÂ∫ìË°®Â¢ûÂä†‰∫ÜÊñ∞ÂàóÔºåedmxÂèåÂáªÊâìÂºÄÔºåÂè≥ÈîÆupdate model from database
 
-Christianª·µƒ
-1£¨alt+shift+…œœ¬£¨æÿ–Œ—°‘Ò
-2£¨cache£¨connectionstring¥ÌŒÛ£¨ª·µº÷¬∆Êπ÷µƒ¥ÌŒÛ
+Christian‰ºöÁöÑ
+1Ôºåalt+shift+‰∏ä‰∏ãÔºåÁü©ÂΩ¢ÈÄâÊã©
+2ÔºåcacheÔºåconnectionstringÈîôËØØÔºå‰ºöÂØºËá¥Â•áÊÄ™ÁöÑÈîôËØØ
 
 
 20170928
-¥´Õ≥µƒ±‡≥Ã£¨Œƒ◊÷∂º–¥‘⁄≥Ã–Ú¿Ô£¨‘⁄ΩÁ√Êø¥µΩŒƒ◊÷£¨ø…“‘Õ®π˝‘⁄‘¥≥Ã–Ú÷–’“∂‘”¶Œƒ◊÷’“µΩŒª÷√£ª ˝æ›ø‚±Ì√˚“≤–¥‘⁄≥Ã–Ú¿Ô£¨÷™µ¿¿Ô±Ì√˚£¨ø…“‘Õ®π˝‘⁄‘¥≥Ã–Ú÷–’“∂‘”¶±Ì√˚’“µΩŒª÷√°£
-œ÷¥˙±‡≥Ã£¨Ω≤æø≤Œ ˝£¨Ω·π˚æÕ «’“µΩŒª÷√∫√ƒ—∞°!
+‰º†ÁªüÁöÑÁºñÁ®ãÔºåÊñáÂ≠óÈÉΩÂÜôÂú®Á®ãÂ∫èÈáåÔºåÂú®ÁïåÈù¢ÁúãÂà∞ÊñáÂ≠óÔºåÂèØ‰ª•ÈÄöËøáÂú®Ê∫êÁ®ãÂ∫è‰∏≠ÊâæÂØπÂ∫îÊñáÂ≠óÊâæÂà∞‰ΩçÁΩÆÔºõÊï∞ÊçÆÂ∫ìË°®Âêç‰πüÂÜôÂú®Á®ãÂ∫èÈáåÔºåÁü•ÈÅìÈáåË°®ÂêçÔºåÂèØ‰ª•ÈÄöËøáÂú®Ê∫êÁ®ãÂ∫è‰∏≠ÊâæÂØπÂ∫îË°®ÂêçÊâæÂà∞‰ΩçÁΩÆ„ÄÇ
+Áé∞‰ª£ÁºñÁ®ãÔºåËÆ≤Á©∂ÂèÇÊï∞ÔºåÁªìÊûúÂ∞±ÊòØÊâæÂà∞‰ΩçÁΩÆÂ•ΩÈöæÂïä!
 
 20150721
 DOM and jQuery
@@ -387,10 +399,10 @@ var img = $(#myId);
 read: var str = img.attr("src");
 write: img.attr("src", "../image/myPic.png");
 
-»˝≤ø«˙
-1£¨±‰—˘◊”
-2£¨»°µ√ ˝æ›
-3£¨∞¥»°µ√µƒ ˝æ›±‰—˘◊”
+‰∏âÈÉ®Êõ≤
+1ÔºåÂèòÊ†∑Â≠ê
+2ÔºåÂèñÂæóÊï∞ÊçÆ
+3ÔºåÊåâÂèñÂæóÁöÑÊï∞ÊçÆÂèòÊ†∑Â≠ê
 
 20150709
 VisualStudio
@@ -398,16 +410,16 @@ go back to the last position: ctrl+-
 
 
 20150708
-sql ®πberwachen
+sql √ºberwachen
 1, connection string:Application Name=nzh;
 2, SQL Server Management Studio
-Extras / SQL Server Profiler / Ereignisauswahl / Spaltenfilter / Wie:nzh, OK, Ausf®πhren
+Extras / SQL Server Profiler / Ereignisauswahl / Spaltenfilter / Wie:nzh, OK, Ausf√ºhren
 
 
 20150624
 --how to run a udf?
 Programmierbarkeit/Funktionen/Tabellenwertfunktionen/udf_XXX/right click
-Skript f®πr Funktion als / select in / Neues Abfrage-Editor-Fenster
+Skript f√ºr Funktion als / select in / Neues Abfrage-Editor-Fenster
 
 
 20150519
@@ -465,7 +477,7 @@ binding: basicHttpBinding (old), wsHttpBinding (>= .NET3.0)
 20150413
 Obsolete [i:]
 
-[Obsolete("Diese Funktion wird ®πbergangsweise verwendet. Funktion newFunction bei Gelegenheit anpassen und benutzen")]
+[Obsolete("Diese Funktion wird √ºbergangsweise verwendet. Funktion newFunction bei Gelegenheit anpassen und benutzen")]
 public void oldFunction()
 {...}
 
@@ -548,9 +560,9 @@ namespace UnitTest
         }
 
         /// <summary>
-        /// Testet, ob in einer beliebigen Sprache / Fallback-Sprache immer 7 Wochentage zur®πckgegeben werden, auch wenn f®πr die Sprache selber keine ®πbersetzungen vorhanden sind.
+        /// Testet, ob in einer beliebigen Sprache / Fallback-Sprache immer 7 Wochentage zur√ºckgegeben werden, auch wenn f√ºr die Sprache selber keine √ºbersetzungen vorhanden sind.
         /// </summary>
-        /// <param name="provider">Der Dataprovider f®πr den DB-Zugriff</param>
+        /// <param name="provider">Der Dataprovider f√ºr den DB-Zugriff</param>
         /// <returns></returns>
         public string TestWeekdayTranslations(UnitTestDataProvider provider)
         {
@@ -583,14 +595,14 @@ namespace UnitTest
 		Dachreling, Leiter
 		Fenster, ?ffnungen
 		Dach?ffnungen
-		Folien, Schriftz®πge
-		T®πr
+		Folien, Schriftz√ºge
+		T√ºr
 		Verbrauchsmaterial
 	Ausbau
-		K®πche unten
-		K®πche oben
+		K√ºche unten
+		K√ºche oben
 		Toilettenraum innen
-		Toilettenraum au?en, T®πr
+		Toilettenraum au?en, T√ºr
 		kleiderschrank
 		Bug unten
 		Bug oben
@@ -733,14 +745,14 @@ string.IsNullOrEmpty(myStr) statt myStr == ""
 [Allgemein]
 Kundenwunsch:
 1, Grid Einstellung zu speichern --> Session
-2, Repeater Position zu bleiben --> Ajax, LinkButton ist nicht gut f®πr Ajax
+2, Repeater Position zu bleiben --> Ajax, LinkButton ist nicht gut f√ºr Ajax
 
 
 20150123
 [DB]
 Trigger,StoredProcedure,UserDefinedFunction
--rechtsklick / ?ndern zu schauen, ?nderung durch "ausf®πhren" zu speichern
--rechtsklick / Script f®πr Trigger als / Drop und Create in / 
+-rechtsklick / ?ndern zu schauen, ?nderung durch "ausf√ºhren" zu speichern
+-rechtsklick / Script f√ºr Trigger als / Drop und Create in / 
 -aktivieren und deaktivieren (Icon mit einem roten Pfeil)
 
 [Ajax]
@@ -775,8 +787,8 @@ Projekt Eigenschaften / ddl auszuw?hlen. Wenn ddl leer ist, Framework zuerst neu
 
 [JavaScript]
 2 Events in RadToolTipManager
-OnClientBeforeShow	f®πr UI
-OnClientRequestStart	f®πr Daten
+OnClientBeforeShow	f√ºr UI
+OnClientRequestStart	f√ºr Daten
 
 
 20150116
