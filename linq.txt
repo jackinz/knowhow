@@ -1,4 +1,12 @@
-﻿20211020
+20220613
+--inner join
+join r in tblRechnungen on listeneintrag.GA_ID equals r.GaId
+
+--left join
+join r in tblRechnungen on listeneintrag.GA_ID equals r.GaId into r_join
+from r in r_join.DefaultIfEmpty()
+
+20211020
 group by合并几行内容到一行
 var tbVerlauf = 
 	from u in Context.Current.GA_Regress_Verlauf
