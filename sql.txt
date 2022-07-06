@@ -1,3 +1,8 @@
+20220706
+select from select:
+SELECT name FROM (SELECT name FROM agentinformation) a 
+SELECT a.name FROM (SELECT name FROM agentinformation) a  
+
 20210330
 DECLARE @TestVariable AS VARCHAR(100)
 SET @TestVariable = 'One Planet One Life'
